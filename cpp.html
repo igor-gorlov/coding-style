@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>C++ Coding Style Guide by Igor Gorlov</title>
+</head>
+
+<body>
+	<header>
+		<h1 align="center">
+			<b><u>C++ Coding Style Guide by Igor Gorlov</u></b>
+		</h1>
+		<p>
+			The guidelines present in this document are strongly encouraged to be followed by every C++ programmer
+			working on my projects. In the meantime, these guidelines are only advises, not strict rules: developers
+			have the right to neglect or even ignore them in special cases.
+		</p>
+		<nav>
+			<h2 align="center" id="contents">Contents</h2>
+			<ul>
+				<li>
+					<p id="contents-general">
+						<a href="#general">General</a>
+					</p>
+				</li>
+				<li>
+					<p id="contents-naming">
+						<a href="#naming">Naming</a>
+					</p>
+				</li>
+				<li>
+					<p id="contents-formatting">
+						<a href="#formatting">Formatting</a>
+					</p>
+				</li>
+				<li>
+					<p id="contents-indentation">
+						<a href="#indentation">Indentation</a>
+					</p>
+				</li>
+				<li>
+					<p id="contents-commenting">
+						<a href="#commenting">Commenting</a>
+					</p>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<h2 align="center" id="general">
+				<a href="#contents-general">General</a>
+			</h2>
+			<ul>
+				<li>
+					<p>Use <strong>C++<u>17</u></strong>.</p>
+				</li>
+				<li>
+					<p>Do <strong>not</strong> use global variables.</p>
+				</li>
+				<li>
+					<p>Use <strong>English</strong> for all names and comments.</p>
+				</li>
+				<li>
+					<p>
+						Use <strong>#pragma&nbsp;once</strong> in order to prevent multiple inclusions of single file.
+						Do <strong>not</strong> use conditional compilation for this purpose.
+					</p>
+				</li>
+				<li>
+					<p>Use <strong>struct</strong> keyword for plain old data types.</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h2 align="center" id="naming">
+				<a href="#contents-naming">Naming</a>
+			</h2>
+			<ul>
+				<li>
+					<p>Use <strong>informative</strong> names for all entities except of temporary variables.</p>
+					<table>
+						<caption>Examples</caption>
+						<tr>
+							<td>An important variable</td>
+							<td>
+								<code><pre>uint64 <var>lastModificationTimestamp</var>;</pre></code>
+							</td>
+						</tr>
+						<tr>
+							<td>A temporary variable used only as a loop counter</td>
+							<td>
+								<code><pre>uint <var>i</var> = 0;</pre></code>
+							</td>
+						</tr>
+					</table>
+				</li>
+				<li>
+					<p>Give include files <strong>.h</strong> extension.</p>
+				</li>
+				<li>
+					<p>Give <strong>.cpp</strong> extension to files that should be compiled directly to binaries.</p>
+				</li>
+				<li>
+					<p>
+						Use <strong>upper&nbsp;camel&nbsp;case</strong> for namespace and type names (except of aliases
+						for arithmetic types, which should be written in <strong>lower&nbsp;camel&nbsp;case</strong>).
+					</p>
+					<table>
+						<caption>Examples</caption>
+						<tr>
+							<td>A user-defined namespace</td>
+							<td>
+								<code>
+									<pre>namespace Prefix</pre>
+									<pre>{</pre>
+									<pre>	// Declarations and definitions...</pre>
+									<pre>}</pre>
+								</code>
+							</td>
+						</tr>
+						<tr>
+							<td>A user-declared type</td>
+							<td>
+								<code><pre>class CustomType;</pre></code>
+							</td>
+						</tr>
+						<tr>
+							<td>An arithmetic type alias</td>
+							<td>
+								<code><pre>typedef std::uint32_t uint32;</pre></code>
+							</td>
+						</tr>
+					</table>
+				</li>
+				<li>
+					<p>Use <strong>lower&nbsp;camel&nbsp;case</strong> to name functions and variables.</p>
+					<table>
+						<caption>Examples</caption>
+						<tr>
+							<td>A function call</td>
+							<td>
+								<code><pre>saveCurrentFile();</pre></code>
+							</td>
+						</tr>
+						<tr>
+							<td>A variable declaration</td>
+							<td>
+								<code><pre>int <var>playerPosition</var>;</pre></code>
+							</td>
+						</tr>
+					</table>
+				</li>
+				<li>
+					<p>Use <strong>upper&nbsp;snake&nbsp;case</strong> for preprocessor identifiers.</p>
+					<table>
+						<tr>
+							<td>Example</td>
+							<td>
+								<code><pre>#define NUMBER_OF_ITERATIONS</pre></code>
+							</td>
+						</tr>
+					</table>
+				</li>
+				<li>
+					<p>
+						Use <strong>lower&nbsp;snake&nbsp;case</strong> to name source files and directories containing
+						source files.
+					</p>
+					<table>
+						<tr>
+							<td>Example</td>
+							<td>
+								<code><pre>path_to/source_file.cpp</pre></code>
+							</td>
+						</tr>
+					</table>
+				</li>
+				<li>
+					<p>Add <strong>m</strong> prefix to names of private class members.</p>
+					<table>
+						<tr>
+							<td>Example</td>
+							<td>
+								<code>
+									<pre>class Allocator</pre>
+									<pre>{</pre>
+									<pre>private:</pre>
+									<pre>	void* <var>mAllocatedMemory</var>;</pre>
+									<pre>};</pre>
+								</code>
+							</td>
+						</tr>
+					</table>
+				</li>
+				<li>
+					<p>Add <strong>p</strong> prefix to names of protected class members.</p>
+					<table>
+						<tr>
+							<td>Example</td>
+							<td>
+								<code>
+									<pre>class Grandfather</pre>
+									<pre>{</pre>
+									<pre>protected:</pre>
+									<pre>	std::string <var>pFamilySkeleton</var>;</pre>
+									<pre>};</pre>
+								</code>
+							</td>
+						</tr>
+					</table>
+				</li>
+				<li>
+					<p>
+						Prefer <strong>verbs</strong> for function names and <strong>nouns</strong> for type, namespace
+						and variable names.
+					</p>
+					<table>
+						<caption>Examples</caption>
+						<tr>
+							<td>A good function name</td>
+							<td>
+								<code><pre>void deallocateMemory(void* <var>memory</var>);</pre></code>
+							</td>
+						</tr>
+						<tr>
+							<td>An undesirable function name</td>
+							<td>
+								<code><pre>void memoryDeallocation(void* <var>memory</var>);</pre></code>
+							</td>
+						</tr>
+						<tr>
+							<td>An appropriate variable name</td>
+							<td>
+								<code><pre>enemy* <var>target</var>;</pre></code>
+							</td>
+						</tr>
+						<tr>
+							<td>An inconvenient variable name</td>
+							<td>
+								<code><pre>enemy* <var>destroy</var>;</pre></code>
+							</td>
+						</tr>
+					</table>
+				</li>
+				<li>
+					<p>
+						Bool variables, as well as functions returning bool, may have names in the form of
+						<strong><u>yes-no</u>&nbsp;question</strong>.
+					</p>
+					<table>
+						<caption>Examples</caption>
+						<tr>
+							<td>A function</td>
+							<td>
+								<code><pre>bool isRunning(ProcessHandler* <var>process</var>);</pre></code>
+							</td>
+						</tr>
+						<tr>
+							<td>A data member of a class</td>
+							<td>
+								<code>
+									<pre>class Player</pre>
+									<pre>{</pre>
+									<pre>public:</pre>
+									<pre>	bool <var>isAlive</var>;</pre>
+									<pre>};</pre>
+								</code>
+							</td>
+						</tr>
+					</table>
+				</li>
+				<li>
+					<p>
+						If a variable stores amount of some items, give it a name with <strong>numberOf</strong> prefix;
+						but if such a variable contains an actual list of items, use
+						<strong>simple&nbsp;plural</strong>.
+					</p>
+					<table>
+						<tr>
+							<td>Example</td>
+							<td>
+								<code>
+									<pre>std::vector&lt;std::string&gt; <var>messages</var>;</pre>
+									<pre><var>messages</var>.push_back(&quot;Alarm!&quot;);</pre>
+									<pre><var>messages</var>.push_back(&quot;Alarm canceled&quot;);</pre>
+									<pre>uint64 <var>numberOfMessages</var> = <var>messages</var>.size();</pre>
+								</code>
+							</td>
+						</tr>
+					</table>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h2 align="center" id="formatting">
+				<a href="#contents-formatting">Formatting</a>
+			</h2>
+			<ul>
+				<li>
+					<p>Organize each source file according to the following template:</p>
+					<ol>
+						<li>
+							<p>
+								An optional <strong><u>multiline</u>&nbsp;comment</strong> briefly describing this file
+								and its contents, followed by <strong><u>two</u>&nbsp;empty&nbsp;lines</strong>.
+							</p>
+						</li>
+						<li>
+							<p>
+								An optional <strong>#pragma&nbsp;once</strong>,
+								followed by <strong><u>two</u>&nbsp;empty&nbsp;lines</strong>.
+							</p>
+						</li>
+						<li>
+							<p>
+								An optional sequence of
+								<strong><u>standard</u>&nbsp;includes&nbsp;in&nbsp;<u>alphabetical</u>&nbsp;order</strong>,
+								followed by <strong><u>one</u>&nbsp;empty&nbsp;line</strong>.
+							</p>
+						</li>
+						<li>
+							<p>
+								An optional sequence of
+								<strong><u>system</u>&nbsp;includes&nbsp;in&nbsp;<u>alphabetical</u>&nbsp;order</strong>,
+								followed by <strong><u>one</u>&nbsp;empty&nbsp;line</strong>.
+							</p>
+						</li>
+						<li>
+							<p>
+								An optional sequence of
+								<strong><u>third-party</u>&nbsp;includes&nbsp;in&nbsp;<u>alphabetical</u>&nbsp;order</strong>,
+								followed by <strong><u>one</u>&nbsp;empty&nbsp;line</strong>.
+							</p>
+						</li>
+						<li>
+							<p>
+								An optional sequence of
+								<strong>includes&nbsp;from&nbsp;<u>current&nbsp;project</u>&nbsp;in&nbsp;<u>alphabetical</u>&nbsp;order</strong>,
+								followed by <strong><u>one</u>&nbsp;empty&nbsp;line</strong>.
+							</p>
+						</li>
+						<li>
+							<p>
+								A sequence of <strong><u>declarations&nbsp;and&nbsp;definitions</u></strong>,
+								optionally divided into paragraphs by
+								<strong><u>one&nbsp;or&nbsp;two</u>&nbsp;empty&nbsp;lines</strong>.
+							</p>
+						</li>
+					</ol>
+				</li>
+				<li>
+					<p>
+						Keep line length <strong>not&nbsp;higher</strong> than <strong><u>120</u>&nbsp;columns</strong>.
+					</p>
+				</li>
+				<li>
+					<p>
+						Do <strong>not</strong> write source files consisting of
+						<strong>more&nbsp;than&nbsp;<u>1000</u>&nbsp;lines</strong>.
+					</p>
+				</li>
+				<li>
+					<p>Place each curly brace, which encloses a scope, on a <strong>separate&nbsp;line</strong>.</p>
+					<table>
+						<tr>
+							<td>Example</td>
+							<td>
+								<code>
+									<pre>if(condition)</pre>
+									<pre>{</pre>
+									<pre>	doSomething();</pre>
+									<pre>	doSomethingElse();</pre>
+									<pre>}</pre>
+								</code>
+							</td>
+						</tr>
+					</table>
+				</li>
+				<li>
+					<p>
+						If a pair of curly braces is empty, place <strong>both</strong> these braces on
+						<strong><u>one&nbsp;separate</u>&nbsp;line&nbsp;<u>without</u>&nbsp;any&nbsp;whitespaces&nbsp;between&nbsp;them</strong>.
+					</p>
+					<table>
+						<tr>
+							<td>Example</td>
+							<td>
+								<code>
+									<pre>class ObjectWithEmptyConstructor</pre>
+									<pre>{</pre>
+									<pre>public:</pre>
+									<pre>	ObjectWithEmptyConstructor()</pre>
+									<pre>	{}</pre>
+									<pre>};</pre>
+								</code>
+							</td>
+						</tr>
+					</table>
+				</li>
+				<li>
+					<p>
+						<strong>Always</strong> use curly braces to enclose code blocks, even when the language rules
+						permit not to use them in this particular situation.
+					</p>
+					<table>
+						<caption>Examples</caption>
+						<tr>
+							<td>A dirty trick allowed by C++</td>
+							<td>
+								<code>
+									<pre>if(condition)</pre>
+									<pre>	thenExecuteSingleStatement();</pre>
+								</code>
+							</td>
+						</tr>
+						<tr>
+							<td>The more reliable way</td>
+							<td>
+								<code>
+									<pre>if(condition)</pre>
+									<pre>{</pre>
+									<pre>	thenExecuteSingleStatement();</pre>
+									<pre>}</pre>
+								</code>
+							</td>
+						</tr>
+					</table>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h2 align="center" id="indentation">
+				<a href="#contents-indentation">Indentation</a>
+			</h2>
+			<ul>
+				<li>
+					<p>
+						For indentation use <strong>tabs</strong> (<strong>one&nbsp;per&nbsp;level</strong>),
+						not spaces.
+					</p>
+				</li>
+				<li>
+					<p>Do <strong>not</strong> indent access specifiers.</p>
+					<table>
+						<tr>
+							<td>Example</td>
+							<td>
+								<code>
+									<pre>class Container</pre>
+									<pre>{</pre>
+									<pre>public:</pre>
+									<pre>	void* <var>externalData</var>;</pre>
+									<pre>private:</pre>
+									<pre>	void* <var>mInternalData</var>;</pre>
+									<pre>};</pre>
+								</code>
+							</td>
+						</tr>
+					</table>
+				</li>
+				<li>
+					<p>
+						Indent comments in the <strong><u>exactly&nbsp;same</u>&nbsp;manner&nbsp;as&nbsp;code</strong>.
+					</p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h2 align="center" id="commenting">
+				<a href="#contents-commenting">Commenting</a>
+			</h2>
+			<ul>
+				<li>
+					<p>
+						When finishing a class or namespace body which
+						<strong>occupies&nbsp;a&nbsp;lot&nbsp;of&nbsp;<u>vertical</u>&nbsp;space</strong>, put a
+						<strong><u>single-line</u>&nbsp;comment&nbsp;<u>right&nbsp;after</u>&nbsp;the&nbsp;closing&nbsp;curly&nbsp;brace</strong>
+						(right after semicolon in case of class). The mentioned comment should be
+						<strong><u>equivalent</u>&nbsp;to&nbsp;the&nbsp;header&nbsp;of&nbsp;this&nbsp;class&nbsp;or&nbsp;namespace</strong>.
+					</p>
+					<table>
+						<caption>Examples</caption>
+						<tr>
+							<td>A namespace</td>
+							<td>
+								<code>
+									<pre>namespace Prefix</pre>
+									<pre>{</pre>
+									<pre>	// Many declarations and definitions...</pre>
+									<pre>} // namespace Prefix</pre>
+								</code>
+							</td>
+						</tr>
+						<tr>
+							<td>A class</td>
+							<td>
+								<code>
+									<pre>class Fake</pre>
+									<pre>{</pre>
+									<pre>	// A huge amount of members...</pre>
+									<pre>}; // class Fake</pre>
+								</code>
+							</td>
+						</tr>
+					</table>
+				</li>
+				<li>
+					<p>
+						If a single-line comment (<u>//...</u>) does not fit on one line,
+						use a <strong>multiline</strong> variant (<u>/*...*/</u>) instead.
+					</p>
+				</li>
+				<li>
+					<p>
+						Try to comment on
+						<strong><u>any</u>&nbsp;code&nbsp;that&nbsp;is&nbsp;<u>not</u>&nbsp;self-documented</strong>.
+					</p>
+				</li>
+				<li>
+					<p>
+						Finish <strong><u>any</u>&nbsp;comment</strong> with a <strong>period</strong>.
+					</p>
+				</li>
+			</ul>
+		</section>
+		<a href="#contents">Back to the table of contents</a>
+	</main>
+</body>
+
+</html>
