@@ -24,6 +24,13 @@
 					<p id="contents-commit-messages">
 						<a href="#commit-messages">Commit Messages</a>
 					</p>
+					<ul>
+						<li>
+							<p id="contents-commit-messages-subject">
+								<a href="#commit-messages-subject">Subject Line</a>
+							</p>
+						</li>
+					</ul>
 				</li>
 			</ul>
 		</nav>
@@ -39,6 +46,20 @@
 				<strong>72</strong> columns.
 			</p>
 			<p>In the next subsections, we will consider each part of a commit message in detail.</p>
+			<section>
+				<h3 align="center" id="commit-messages-subject">
+					<a href="#contents-commit-messages-subject">Subject Line</a>
+				</h3>
+				<p>
+					A subject line is intended to express a <strong>brief summary</strong> of the commit, which may be
+					used by various developer tools and services, including (but not limiting to) the GitHub web
+					interface and Git itself. In many cases, the only thing that is shown in a commit log being viewed
+					by some third-party programmer will be your subject line. Therefore, you have to make it concise and
+					abstract, letting a reader to get the high-level sense of the changes represented by this commit. Do
+					<strong>not</strong> mention raw filenames in the subject line - use more abstract entities from the
+					project architecture instead (for example, module names).
+				</p>
+			</section>
 		</section>
 	</main>
 	<a href="#contents">Back to the table of contents</a>
