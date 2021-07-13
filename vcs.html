@@ -72,12 +72,12 @@
 				</p>
 				<p>Despite the hard length limit, a subject line has its own internal structure:</p>
 				<code>
-					&lt;<i>type</i>&gt; &lt;<i>scope</i>&gt;: &lt;<i>description</i>&gt;
+					&lt;<i>type</i>&gt;[ &lt;<i>scope</i>&gt;]: &lt;<i>description</i>&gt;
 				</code>
 				<p>
-					Here, &lt;type&gt; is an identifier denoting the current commit type, &lt;scope&gt; is a name of the
-					architectural entity this commit is related to, &lt;description&gt; is a very brief summary of the
-					changes.
+					Here, &lt;type&gt; is an identifier denoting the current commit type, &lt;scope&gt; is an optional
+					name of the architectural entity this commit is related to, &lt;description&gt; is a very brief
+					summary of the changes.
 				</p>
 				<p>All possible commit types are listed in the table below.</p>
 				<table>
@@ -121,7 +121,8 @@
 					of the structural units of the project. If the chosen unit is nested (is a part of a larger unit),
 					you can create a hierarchical name using <strong>forward&nbsp;slash</strong> (/) as a separator;
 					such name will look like a filepath, although it hardly ever has something to do with real file
-					system.
+					system. If the chosen unit implies the whole project (that is, represents the topmost level of the
+					hierarchy), a scope name should be omitted.
 				</p>
 				<p>
 					A description is here to answer the question "<strong>what?</strong>" instead of
