@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Version Control Guide by Igor Gorlov</title>
+</head>
+
+<body>
+	<header>
+		<h1 align="center">
+			<b><u>Version Control Guide by Igor Gorlov</u></b>
+		</h1>
+		<p>
+			In my work, I use <a href="https://git-scm.com"><strong>Git</strong></a> as the only version control system.
+			All my projects are Git repositories remotely hosted on
+			<a href="https://github.com"><strong>GitHub</strong></a> under
+			<a href="https://github.com/igor-gorlov"><strong>Igor Gorlov personal account</strong></a>.
+		</p>
+		<nav>
+			<h2 align="center" id="contents">Contents</h2>
+			<ul>
+				<li>
+					<p id="contents-commit-messages">
+						<a href="#commit-messages">Commit Messages</a>
+					</p>
+					<ul>
+						<li>
+							<p id="contents-commit-messages-subject">
+								<a href="#commit-messages-subject">Subject Line</a>
+							</p>
+						</li>
+						<li>
+							<p id="contents-commit-messages-body">
+								<a href="#commit-messages-body">Body</a>
+							</p>
+						</li>
+						<li>
+							<p id="contents-commit-messages-footer">
+								<a href="#commit-messages-footer">Footer</a>
+							</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<h2 align="center" id="commit-messages">
+				<a href="#contents-commit-messages">Commit Messages</a>
+			</h2>
+			<p>
+				A well-formed commit message consists of a mandatory <strong>subject line</strong>, an optional
+				<strong>body</strong> and an optional <strong>footer</strong>. All these three parts are separated from
+				each other by <strong><u>one</u>&nbsp;empty&nbsp;line</strong>. The whole message should be wrapped to
+				<strong>72</strong> columns.
+			</p>
+			<p>In the next subsections, we will consider each part of a commit message in detail.</p>
+			<section>
+				<h3 align="center" id="commit-messages-subject">
+					<a href="#contents-commit-messages-subject">Subject Line</a>
+				</h3>
+				<p>
+					A subject line is intended to express a <strong>brief summary</strong> of the commit, which may be
+					used by various developer tools and services, including (but not limiting to) the GitHub web
+					interface and Git itself. In many cases, the only thing that is shown in a commit log being viewed
+					by some third-party programmer will be your subject line. Therefore, you have to make it concise and
+					abstract, letting a reader to get the high-level sense of the changes represented by this commit.
+					Unless it is really necessary, do <strong>not</strong> mention raw filenames in the subject line -
+					use more abstract entities from the project architecture instead (for example, module names).
+				</p>
+				<p>Despite the hard length limit, a subject line has its own internal structure:</p>
+				<code>
+					&lt;<i>type</i>&gt;[ &lt;<i>scope</i>&gt;]: &lt;<i>description</i>&gt;
+				</code>
+				<p>
+					Here, &lt;type&gt; is an identifier denoting the current commit type, &lt;scope&gt; is an optional
+					name of the architectural entity this commit is related to, &lt;description&gt; is a very brief
+					summary of the changes.
+				</p>
+				<p>All possible commit types are listed in the table below.</p>
+				<table>
+					<caption>Commit types</caption>
+					<tr>
+						<th>Identifier</th>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>fix</td>
+						<td>Fix</td>
+						<td>Fixes a bug or addresses an issue</td>
+					</tr>
+					<tr>
+						<td>feat</td>
+						<td>Feature</td>
+						<td>Adds new functionality</td>
+					</tr>
+					<tr>
+						<td>mod</td>
+						<td>Modification</td>
+						<td>
+							Changes existing functionality in order to get a new behavior, but <strong>not</strong> to
+							fix a bug
+						</td>
+					</tr>
+					<tr>
+						<td>opt</td>
+						<td>Optimization</td>
+						<td>
+							Reduces the amount of resources needed for execution of the code, such as CPU time, memory
+							consumption, binary size etc.
+						</td>
+					</tr>
+					<tr>
+						<td>refactor</td>
+						<td>Refactoring</td>
+						<td>Restructures the code for readability without any impact on its semantics</td>
+					</tr>
+					<tr>
+						<td>format</td>
+						<td>Code Formatting</td>
+						<td>Changes formatting of the code, but does <strong>not</strong> affect its meaning at all</td>
+					</tr>
+				</table>
+				<p>
+					A scope can be denoted by an arbitrary <strong>Git-cased</strong> name transparently related to one
+					of the structural units of the project. If the chosen unit is nested (is a part of a larger unit),
+					you can create a hierarchical name using <strong>forward&nbsp;slash</strong> (/) as a separator;
+					such name will look like a filepath, although it hardly ever has something to do with real file
+					system. If the chosen unit implies the whole project (that is, represents the topmost level of the
+					hierarchy), a scope name should be omitted.
+				</p>
+				<p>
+					A description is here to answer the question "<strong>what?</strong>" instead of
+					"<strong>why?</strong>". Write in a few words what exactly was done, and leave the reasons (if any)
+					for the message body. Please note that you have to use an <strong>imperative mood</strong> within
+					the description: write it in the <strong>present tense</strong>. Also do <strong>not</strong> start
+					the description with a capital letter and do <strong>not</strong> finish it with a period (.).
+				</p>
+				<section>
+					<h4 align="center">Subject line examples</h4>
+					<ul>
+						<li>
+							<p>fix ui/input/keyboard: make handling of arrow keys correct</p>
+						</li>
+						<li>
+							<p>feat core/parser: add Unicode support</p>
+						</li>
+						<li>
+							<p>mod ui/settings/timeout: replace the list with a text field</p>
+						</li>
+						<li>
+							<p>opt lib/containers/concurrent-map: switch to a lock-free algorithm</p>
+						</li>
+						<li>
+							<p>refactor server: split up the queryDatabase() method</p>
+						</li>
+						<li>
+							<p>format: change the indentation method from spaces to tabs</p>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<h3 align="center" id="commit-messages-body">
+					<a href="#contents-commit-messages-body">Body</a>
+				</h3>
+				<p>
+					A subject line is typically followed by a body which tells more about the commit in a relatively
+					free form. This part of a commit message consists of an arbitrary number of paragraphs separated by
+					an <strong>empty&nbsp;line</strong>. Here you can explain the <strong>reasons</strong> the commit
+					had been prompted by, add <strong>technical&nbsp;details</strong> and (probably) place additional
+					information.
+				</p>
+				<p>
+					A body is <strong>less</strong> abstract than a subject line, so you are allowed to use raw
+					filenames, not only architectural entities. However, avoid abusing this low level style - do
+					<strong>not</strong> turn your commit message into pseudocode.
+				</p>
+			</section>
+			<section>
+				<h3 align="center" id="commit-messages-footer">
+					<a href="#contents-commit-messages-footer">Footer</a>
+				</h3>
+				<p>
+					A footer is used only for "<strong>Fix</strong>" commits to point to the problem being solved. Like
+					a subject line, a footer occupies strictly <strong>one</strong> 72-column row. It consists of a
+					<strong>hash&nbsp;sign</strong> (#), immediately followed by a number identifying the addressed
+					issue: <strong>#123456</strong>.
+				</p>
+			</section>
+		</section>
+	</main>
+	<a href="#contents">Back to the table of contents</a>
+</body>
+
+</html>
