@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>General Coding Style Guidelines by Igor Gorlov</title>
+</head>
+
+<body>
+	<header>
+		<h1 align="center">
+			<b><u>General Coding Style Guidelines by Igor Gorlov</u></b>
+		</h1>
+		<p>
+			The conventions established by this document, as well as ones established by other documents in this
+			repository, are strongly encouraged to be followed by every programmer working on my projects. In the
+			meantime, all these rules are not dogmas: developers have the right to neglect or even ignore them in
+			special cases.
+		</p>
+		<nav>
+			<h2 align="center" id="contents">Contents</h2>
+			<ul>
+				<li>
+					<p id="contents-terminology">
+						<a href="#terminology">Terminology</a>
+					</p>
+				</li>
+				<li>
+					<p id="contents-language">
+						<a href="#language">Natural Language</a>
+					</p>
+				</li>
+				<li>
+					<p id="contents-project">
+						<a href="#project">Project Basics</a>
+					</p>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<h2 align="center" id="terminology">
+				<a href="#contents-terminology">Terminology</a>
+			</h2>
+			<p>The following are some common terms used throughout the whole coding style documentation.</p>
+			<dl>
+				<dt><strong><u>Spaceless case</u></strong></dt>
+				<dd>
+					A collective name for several styles of phrase writing in which whitespaces are <strong>not</strong>
+					used.
+				</dd>
+				<dt><strong><u>Upper camel case</u></strong></dt>
+				<dd>
+					A spaceless case where <strong>each</strong> word of the phrase being written begins with a
+					<strong>capital letter</strong>.
+					<table>
+						<tr>
+							<td>Example</td>
+							<td>
+								SpacesAreNotAllowedHere
+							</td>
+						</tr>
+					</table>
+				</dd>
+				<dt><strong><u>Lower camel case</u></strong></dt>
+				<dd>
+					A spaceless case where <strong>each</strong> word of the phrase being written,
+					<strong>except of the first one</strong>, begins with a <strong>capital letter</strong>.
+					<table>
+						<tr>
+							<td>Example</td>
+							<td>
+								spacesAreNotAllowedHere
+							</td>
+						</tr>
+					</table>
+				</dd>
+				<dt><strong><u>Upper snake case</u></strong></dt>
+				<dd>
+					A spaceless case using an <strong>underscore</strong> character ("_") as a word separator and
+					requiring <strong>all</strong> letters to be <strong>capital</strong>.
+					<table>
+						<tr>
+							<td>Example</td>
+							<td>
+								SPACES_ARE_NOT_ALLOWED_HERE
+							</td>
+						</tr>
+					</table>
+				</dd>
+				<dt><strong><u>Lower snake case</u></strong></dt>
+				<dd>
+					A spaceless case using an <strong>underscore</strong> character ("_") as a word separator and
+					<strong>totally prohibiting</strong> capital letters.
+					<table>
+						<tr>
+							<td>Example</td>
+							<td>
+								spaces_are_not_allowed_here
+							</td>
+						</tr>
+					</table>
+				</dd>
+				<dt><strong><u>Git case</u></strong></dt>
+				<dd>
+					A spaceless case using <strong>hyphen</strong> character ("-") as a word separator and
+					<strong>totally prohibiting</strong> capital letters.
+					<table>
+						<tr>
+							<td>Example</td>
+							<td>
+								spaces-are-not-allowed-here
+							</td>
+						</tr>
+					</table>
+				</dd>
+			</dl>
+		</section>
+		<section>
+			<h2 align="center" id="language">
+				<a href="#contents-language">Natural Language</a>
+			</h2>
+			<p>
+				The official language of our community is <strong>English</strong>. It should be used in almost every
+				case where natural language is required, including the documentation, file and directory names,
+				identifiers within the source code, commit messages, interaction between the community members, and so
+				on. In personal communication with me, you can also use Russian.
+			</p>
+		</section>
+		<section>
+			<h2 align="center" id="project">
+				<a href="#contents-project">Project Basics</a>
+			</h2>
+			<p>
+				This section introduces a set of coding style rules which are applicable to all possible projects
+				regardless of their type or programming languages they are written in. Language-specific rules are
+				defined in separate documents and, in case of overlapping, take precedence over the general guidelines.
+			</p>
+			<ul>
+				<li>
+					<p>Name the root directory of a project in <strong>Git case</strong>.</p>
+				</li>
+				<li>
+					<p>
+						Use <strong>lower snake case</strong> to name <strong>all</strong> files and directories which
+						are (recursively) located within the root directory of a project.
+					</p>
+				</li>
+				<li>
+					<p>Keep line length <strong>not</strong> higher than <strong>120</strong> columns.</p>
+				</li>
+				<li>
+					<p>
+						Do <strong>not</strong> write source files consisting of more than <strong>1000</strong> lines.
+					</p>
+				</li>
+			</ul>
+		</section>
+		<a href="#contents">Back to the table of contents</a>
+	</main>
+</body>
+
+</html>
