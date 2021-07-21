@@ -52,6 +52,11 @@
 								<a href="#branching-terminology">Terminology</a>
 							</p>
 						</li>
+						<li>
+							<p id="contents-branching-strategy">
+								<a href="#branching-strategy">Basic Branching Strategy</a>
+							</p>
+						</li>
 					</ul>
 				</li>
 			</ul>
@@ -237,6 +242,36 @@
 						A branch having at least one commit that points to a code <strong>not</strong> in a solid state.
 					</dd>
 				</dl>
+			</section>
+			<section>
+				<h3 align="center" id="branching-strategy">
+					<a href="#contents-branching-strategy">Basic Branching Strategy</a>
+				</h3>
+				<p>
+					Every repository is built around the default "<strong>dev</strong>" solid branch which represents
+					the main stream of development. Ideally, the whole history of the project should be linearly stored
+					on this branch as a series of <strong>small and distinct</strong> commits.
+				</p>
+				<p>However, such scenario is often not viable in real world:</p>
+				<ul>
+					<li>
+						<p>
+							The first obstacle comes from inherent complexity of any software which is larger than a
+							code example from a beginners' manual. The more abstraction layers your project consists of,
+							the harder it becomes both to retain a solid state and to keep commits compact
+							simultaneously.
+						</p>
+					</li>
+					<li>
+						<p>
+							Another problem appears when the upcoming release is getting close. You have to perform
+							several final touches before announcing a new version, but suddenly understand that those
+							touches are really not needed on "dev" - they will hamper the future work. For example,
+							there is absolutely no necessity to improve quality of visual design if you are planning to
+							completely revisit the GUI right after the upcoming release.
+						</p>
+					</li>
+				</ul>
 			</section>
 		</section>
 	</main>
