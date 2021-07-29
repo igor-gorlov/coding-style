@@ -21,6 +21,11 @@
 			<h2 align="center" id="contents">Contents</h2>
 			<ul>
 				<li>
+					<p id="contents-system">
+						<a href="#system">The System of Coding Rules</a>
+					</p>
+				</li>
+				<li>
 					<p id="contents-terminology">
 						<a href="#terminology">Terminology</a>
 					</p>
@@ -39,6 +44,25 @@
 		</nav>
 	</header>
 	<main>
+		<section>
+			<h2 align="center" id="system">
+				<a href="#contents-system">The System of Coding Rules</a>
+			</h2>
+			<p>
+				This document provides a set of rules applicable to all possible projects, regardless of their type or
+				the programming languages their are written in. Language-specific rules are defined in separate
+				documents and, in case of overlapping, take precedence over the general guidelines; for example,
+				"cpp.html" contains information specific to C++.
+			</p>
+			<p>
+				A project, in turn, can define its own set of rules which will override both the general and the
+				per-language instructions. Such local rules should be described by a special document called
+				"<strong>workflow</strong>" stored in the root directory of the project. This document maybe either a
+				<strong>plain&nbsp;text</strong> file (<strong>workflow.txt</strong>) or an <strong>HTML</strong> page
+				(<strong>workflow.html</strong>). The form of "workflow" is unspecified, but we recommend to describe
+				the project architecture, its branching strategy, and other non-standard stuff.
+			</p>
+		</section>
 		<section>
 			<h2 align="center" id="terminology">
 				<a href="#contents-terminology">Terminology</a>
@@ -132,11 +156,6 @@
 			<h2 align="center" id="project">
 				<a href="#contents-project">Project Basics</a>
 			</h2>
-			<p>
-				This section introduces a set of coding style rules which are applicable to all possible projects
-				regardless of their type or programming languages they are written in. Language-specific rules are
-				defined in separate documents and, in case of overlapping, take precedence over the general guidelines.
-			</p>
 			<ul>
 				<li>
 					<p>Name the root directory of a project in <strong>Git case</strong>.</p>
