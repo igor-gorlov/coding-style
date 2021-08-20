@@ -393,7 +393,10 @@
 					product needs additional pre-release tuning which has nothing to do with the subsequent (starting
 					after this new version) development, create a dedicated <i>release&nbsp;branch</i> and do all the
 					preparatory work there. When the project is absolutely ready to be released, tag the tip of the
-					release branch, and you are done.
+					release branch, and you are done. However, if you maintain several generations of the product in
+					parallel (like Microsoft does with its Windows 10 and Windows 11 operating systems), it might be
+					sine to develop updates and fixes for each generation right on that generation's release branch
+					(after the major release tag).
 				</p>
 				<p>
 					Release branches are <strong>solid</strong>. Similarly to "dev", any of them can be (but not always
