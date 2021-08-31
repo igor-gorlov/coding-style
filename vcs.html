@@ -160,21 +160,22 @@
 					hierarchy), a scope name should be omitted.
 				</p>
 				<p>
-					A description is here to answer the question "<strong>what?</strong>" instead of
-					"<strong>why?</strong>". Write in a few words what exactly was done, and leave the reasons (if any)
-					for the message body. Please note that you have to use an <strong>imperative mood</strong> within
-					the description (write it in the <strong>present tense</strong>), and the use of articles (a/an,
-					the) is <strong>not</strong> recommended. Also do <strong>not</strong> start the description with a
-					capital letter and do <strong>not</strong> finish it with a period (.).
+					A description is here to answer the question &quot;<strong>what?</strong>&quot; instead of
+					&quot;<strong>why?</strong>&quot;. Write in a few words what exactly was done, and leave the reasons
+					(if any) for the message body. Please note that you have to use an <strong>imperative mood</strong>
+					within the description (write it in the <strong>present tense</strong>), and the use of articles
+					(a/an, the) is <strong>not</strong> recommended. Also do <strong>not</strong> start the description
+					with a capital letter and do <strong>not</strong> finish it with a period (.).
 				</p>
 				<p>
 					It is possible to refer to another scope by its name right from a description. This trick is very
 					helpful in circumstances when you are exceeding the length limit and need to save your characters,
 					but the full title of the unit being mentioned is too cumbersome. For example, you have a section
-					called "Frequently Asked Questions" in your application's "readme" file. Let's assign a "faq" scope
-					name to this section. Now, when mentioning it in a commit description, simply type the scope name
-					with a <strong>tilde</strong> (~) at the beginning: <strong>~faq</strong>. That's it, you just have
-					saved <strong>22</strong> (<strong>twenty&nbsp;two!</strong>) characters!
+					called &quot;Frequently Asked Questions&quot; in your application's &quot;readme&quot; file. Let's
+					assign a &quot;faq&quot; scope name to this section. Now, when mentioning it in a commit
+					description, simply type the scope name with a <strong>tilde</strong> (~) at the beginning:
+					<strong>~faq</strong>. That's it, you just have saved <strong>22</strong>
+					(<strong>twenty&nbsp;two!</strong>) characters!
 				</p>
 				<section>
 					<h4 align="center">Subject line examples</h4>
@@ -222,10 +223,10 @@
 					<a href="#contents-commit-messages-footer">Footer</a>
 				</h3>
 				<p>
-					A footer is used only for "<strong>Fix</strong>" commits to point to the problem being solved. Like
-					a subject line, a footer occupies strictly <strong>one</strong> 72-column row. It consists of a
-					<strong>hash&nbsp;sign</strong> (#), immediately followed by a number identifying the addressed
-					issue: <strong>#123456</strong>.
+					A footer is used only for &quot;<strong>Fix</strong>&quot; commits to point to the problem being
+					solved. Like a subject line, a footer occupies strictly <strong>one</strong> 72-column row. It
+					consists of a <strong>hash&nbsp;sign</strong> (#), immediately followed by a number identifying the
+					addressed issue: <strong>#123456</strong>.
 				</p>
 			</section>
 		</section>
@@ -288,9 +289,9 @@
 					<a href="#contents-branching-overview">Overview</a>
 				</h3>
 				<p>
-					Every repository is built around the default branch called "<strong>dev</strong>". This is a
-					<strong>solid</strong> branch, it represents the main stream of development. Ideally, the whole
-					history of the project should be linearly stored on "dev" as a series of
+					Every repository is built around the default branch called &quot;<strong>dev</strong>&quot;. This is
+					a <strong>solid</strong> branch, it represents the main stream of development. Ideally, the whole
+					history of the project should be linearly stored on &quot;dev&quot; as a series of
 					<strong>small and distinct</strong> commits.
 				</p>
 				<p>However, such scenario is often not viable in real world:</p>
@@ -307,9 +308,9 @@
 						<p id="branching-overview-issue2">
 							Another problem appears when the upcoming release is getting close. You have to perform
 							several final touches before announcing a new version, but suddenly understand that those
-							touches are really not needed on "dev" - they will hamper the future work. For example,
-							there is absolutely no necessity to improve quality of visual design if you are planning to
-							completely revisit the GUI right after the upcoming release.
+							touches are really not needed on &quot;dev&quot; - they will hamper the future work. For
+							example, there is absolutely no necessity to improve quality of visual design if you are
+							planning to completely revisit the GUI right after the upcoming release.
 						</p>
 					</li>
 				</ul>
@@ -326,7 +327,8 @@
 					To resolve the <a href="#branching-overview-issue1">first issue</a>, we add some kind of complexity
 					management using temporary unstable branches (hereinafter -
 					<strong>encapsulation&nbsp;branches</strong>). When a complex task rises, create a new branch, do
-					all unstable work on it, then merge back into "dev", and finally delete the encapsulation branch.
+					all unstable work on it, then merge back into &quot;dev&quot;, and finally delete the encapsulation
+					branch.
 				</p>
 				<p>Despite that this process is very intuitive, a set of mandatory rules exists:</p>
 				<ul>
@@ -363,15 +365,18 @@
 						<table>
 							<caption>Examples</caption>
 							<tr>
-								<td>Develop a new big class named "TextParser"</td>
+								<td>Develop a new big class named &quot;TextParser&quot;</td>
 								<td>feat/text-parser</td>
 							</tr>
 							<tr>
-								<td>Refactor a "Network" module consisting of many classes</td>
+								<td>Refactor a &quot;Network&quot; module consisting of many classes</td>
 								<td>refactor/network</td>
 							</tr>
 							<tr>
-								<td>Rewrite a "Server" class which is a member of the "Network" module</td>
+								<td>
+									Rewrite a &quot;Server&quot; class which is a member of the &quot;Network&quot;
+									module
+								</td>
 								<td>mod/network-server</td>
 							</tr>
 						</table>
@@ -410,8 +415,8 @@
 					<strong>never</strong> gets deleted.
 				</p>
 				<p>
-					Release branches are <strong>solid</strong>. Similarly to "dev", any of them can be (but not always
-					is) a base for its own encapsulation branches.
+					Release branches are <strong>solid</strong>. Similarly to &quot;dev&quot;, any of them can be (but
+					not always is) a base for its own encapsulation branches.
 				</p>
 			</section>
 		</section>
