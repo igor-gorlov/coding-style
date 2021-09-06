@@ -31,6 +31,28 @@
 					</p>
 				</li>
 				<li>
+					<p id="contents-metafiles">
+						<a href="#metafiles">Metafiles</a>
+					</p>
+					<ul>
+						<li>
+							<p id="contents-metafiles-readme">
+								<a href="#metafiles-readme">readme.md</a>
+							</p>
+						</li>
+						<li>
+							<p id="contents-metafiles-architecture">
+								<a href="#metafiles-architecture">architecture.md</a>
+							</p>
+						</li>
+						<li>
+							<p id="contents-metafiles-workflow">
+								<a href="#metafiles-workflow">workflow.md</a>
+							</p>
+						</li>
+					</ul>
+				</li>
+				<li>
 					<p id="contents-language">
 						<a href="#language">Natural Language</a>
 					</p>
@@ -132,13 +154,45 @@
 				documents and, in case of overlapping, take precedence over the general guidelines; for example,
 				&quot;cpp.html&quot; contains information specific to C++.
 			</p>
-			<p>
-				A project, in turn, can define its own set of rules overriding both the general and the per-language
-				instructions. Such local rules should be described by a special document called
-				&quot;<strong>workflow.md</strong>&quot; which resides in the root directory of the project and is
-				written in Markdown. The form of &quot;workflow.md&quot; is unspecified, but we recommend to describe
-				the project architecture, its branching strategy, and other non-standard stuff.
-			</p>
+		</section>
+		<section>
+			<h2 align="center" id="metafiles">
+				<a href="#contents-metafiles">Metafiles</a>
+			</h2>
+			<section>
+				<h3 align="center" id="metafiles-readme">
+					<a href="#contents-metafiles-readme">readme.md</a>
+				</h3>
+				<p>
+					Every project must have a &quot;<i>readme.md</i>&quot; file within its root directory. This is a
+					<strong>Markdown</strong> document which describes the project, defines its goals and ideology,
+					gives some basic instructions on building and/or using the product. However, &quot;readme.md&quot;
+					is <strong>not</strong> a replacement for regular documentation; it only declares the essentials.
+				</p>
+			</section>
+			<section>
+				<h3 align="center" id="metafiles-architecture">
+					<a href="#contents-metafiles-architecture">architecture.md</a>
+				</h3>
+				<p>
+					This <strong>mandatory</strong> metafile maps real names of architectural units to appropriate names
+					used for commit scoping, and therefore serves as a reminder for developers. Also,
+					&quot;architecture.md&quot; has an auxiliary function: it gives a quick high-level overview of the
+					codebase and helps to understand relationships between all components.
+				</p>
+			</section>
+			<section>
+				<h3 align="center" id="metafiles-workflow">
+					<a href="#contents-metafiles-workflow">workflow.md</a>
+				</h3>
+				<p>
+					A project can define its own set of rules overriding both the general and the per-language
+					instructions. Such local rules should be described by a special document called
+					&quot;<strong>workflow.md</strong>&quot; which resides in the root directory of the project and is
+					written in Markdown. The form of &quot;workflow.md&quot; is unspecified.
+				</p>
+				<p>&quot;workflow.md&quot; is an <strong>optional</strong> metafile.</p>
+			</section>
 		</section>
 		<section>
 			<h2 align="center" id="language">
@@ -171,19 +225,6 @@
 				<li>
 					<p>
 						Do <strong>not</strong> write source files consisting of more than <strong>1000</strong> lines.
-					</p>
-				</li>
-				<li>
-					<p>
-						Every project must have a &quot;<i>readme.md</i>&quot; file within its root directory. This is a
-						<strong>Markdown</strong> document which describes the project, defines its goals and ideology,
-						gives some basic instructions on building and/or using the product.
-					</p>
-				</li>
-				<li>
-					<p>
-						Do <strong>not</strong> place detailed information about your project into
-						&quot;readme.md&quot;, use dedicated documentation files for comprehensive explanations.
 					</p>
 				</li>
 			</ul>
