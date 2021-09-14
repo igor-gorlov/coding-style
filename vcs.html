@@ -95,7 +95,7 @@
 					by some third-party programmer will be your subject line. Therefore, you have to make it concise and
 					abstract, letting a reader to get the high-level sense of the changes represented by this commit.
 					Unless it is really necessary, do <strong>not</strong> mention raw filenames in the subject line -
-					use more abstract entities from the project architecture instead (for example, module names).
+					use <strong>archinames</strong> instead.
 				</p>
 				<p>Despite the hard length limit, a subject line has its own internal structure:</p>
 				<code>
@@ -152,12 +152,11 @@
 					</tr>
 				</table>
 				<p>
-					A scope can be denoted by an arbitrary <strong>Git-cased</strong> name transparently related to one
-					of the structural units of the project. If the chosen unit is nested (is a part of a larger unit),
-					you can create a hierarchical name using <strong>forward&nbsp;slash</strong> (/) as a separator;
-					such name will look like a filepath, although it hardly ever has something to do with real file
-					system. If the chosen unit implies the whole project (that is, represents the topmost level of the
-					hierarchy), a scope name should be omitted.
+					A scope is denoted by an appropriate archiname. If the pointed-to architectural entity is nested (is
+					a part of a larger archient), you can create a hierarchical identifier using
+					<strong>forward&nbsp;slash</strong> (/) as a separator; such scope name will look like a filepath,
+					although it hardly ever has something to do with real file system. If the chosen architectural
+					entity is the archiroot, a scope name should be omitted.
 				</p>
 				<p>
 					A description is here to answer the question &quot;<strong>what?</strong>&quot; instead of
@@ -170,12 +169,11 @@
 				<p>
 					It is possible to refer to another scope by its name right from a description. This trick is very
 					helpful in circumstances when you are exceeding the length limit and need to save your characters,
-					but the full title of the unit being mentioned is too cumbersome. For example, you have a section
-					called &quot;Frequently Asked Questions&quot; in your application's &quot;readme&quot; file. Let's
-					assign a &quot;faq&quot; scope name to this section. Now, when mentioning it in a commit
-					description, simply type the scope name with a <strong>tilde</strong> (~) at the beginning:
-					<strong>~faq</strong>. That's it, you just have saved <strong>22</strong>
-					(<strong>twenty&nbsp;two!</strong>) characters!
+					but the archititle being mentioned is too cumbersome. For example, you have a section with
+					archititle &quot;Frequently Asked Questions&quot; and archiname &quot;faq&quot; in your
+					application's user manual. When mentioning this section in a commit description, simply type the
+					scope name with a <strong>tilde</strong> (~) at the beginning: <strong>~faq</strong>. That's it, you
+					just have saved <strong>22</strong> (<strong>twenty&nbsp;two!</strong>) characters!
 				</p>
 				<section>
 					<h4 align="center">Subject line examples</h4>
