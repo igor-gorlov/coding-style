@@ -30,3 +30,7 @@
 * Formatting ~formatting
 * Indentation ~indentation
 * Commenting ~commenting
+
+## Templates (.templates/) ~templates
+
+### Document (document.html) ~document
