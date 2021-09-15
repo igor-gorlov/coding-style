@@ -4,12 +4,12 @@
 
 * Terminology ~terminology
 * The System of Coding Rules ~system
+* Natural Language ~language
+* Project Basics ~project-basics
 * Metafiles ~metafiles
   * architecture.md ~architecture
   * workflow.md ~workflow
   * readme.md ~readme
-* Natural Language ~language
-* Project Basics ~project-basics
 
 ## Version Control Guide (vcs.html) ~vcs
 
