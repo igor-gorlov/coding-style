@@ -204,6 +204,68 @@
 					<strong>every&nbsp;archichange</strong>. The update is performed by the same commit which applies
 					the architectural change itself.
 				</p>
+				<p>The following is a set of rules &quot;architecture.md&quot; should comply with:</p>
+				<ul>
+					<li>
+						<p>
+							The document begins with a <strong>level&nbsp;1</strong> header exactly matching the name of
+							the project.
+						</p>
+					</li>
+					<li>
+						<p>
+							<strong>File</strong> archients of up to 5 next architectural layers are denoted by headers
+							of lower (2-6) level. These headers have the following syntax:
+						</p>
+						<code>&lt;archititle&gt; (&lt;file-or-directory-name&gt;) ~&lt;archiname&gt;</code>
+					</li>
+					<li>
+						<p>
+							Deeper layers are represented as elements of a multi-level bulleted list. The form of such
+							elements is:
+						</p>
+						<code>&lt;archititle&gt; ~&lt;archiname&gt;</code>
+					</li>
+					<li>
+						<p>Do <strong>not</strong> mention metafiles in &quot;architecture.md&quot;.</p>
+					</li>
+				</ul>
+				<p>
+					The example below shows the contents of a real &quot;architecture.md&quot; file which had been being
+					using in this coding style documentation at one of its development stages.
+				</p>
+				<blockquote>
+					<code>
+						# Coding Style Guide by Igor Gorlov<br><br>
+						## General Guidelines (general.html) ~general<br><br>
+						* Terminology ~terminology<br>
+						* The System of Coding Rules ~system<br>
+						* Metafiles ~metafiles<br>
+						&nbsp;&nbsp;* architecture.md ~architecture<br>
+						&nbsp;&nbsp;* workflow.md ~workflow<br>
+						&nbsp;&nbsp;* readme.md ~readme<br>
+						* Natural Language ~language<br>
+						* Project Basics ~project-basics<br><br>
+						## Version Control Guide (vcs.html) ~vcs<br><br>
+						* Commit Messages ~commit-messages<br>
+						&nbsp;&nbsp;* Subject Line ~subject-line<br>
+						&nbsp;&nbsp;* Body ~body<br>
+						&nbsp;&nbsp;* Footer ~footer<br>
+						* Branching ~branching<br>
+						&nbsp;&nbsp;* Terminology ~terminology<br>
+						&nbsp;&nbsp;* Overview ~overview<br>
+						&nbsp;&nbsp;* Encapsulation Branches ~encapsulation<br>
+						&nbsp;&nbsp;* Release Branches ~release<br><br>
+						## C++ Coding Style Guide (cpp.html) ~cpp<br><br>
+						* General ~general<br>
+						* Naming ~naming<br>
+						* Formatting ~formatting<br>
+						* Indentation ~indentation<br>
+						* Commenting ~commenting<br><br>
+						## Templates (.templates/) ~templates<br><br>
+						### Document (document.html) ~document<br><br>
+					</code>
+				</blockquote>
 			</section>
 			<section>
 				<h3 align="center" id="metafiles-workflow">
