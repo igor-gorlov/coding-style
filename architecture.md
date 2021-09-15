@@ -22,3 +22,11 @@
   * Overview ~overview
   * Encapsulation Branches ~encapsulation
   * Release Branches ~release
+
+## C++ Coding Style Guide (cpp.html) ~cpp
+
+* General ~general
+* Naming ~naming
+* Formatting ~formatting
+* Indentation ~indentation
+* Commenting ~commenting
