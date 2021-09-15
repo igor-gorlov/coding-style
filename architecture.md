@@ -10,3 +10,15 @@
   * readme.md ~readme
 * Natural Language ~language
 * Project Basics ~project-basics
+
+## Version Control Guide (vcs.html) ~vcs
+
+* Commit Messages ~commit-messages
+  * Subject Line ~subject-line
+  * Body ~body
+  * Footer ~footer
+* Branching ~branching
+  * Terminology ~terminology
+  * Overview ~overview
+  * Encapsulation Branches ~encapsulation
+  * Release Branches ~release
