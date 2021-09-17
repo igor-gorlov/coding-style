@@ -14,7 +14,7 @@
 ## Version Control Guide (vcs.html) ~vcs
 
 * Commit Messages ~messages
-  * Subject Line ~subject-line
+  * Subject Line ~subject
   * Body ~body
   * Footer ~footer
 * Branching ~branching
