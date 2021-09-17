@@ -13,7 +13,7 @@
 
 ## Version Control Guide (vcs.html) ~vcs
 
-* Commit Messages ~commit-messages
+* Commit Messages ~messages
   * Subject Line ~subject-line
   * Body ~body
   * Footer ~footer
