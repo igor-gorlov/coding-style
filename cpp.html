@@ -82,13 +82,13 @@
 						<tr>
 							<td>An important variable</td>
 							<td>
-								<code><pre>uint64 <var>lastModificationTimestamp</var>;</pre></code>
+								<code>uint64 <var>lastModificationTimestamp</var>;</code>
 							</td>
 						</tr>
 						<tr>
 							<td>A temporary variable used only as a loop counter</td>
 							<td>
-								<code><pre>uint <var>i</var> = 0;</pre></code>
+								<code>uint <var>i</var> = 0;</code>
 							</td>
 						</tr>
 					</table>
@@ -109,24 +109,19 @@
 						<tr>
 							<td>A user-defined namespace</td>
 							<td>
-								<code>
-									<pre>namespace LibraryPrefix</pre>
-									<pre>{</pre>
-									<pre>	// Declarations and definitions...</pre>
-									<pre>}</pre>
-								</code>
+								<iframe src="snippets/cpp_example_1.html"></iframe>
 							</td>
 						</tr>
 						<tr>
 							<td>A user-declared type</td>
 							<td>
-								<code><pre>class CustomType;</pre></code>
+								<code>class CustomType;</code>
 							</td>
 						</tr>
 						<tr>
 							<td>An arithmetic type alias</td>
 							<td>
-								<code><pre>typedef std::uint32_t uint32;</pre></code>
+								<code>typedef std::uint32_t uint32;</code>
 							</td>
 						</tr>
 					</table>
@@ -138,13 +133,13 @@
 						<tr>
 							<td>A function call</td>
 							<td>
-								<code><pre>saveCurrentFile();</pre></code>
+								<code>saveCurrentFile();</code>
 							</td>
 						</tr>
 						<tr>
 							<td>A variable declaration</td>
 							<td>
-								<code><pre>int <var>playerPosition</var>;</pre></code>
+								<code>int <var>playerPosition</var>;</code>
 							</td>
 						</tr>
 					</table>
@@ -155,7 +150,7 @@
 						<tr>
 							<td>Example</td>
 							<td>
-								<code><pre>#define NUMBER_OF_ITERATIONS</pre></code>
+								<code>#define NUMBER_OF_ITERATIONS</code>
 							</td>
 						</tr>
 					</table>
@@ -166,13 +161,7 @@
 						<tr>
 							<td>Example</td>
 							<td>
-								<code>
-									<pre>class Allocator</pre>
-									<pre>{</pre>
-									<pre>private:</pre>
-									<pre>	void* <var>mAllocatedMemory</var>;</pre>
-									<pre>};</pre>
-								</code>
+								<iframe src="snippets/cpp_example_2.html"></iframe>
 							</td>
 						</tr>
 					</table>
@@ -183,13 +172,7 @@
 						<tr>
 							<td>Example</td>
 							<td>
-								<code>
-									<pre>class Grandfather</pre>
-									<pre>{</pre>
-									<pre>protected:</pre>
-									<pre>	std::string <var>pFamilySkeleton</var>;</pre>
-									<pre>};</pre>
-								</code>
+								<iframe src="snippets/cpp_example_3.html"></iframe>
 							</td>
 						</tr>
 					</table>
@@ -204,25 +187,25 @@
 						<tr>
 							<td>A good function name</td>
 							<td>
-								<code><pre>void deallocateMemory(void* <var>memory</var>);</pre></code>
+								<code>void deallocateMemory(void* <var>memory</var>);</code>
 							</td>
 						</tr>
 						<tr>
 							<td>An undesirable function name</td>
 							<td>
-								<code><pre>void memoryDeallocation(void* <var>memory</var>);</pre></code>
+								<code>void memoryDeallocation(void* <var>memory</var>);</code>
 							</td>
 						</tr>
 						<tr>
 							<td>An appropriate variable name</td>
 							<td>
-								<code><pre>enemy* <var>target</var>;</pre></code>
+								<code>enemy* <var>target</var>;</code>
 							</td>
 						</tr>
 						<tr>
 							<td>An inconvenient variable name</td>
 							<td>
-								<code><pre>enemy* <var>destroy</var>;</pre></code>
+								<code>enemy* <var>destroy</var>;</code>
 							</td>
 						</tr>
 					</table>
@@ -237,19 +220,13 @@
 						<tr>
 							<td>A function</td>
 							<td>
-								<code><pre>bool isRunning(ProcessHandler* <var>process</var>);</pre></code>
+								<code>bool isRunning(ProcessHandler* <var>process</var>);</code>
 							</td>
 						</tr>
 						<tr>
 							<td>A data member of a class</td>
 							<td>
-								<code>
-									<pre>class Player</pre>
-									<pre>{</pre>
-									<pre>public:</pre>
-									<pre>	bool <var>isAlive</var>;</pre>
-									<pre>};</pre>
-								</code>
+								<iframe src="snippets/cpp_example_4.html"></iframe>
 							</td>
 						</tr>
 					</table>
@@ -264,12 +241,7 @@
 						<tr>
 							<td>Example</td>
 							<td>
-								<code>
-									<pre>std::vector&lt;std::string&gt; <var>messages</var>;</pre>
-									<pre><var>messages</var>.push_back(&quot;Alarm!&quot;);</pre>
-									<pre><var>messages</var>.push_back(&quot;Alarm canceled&quot;);</pre>
-									<pre>uint64 <var>numberOfMessages</var> = <var>messages</var>.size();</pre>
-								</code>
+								<iframe src="snippets/cpp_example_5.html"></iframe>
 							</td>
 						</tr>
 					</table>
@@ -339,13 +311,7 @@
 						<tr>
 							<td>Example</td>
 							<td>
-								<code>
-									<pre>if(condition)</pre>
-									<pre>{</pre>
-									<pre>	doSomething();</pre>
-									<pre>	doSomethingElse();</pre>
-									<pre>}</pre>
-								</code>
+								<iframe src="snippets/cpp_example_6.html"></iframe>
 							</td>
 						</tr>
 					</table>
@@ -359,14 +325,7 @@
 						<tr>
 							<td>Example</td>
 							<td>
-								<code>
-									<pre>class ObjectWithEmptyConstructor</pre>
-									<pre>{</pre>
-									<pre>public:</pre>
-									<pre>	ObjectWithEmptyConstructor()</pre>
-									<pre>	{}</pre>
-									<pre>};</pre>
-								</code>
+								<iframe src="snippets/cpp_example_7.html"></iframe>
 							</td>
 						</tr>
 					</table>
@@ -381,21 +340,13 @@
 						<tr>
 							<td>A dirty trick allowed by C++</td>
 							<td>
-								<code>
-									<pre>if(condition)</pre>
-									<pre>	thenExecuteSingleStatement();</pre>
-								</code>
+								<iframe src="snippets/cpp_example_8.html"></iframe>
 							</td>
 						</tr>
 						<tr>
 							<td>The more reliable way</td>
 							<td>
-								<code>
-									<pre>if(condition)</pre>
-									<pre>{</pre>
-									<pre>	thenExecuteSingleStatement();</pre>
-									<pre>}</pre>
-								</code>
+								<iframe src="snippets/cpp_example_9.html"></iframe>
 							</td>
 						</tr>
 					</table>
@@ -419,15 +370,7 @@
 						<tr>
 							<td>Example</td>
 							<td>
-								<code>
-									<pre>class Container</pre>
-									<pre>{</pre>
-									<pre>public:</pre>
-									<pre>	void* <var>externalData</var>;</pre>
-									<pre>private:</pre>
-									<pre>	void* <var>mInternalData</var>;</pre>
-									<pre>};</pre>
-								</code>
+								<iframe src="snippets/cpp_example_10.html"></iframe>
 							</td>
 						</tr>
 					</table>
@@ -457,23 +400,13 @@
 						<tr>
 							<td>A namespace</td>
 							<td>
-								<code>
-									<pre>namespace Prefix</pre>
-									<pre>{</pre>
-									<pre>	// Many declarations and definitions...</pre>
-									<pre>} // namespace Prefix</pre>
-								</code>
+								<iframe src="snippets/cpp_example_11.html"></iframe>
 							</td>
 						</tr>
 						<tr>
 							<td>A class</td>
 							<td>
-								<code>
-									<pre>class Fake</pre>
-									<pre>{</pre>
-									<pre>	// A huge amount of members...</pre>
-									<pre>}; // class Fake</pre>
-								</code>
+								<iframe src="snippets/cpp_example_12.html"></iframe>
 							</td>
 						</tr>
 					</table>
