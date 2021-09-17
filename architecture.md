@@ -5,7 +5,7 @@
 * Terminology ~terminology
 * The System of Coding Rules ~system
 * Natural Language ~language
-* Project Basics ~project-basics
+* Project Basics ~project
 * Metafiles ~metafiles
   * architecture.md ~architecture
   * workflow.md ~workflow
@@ -13,8 +13,8 @@
 
 ## Version Control Guide (vcs.html) ~vcs
 
-* Commit Messages ~commit-messages
-  * Subject Line ~subject-line
+* Commit Messages ~messages
+  * Subject Line ~subject
   * Body ~body
   * Footer ~footer
 * Branching ~branching
