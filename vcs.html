@@ -67,6 +67,11 @@
 								<a href="#branching-release">Release Branches</a>
 							</p>
 						</li>
+						<li>
+							<p id="contents-branching-initial">
+								<a href="#branching-initial">Initial Commit</a>
+							</p>
+						</li>
 					</ul>
 				</li>
 			</ul>
@@ -396,7 +401,7 @@
 						</p>
 					</li>
 					<li>
-						<p>
+						<p id="branching-encapsulation-splitting-rule">
 							Keep all commits <strong>small and logically separated</strong>; if you have a complex task,
 							break it down into simpler ones.
 						</p>
@@ -426,6 +431,37 @@
 					A special &quot;<i>rel</i>&quot; prefix is used to clearly indicate a release branch; the prefix and
 					the branch name are separated by a <strong>slash</strong> (/): <strong>rel/v1</strong>.
 				</p>
+			</section>
+			<section>
+				<h3 align="center" id="branching-initial">
+					<a href="#contents-branching-initial">Initial Commit</a>
+				</h3>
+				<p>
+					A new repository may begin its life either from scratch (when there are no files yet) or by
+					importing an existing codebase. Regardless of the origin of the contents being added, the history of
+					the project has to start from some <i>initial&nbsp;commit</i>, which is the root of &quot;dev&quot;
+					branch and thus must be <strong>solid</strong>. An initial commit is special in the sense that its
+					message requirements have nothing to do with the regular
+					<a href="#commit-messages">commit message rules</a> (see next paragraphs for details). Also, by
+					definition, it is impossible for a repository to have more than 1 initial commit as well as not to
+					have it at all; therefore, the initial commit is always unique within particular history.
+				</p>
+				<p>
+					In case of existing code, <strong>all</strong> imported data should be included in one
+					<strong>monolithic</strong> initial commit. This is an exception to the
+					<a href="#branching-encapsulation-splitting-rule">rule which requires commits to be small</a>. Such
+					initial commit is equipped with a message <strong>exactly</strong> matching the text below:
+				</p>
+				<blockquote>Import project</blockquote>
+				<p>
+					When creating a project from scratch, the initial commit must consist of
+					<a href="general.html#metafiles-readme">&quot;readme.md&quot;</a> and
+					<a href="general.html#metafiles-architecture">&quot;architecture.md&quot;</a> documents. The former
+					metafile follows the regular conventions established for &quot;readme.md&quot;; the latter must only
+					have the <strong>top&#8209;level&nbsp;header</strong> inside it. The commit message will look
+					<strong>exactly</strong> as follows:
+				</p>
+				<blockquote>Initialize project</blockquote>
 			</section>
 		</section>
 	</main>
