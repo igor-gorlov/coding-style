@@ -401,7 +401,7 @@
 						</p>
 					</li>
 					<li>
-						<p>
+						<p id="branching-encapsulation-splitting-rule">
 							Keep all commits <strong>small and logically separated</strong>; if you have a complex task,
 							break it down into simpler ones.
 						</p>
@@ -441,6 +441,11 @@
 					importing an existing codebase. Regardless of the origin of the contents being added, the history of
 					the project has to start from some <i>initial&nbsp;commit</i>, which is the root of &quot;dev&quot;
 					branch and thus must be <strong>solid</strong>.
+				</p>
+				<p>
+					In case of existing code, <strong>all</strong> imported data should be included in one
+					<strong>monolithic</strong> initial commit. This is an exception to the
+					<a href="#branching-encapsulation-splitting-rule">rule which requires commits to be small</a>.
 				</p>
 			</section>
 		</section>
