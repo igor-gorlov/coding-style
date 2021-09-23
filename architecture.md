@@ -3,12 +3,12 @@
 ## Main Page (index.html) ~main
 
 * Motivation ~motivation
+* Natural Language ~language
 
 ## General Guidelines (general.html) ~general
 
 * Terminology ~terminology
 * The System of Coding Rules ~system
-* Natural Language ~language
 * Project Basics ~project
 * Metafiles ~metafiles
   * architecture.md ~architecture
