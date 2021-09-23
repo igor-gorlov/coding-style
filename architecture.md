@@ -1,5 +1,9 @@
 # Coding Style Guide by Igor Gorlov
 
+## Main Page (index.html) ~main
+
+* Motivation ~motivation
+
 ## General Guidelines (general.html) ~general
 
 * Terminology ~terminology
