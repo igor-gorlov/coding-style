@@ -9,7 +9,6 @@
 ## General Guidelines (general.html) ~general
 
 * Terminology ~terminology
-* The System of Coding Rules ~system
 * Project Basics ~project
 * Metafiles ~metafiles
   * architecture.md ~architecture
