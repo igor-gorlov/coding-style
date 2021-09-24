@@ -4,6 +4,7 @@
 
 * Motivation ~motivation
 * Natural Language ~language
+* Generic Instructions ~generic
 
 ## General Guidelines (general.html) ~general
 
