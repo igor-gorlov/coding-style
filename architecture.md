@@ -37,6 +37,8 @@
 * Indentation ~indentation
 * Commenting ~commenting
 
+## Common Stylesheet (common.css) ~common-style
+
 ## Templates (.templates/) ~templates
 
 ### Document (document.html) ~document
