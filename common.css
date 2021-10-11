@@ -18,3 +18,9 @@ dt
 	white-space: nowrap;
 	hyphens: none;
 }
+
+.non-breaking
+{
+	white-space: nowrap;
+	hyphens: none;
+}
