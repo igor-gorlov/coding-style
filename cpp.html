@@ -55,8 +55,8 @@
 				</li>
 				<li>
 					<p>
-						Use <strong>#pragma&nbsp;once</strong> in order to prevent multiple inclusions of single file.
-						Do <strong>not</strong> use conditional compilation for this purpose.
+						Use <strong class="non-breaking">#pragma once</strong> in order to prevent multiple inclusions
+						of single file. Do <strong>not</strong> use conditional compilation for this purpose.
 					</p>
 				</li>
 				<li>
@@ -95,8 +95,9 @@
 				</li>
 				<li>
 					<p>
-						Use <strong>upper&nbsp;camel&nbsp;case</strong> for namespace and type names (except of aliases
-						for arithmetic types, which should be written in <strong>lower&nbsp;camel&nbsp;case</strong>).
+						Use <strong class="non-breaking">upper camel case</strong> for namespace and type names (except
+						of aliases for arithmetic types, which should be written in
+						<strong class="non-breaking">lower camel case</strong>).
 					</p>
 					<table>
 						<caption>Examples</caption>
@@ -121,7 +122,7 @@
 					</table>
 				</li>
 				<li>
-					<p>Use <strong>lower&nbsp;camel&nbsp;case</strong> to name functions and variables.</p>
+					<p>Use <strong class="non-breaking">lower camel case</strong> to name functions and variables.</p>
 					<table>
 						<caption>Examples</caption>
 						<tr>
@@ -139,7 +140,7 @@
 					</table>
 				</li>
 				<li>
-					<p>Use <strong>upper&nbsp;snake&nbsp;case</strong> for preprocessor identifiers.</p>
+					<p>Use <strong class="non-breaking">upper snake case</strong> for preprocessor identifiers.</p>
 					<table>
 						<tr>
 							<td>Example</td>
@@ -207,7 +208,7 @@
 				<li>
 					<p>
 						Bool variables, as well as functions returning bool, may have names in the form of
-						<strong><u>yes-no</u>&nbsp;question</strong>.
+						<strong class="non-breaking"><u>yes-no</u> question</strong>.
 					</p>
 					<table>
 						<caption>Examples</caption>
@@ -229,7 +230,7 @@
 					<p>
 						If a variable stores amount of some items, give it a name with <strong>numberOf</strong> prefix;
 						but if such a variable contains an actual list of items, use
-						<strong>simple&nbsp;plural</strong>.
+						<strong class="non-breaking">simple plural</strong>.
 					</p>
 					<table>
 						<tr>
@@ -252,55 +253,67 @@
 					<ol>
 						<li>
 							<p>
-								An optional <strong><u>multiline</u>&nbsp;comment</strong> briefly describing this file
-								and its contents, followed by <strong><u>two</u>&nbsp;empty&nbsp;lines</strong>.
+								An optional <strong class="non-breaking"><u>multiline</u> comment</strong> briefly
+								describing this file and its contents, followed by
+								<strong class="non-breaking"><u>two</u> empty lines</strong>.
 							</p>
 						</li>
 						<li>
 							<p>
-								An optional <strong>#pragma&nbsp;once</strong>,
-								followed by <strong><u>two</u>&nbsp;empty&nbsp;lines</strong>.
-							</p>
-						</li>
-						<li>
-							<p>
-								An optional sequence of
-								<strong><u>standard</u>&nbsp;includes&nbsp;in&nbsp;<u>alphabetical</u>&nbsp;order</strong>,
-								followed by <strong><u>one</u>&nbsp;empty&nbsp;line</strong>.
+								An optional <strong class="non-breaking">#pragma once</strong>, followed by
+								<strong class="non-breaking"><u>two</u> empty lines</strong>.
 							</p>
 						</li>
 						<li>
 							<p>
 								An optional sequence of
-								<strong><u>system</u>&nbsp;includes&nbsp;in&nbsp;<u>alphabetical</u>&nbsp;order</strong>,
-								followed by <strong><u>one</u>&nbsp;empty&nbsp;line</strong>.
+								<strong class="non-breaking">
+									<u>standard</u> includes in <u>alphabetical</u> order
+								</strong>,
+								followed by <strong class="non-breaking"><u>one</u> empty line</strong>.
 							</p>
 						</li>
 						<li>
 							<p>
 								An optional sequence of
-								<strong><u>third-party</u>&nbsp;includes&nbsp;in&nbsp;<u>alphabetical</u>&nbsp;order</strong>,
-								followed by <strong><u>one</u>&nbsp;empty&nbsp;line</strong>.
+								<strong class="non-breaking">
+									<u>system</u> includes in <u>alphabetical</u> order
+								</strong>,
+								followed by <strong class="non-breaking"><u>one</u> empty line</strong>.
 							</p>
 						</li>
 						<li>
 							<p>
 								An optional sequence of
-								<strong>includes&nbsp;from&nbsp;<u>current&nbsp;project</u>&nbsp;in&nbsp;<u>alphabetical</u>&nbsp;order</strong>,
-								followed by <strong><u>one</u>&nbsp;empty&nbsp;line</strong>.
+								<strong class="non-breaking">
+									<u>third-party</u> includes in <u>alphabetical</u> order
+								</strong>,
+								followed by <strong class="non-breaking"><u>one</u> empty line</strong>.
 							</p>
 						</li>
 						<li>
 							<p>
-								A sequence of <strong><u>declarations&nbsp;and&nbsp;definitions</u></strong>,
+								An optional sequence of
+								<strong class="non-breaking">
+									includes from <u>current project</u> in <u>alphabetical</u> order
+								</strong>,
+								followed by <strong class="non-breaking"><u>one</u> empty line</strong>.
+							</p>
+						</li>
+						<li>
+							<p>
+								A sequence of <strong class="non-breaking"><u>declarations and definitions</u></strong>,
 								optionally divided into paragraphs by
-								<strong><u>one&nbsp;or&nbsp;two</u>&nbsp;empty&nbsp;lines</strong>.
+								<strong class="non-breaking"><u>one or two</u> empty lines</strong>.
 							</p>
 						</li>
 					</ol>
 				</li>
 				<li>
-					<p>Place each curly brace, which encloses a scope, on a <strong>separate&nbsp;line</strong>.</p>
+					<p>
+						Place each curly brace, which encloses a scope, on a
+						<strong class="non-breaking">separate line</strong>.
+					</p>
 					<table>
 						<tr>
 							<td>Example</td>
@@ -313,7 +326,9 @@
 				<li>
 					<p>
 						If a pair of curly braces is empty, place <strong>both</strong> these braces on
-						<strong><u>one&nbsp;separate</u>&nbsp;line&nbsp;<u>without</u>&nbsp;any&nbsp;whitespaces&nbsp;between&nbsp;them</strong>.
+						<strong class="non-breaking">
+							<u>one separate</u> line <u>without</u> any whitespaces between them
+						</strong>.
 					</p>
 					<table>
 						<tr>
@@ -365,7 +380,7 @@
 				</li>
 				<li>
 					<p>
-						Indent comments in the <strong><u>exactly&nbsp;same</u>&nbsp;manner&nbsp;as&nbsp;code</strong>.
+						Indent comments in the <strong class="non-breaking"><u>exactly same</u> manner as code</strong>.
 					</p>
 				</li>
 			</ul>
@@ -378,10 +393,14 @@
 				<li>
 					<p>
 						When finishing a class or namespace body which
-						<strong>occupies&nbsp;a&nbsp;lot&nbsp;of&nbsp;<u>vertical</u>&nbsp;space</strong>, put a
-						<strong><u>single-line</u>&nbsp;comment&nbsp;<u>right&nbsp;after</u>&nbsp;the&nbsp;closing&nbsp;curly&nbsp;brace</strong>
+						<strong class="non-breaking">occupies a lot of <u>vertical</u> space</strong>, put a
+						<strong class="non-breaking">
+							<u>single-line</u> comment <u>right after</u> the closing curly brace
+						</strong>
 						(right after semicolon in case of class). The mentioned comment should be
-						<strong><u>equivalent</u>&nbsp;to&nbsp;the&nbsp;header&nbsp;of&nbsp;this&nbsp;class&nbsp;or&nbsp;namespace</strong>.
+						<strong class="non-breaking">
+							<u>equivalent</u> to the header of this class or namespace
+						</strong>.
 					</p>
 					<table>
 						<caption>Examples</caption>
@@ -402,18 +421,18 @@
 				<li>
 					<p>
 						If a single-line comment (<u>//...</u>) does not fit on one line,
-						use a <strong>multiline</strong> variant (<u>/*...*/</u>) instead.
+						use a <strong>multiline</strong> variant (<u class="non-breaking">/*...*/</u>) instead.
 					</p>
 				</li>
 				<li>
 					<p>
 						Try to comment on
-						<strong><u>any</u>&nbsp;code&nbsp;that&nbsp;is&nbsp;<u>not</u>&nbsp;self-documented</strong>.
+						<strong class="non-breaking"><u>any</u> code that is <u>not</u> self-documented</strong>.
 					</p>
 				</li>
 				<li>
 					<p>
-						Finish <strong><u>any</u>&nbsp;comment</strong> with a <strong>period</strong>.
+						Finish <strong class="non-breaking"><u>any</u> comment</strong> with a <strong>period</strong>.
 					</p>
 				</li>
 			</ul>
