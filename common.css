@@ -19,6 +19,11 @@ dt
 	hyphens: none;
 }
 
+strong>strong
+{
+	text-decoration: underline;
+}
+
 .non-breaking
 {
 	white-space: nowrap;
