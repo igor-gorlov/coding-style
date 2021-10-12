@@ -24,6 +24,13 @@ strong>strong
 	text-decoration: underline;
 }
 
+dfn
+{
+	font-style: italic;
+	white-space: nowrap;
+	hyphens: none;
+}
+
 .non-breaking
 {
 	white-space: nowrap;
