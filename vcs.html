@@ -82,10 +82,11 @@
 				<a href="#contents-commit-messages">Commit Messages</a>
 			</h2>
 			<p>
-				A well-formed commit message consists of a mandatory <strong>subject line</strong>, an optional
-				<strong>body</strong> and an optional <strong>footer</strong>. All these three parts are separated from
-				each other by <strong><u>one</u>&nbsp;empty&nbsp;line</strong>. The whole message should be wrapped to
-				<strong>72</strong> columns and should <strong>not</strong> refer to any other commits.
+				A well-formed commit message consists of a mandatory <strong class="non-breaking">subject line</strong>,
+				an optional <strong>body</strong> and an optional <strong>footer</strong>. All these three parts are
+				separated from each other by <strong class="non-breaking"><u>one</u> empty line</strong>. The whole
+				message should be wrapped to <strong>72</strong> columns and should <strong>not</strong> refer to any
+				other commits.
 			</p>
 			<p>In the next subsections, we will consider each part of a commit message in detail.</p>
 			<section>
@@ -166,9 +167,9 @@
 				<p>
 					A scope is denoted by an appropriate archiname. If the pointed-to architectural entity is nested (is
 					a part of a larger archient), you can create a hierarchical identifier using
-					<strong>forward&nbsp;slash</strong> (/) as a separator; such scope name will look like a filepath,
-					although it hardly ever has something to do with real file system. If the chosen architectural
-					entity is the archiroot, a scope name should be omitted.
+					<strong class="non-breaking">forward slash</strong> (/) as a separator; such scope name will look
+					like a filepath, although it hardly ever has something to do with real file system. If the chosen
+					architectural entity is the archiroot, a scope name should be omitted.
 				</p>
 				<p>
 					A description is here to answer the question &quot;<strong>what?</strong>&quot; instead of
@@ -185,7 +186,7 @@
 					archititle &quot;Frequently Asked Questions&quot; and archiname &quot;faq&quot; in your
 					application's user manual. When mentioning this section in a commit description, simply type the
 					scope name with a <strong>tilde</strong> (~) at the beginning: <strong>~faq</strong>. That's it, you
-					just have saved <strong>22</strong> (<strong>twenty&nbsp;two!</strong>) characters!
+					just have saved <strong>22</strong> (<strong class="non-breaking">twenty two!</strong>) characters!
 				</p>
 				<section>
 					<h4>Subject Line Examples</h4>
@@ -221,9 +222,9 @@
 				<p>
 					A subject line is typically followed by a body which tells more about the commit in a relatively
 					free form. This part of a commit message consists of an arbitrary number of paragraphs separated by
-					an <strong>empty&nbsp;line</strong>. Here you can explain the <strong>reasons</strong> the commit
-					had been prompted by, add <strong>technical&nbsp;details</strong> and (probably) place additional
-					information.
+					an <strong class="non-breaking">empty line</strong>. Here you can explain the
+					<strong>reasons</strong> the commit had been prompted by, add
+					<strong class="non-breaking">technical details</strong> and (probably) place additional information.
 				</p>
 				<p>
 					A body is <strong>less</strong> abstract than a subject line, so you are allowed to use raw
@@ -238,8 +239,8 @@
 				<p>
 					A footer is used only for &quot;<strong>Fix</strong>&quot; commits to point to the problem being
 					solved. Like a subject line, a footer occupies strictly <strong>one</strong> 72-column row. It
-					consists of a <strong>hash&nbsp;sign</strong> (#), immediately followed by a number identifying the
-					addressed issue: <strong>#123456</strong>.
+					consists of a <strong class="non-breaking">hash sign</strong> (#), immediately followed by a number
+					identifying the addressed issue: <strong>#123456</strong>.
 				</p>
 			</section>
 		</section>
@@ -339,9 +340,9 @@
 				<p>
 					To resolve the <a href="#branching-overview-issue1">first issue</a>, we add some kind of complexity
 					management using temporary unstable branches (hereinafter -
-					<strong>encapsulation&nbsp;branches</strong>). When a complex task rises, create a new branch, do
-					all unstable work on it, then merge back into &quot;dev&quot;, and finally delete the encapsulation
-					branch.
+					<strong class="non-breaking">encapsulation branches</strong>). When a complex task rises, create a
+					new branch, do all unstable work on it, then merge back into &quot;dev&quot;, and finally delete the
+					encapsulation branch.
 				</p>
 				<p>Despite that this process is very intuitive, a set of mandatory rules exists:</p>
 				<ul>
@@ -425,12 +426,12 @@
 				<p>
 					This addresses the <a href="#branching-overview-issue2">second issue</a>. If the new version of your
 					product needs additional pre-release tuning which has nothing to do with the subsequent (starting
-					after this new version) development, create a dedicated <i>release&nbsp;branch</i> and do all the
-					preparatory work there. When the project is absolutely ready to be released, tag the tip of the
-					release branch, and you are done. However, if you maintain several generations of the product in
-					parallel (like Microsoft does with its Windows 10 and Windows 11 operating systems), it might be
-					sine to develop updates and fixes for each generation right on that generation's release branch
-					(after the major release tag). Anyway, a release branch persistently remains alive and
+					after this new version) development, create a dedicated <i class="non-breaking">release branch</i>
+					and do all the preparatory work there. When the project is absolutely ready to be released, tag the
+					tip of the release branch, and you are done. However, if you maintain several generations of the
+					product in parallel (like Microsoft does with its Windows 10 and Windows 11 operating systems), it
+					might be sine to develop updates and fixes for each generation right on that generation's release
+					branch (after the major release tag). Anyway, a release branch persistently remains alive and
 					<strong>never</strong> gets deleted.
 				</p>
 				<p>
@@ -449,12 +450,13 @@
 				<p>
 					A new repository may begin its life either from scratch (when there are no files yet) or by
 					importing an existing codebase. Regardless of the origin of the contents being added, the history of
-					the project has to start from some <i>initial&nbsp;commit</i>, which is the root of &quot;dev&quot;
-					branch and thus must be <strong>solid</strong>. An initial commit is special in the sense that its
-					message requirements have nothing to do with the regular
-					<a href="#commit-messages">commit message rules</a> (see next paragraphs for details). Also, by
-					definition, it is impossible for a repository to have more than 1 initial commit as well as not to
-					have it at all; therefore, the initial commit is always unique within particular history.
+					the project has to start from some <i class="non-breaking">initial commit</i>, which is the root of
+					&quot;dev&quot; branch and thus must be <strong>solid</strong>. An initial commit is special in the
+					sense that its message requirements have nothing to do with the regular
+					<a href="#commit-messages"><span class="non-breaking">commit message rules</span></a> (see next
+					paragraphs for details). Also, by definition, it is impossible for a repository to have more than 1
+					initial commit as well as not to have it at all; therefore, the initial commit is always unique
+					within particular history.
 				</p>
 				<p>
 					In case of existing code, <strong>all</strong> imported data should be included in one
@@ -468,8 +470,8 @@
 					<a href="general.html#metafiles-readme">&quot;readme.md&quot;</a> and
 					<a href="general.html#metafiles-architecture">&quot;architecture.md&quot;</a> documents. The former
 					metafile follows the regular conventions established for &quot;readme.md&quot;; the latter must only
-					have the <strong>top&#8209;level&nbsp;header</strong> inside it. The commit message will look
-					<strong>exactly</strong> as follows:
+					have the <strong class="non-breaking">top-level header</strong> inside it. The commit message will
+					look <strong>exactly</strong> as follows:
 				</p>
 				<blockquote>Initialize project</blockquote>
 			</section>
