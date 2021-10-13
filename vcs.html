@@ -14,7 +14,9 @@
 			In my work, I use <a href="https://git-scm.com"><strong>Git</strong></a> as the only version control system.
 			All my projects are Git repositories remotely hosted on
 			<a href="https://github.com"><strong>GitHub</strong></a> under
-			<a href="https://github.com/igor-gorlov"><strong>Igor Gorlov personal account</strong></a>.
+			<a href="https://github.com/igor-gorlov">
+				<strong class="non-breaking">Igor Gorlov personal account</strong>
+			</a>.
 		</p>
 		<nav>
 			<h2 id="contents">Contents</h2>
@@ -94,13 +96,13 @@
 					<a href="#contents-commit-messages-subject">Subject Line</a>
 				</h3>
 				<p>
-					A subject line is intended to express a <strong>brief summary</strong> of the commit, which may be
-					used by various developer tools and services, including (but not limiting to) the GitHub web
-					interface and Git itself. In many cases, the only thing that is shown in a commit log being viewed
-					by some third-party programmer will be your subject line. Therefore, you have to make it concise and
-					abstract, letting a reader to get the high-level sense of the changes represented by this commit.
-					Unless it is really necessary, do <strong>not</strong> mention raw filenames in the subject line -
-					use <strong>archinames</strong> instead.
+					A subject line is intended to express a <strong class="non-breaking">brief summary</strong> of the
+					commit, which may be used by various developer tools and services, including (but not limiting to)
+					the GitHub web interface and Git itself. In many cases, the only thing that is shown in a commit log
+					being viewed by some third-party programmer will be your subject line. Therefore, you have to make
+					it concise and abstract, letting a reader to get the high-level sense of the changes represented by
+					this commit. Unless it is really necessary, do <strong>not</strong> mention raw filenames in the
+					subject line - use <strong>archinames</strong> instead.
 				</p>
 				<p>Despite the hard length limit, a subject line has its own internal structure:</p>
 				<code>
@@ -174,10 +176,11 @@
 				<p>
 					A description is here to answer the question &quot;<strong>what?</strong>&quot; instead of
 					&quot;<strong>why?</strong>&quot;. Write in a few words what exactly was done, and leave the reasons
-					(if any) for the message body. Please note that you have to use an <strong>imperative mood</strong>
-					within the description (write it in the <strong>present tense</strong>), and the use of articles
-					(a/an, the) is <strong>not</strong> recommended. Also do <strong>not</strong> start the description
-					with a capital letter and do <strong>not</strong> finish it with a period (.).
+					(if any) for the message body. Please note that you have to use an
+					<strong class="non-breaking">imperative mood</strong> within the description (write it in the
+					<strong class="non-breaking">present tense</strong>), and the use of articles (a/an, the) is
+					<strong>not</strong> recommended. Also do <strong>not</strong> start the description with a capital
+					letter and do <strong>not</strong> finish it with a period (.).
 				</p>
 				<p>
 					It is possible to refer to another scope by its name right from a description. This trick is very
@@ -260,7 +263,7 @@
 					<dt>Workable program</dt>
 					<dd>
 						A program that <strong>compiles</strong> (if required), <strong>runs</strong> and
-						<strong>passes all tests</strong> (if any).
+						<strong class="non-breaking">passes all tests</strong> (if any).
 					</dd>
 					<dt>Readable documentation</dt>
 					<dd>
@@ -285,13 +288,20 @@
 					</dd>
 					<dt>Unstable state</dt>
 					<dd>
-						A codebase is considered to be in an unstable state when <strong>one or more</strong> of the
-						solid state conditions are <strong>false</strong>.
+						A codebase is considered to be in an unstable state when
+						<strong class="non-breaking">one or more</strong> of the solid state conditions are
+						<strong>false</strong>.
 					</dd>
 					<dt>Solid commit</dt>
-					<dd>A commit pointing to a codebase snapshot which is in a <strong>solid state</strong>.</dd>
+					<dd>
+						A commit pointing to a codebase snapshot which is in a
+						<strong class="non-breaking">solid state</strong>.
+					</dd>
 					<dt>Unstable commit</dt>
-					<dd>A commit pointing to a codebase snapshot which is in an <strong>unstable state</strong>.</dd>
+					<dd>
+						A commit pointing to a codebase snapshot which is in an
+						<strong class="non-breaking">unstable state</strong>.
+					</dd>
 					<dt>Solid branch</dt>
 					<dd>A branch requiring <strong>every</strong> its commit to be <strong>solid</strong>.</dd>
 					<dt>Unstable branch</dt>
@@ -348,8 +358,8 @@
 				<ul>
 					<li>
 						<p>
-							The branch name must be written in <strong>Git case</strong>. If the name is hierarchical,
-							replace the separating slash (/) with a <strong>hyphen</strong> (-).
+							The branch name must be written in <strong class="non-breaking">Git case</strong>. If the
+							name is hierarchical, replace the separating slash (/) with a <strong>hyphen</strong> (-).
 						</p>
 						<table>
 							<caption>Examples</caption>
@@ -413,8 +423,8 @@
 					</li>
 					<li>
 						<p id="branching-encapsulation-splitting-rule">
-							Keep all commits <strong>small and logically separated</strong>; if you have a complex task,
-							break it down into simpler ones.
+							Keep all commits <strong class="non-breaking">small and logically separated</strong>; if you
+							have a complex task, break it down into simpler ones.
 						</p>
 					</li>
 				</ul>
