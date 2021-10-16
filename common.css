@@ -31,6 +31,11 @@ dfn
 	hyphens: none;
 }
 
+nav ul, nav ol
+{
+	list-style-type: none;
+}
+
 .non-breaking
 {
 	white-space: nowrap;
