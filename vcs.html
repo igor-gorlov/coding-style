@@ -21,58 +21,30 @@
 		<nav>
 			<h2 id="contents">Contents</h2>
 			<ul>
-				<li>
-					<p id="contents-commit-messages">
-						<a href="#commit-messages">Commit Messages</a>
-					</p>
+				<li id="contents-commit-messages">
+					<a href="#commit-messages">Commit Messages</a>
 					<ul>
-						<li>
-							<p id="contents-commit-messages-subject">
-								<a href="#commit-messages-subject">Subject Line</a>
-							</p>
+						<li id="contents-commit-messages-subject">
+							<a href="#commit-messages-subject">Subject Line</a>
 						</li>
-						<li>
-							<p id="contents-commit-messages-body">
-								<a href="#commit-messages-body">Body</a>
-							</p>
+						<li id="contents-commit-messages-body">
+							<a href="#commit-messages-body">Body</a>
 						</li>
-						<li>
-							<p id="contents-commit-messages-footer">
-								<a href="#commit-messages-footer">Footer</a>
-							</p>
+						<li id="contents-commit-messages-footer">
+							<a href="#commit-messages-footer">Footer</a>
 						</li>
 					</ul>
 				</li>
-				<li>
-					<p id="contents-branching">
-						<a href="#branching">Branching</a>
-					</p>
+				<li id="contents-branching">
+					<a href="#branching">Branching</a>
 					<ul>
-						<li>
-							<p id="contents-branching-terminology">
-								<a href="#branching-terminology">Terminology</a>
-							</p>
+						<li id="contents-branching-terminology"><a href="#branching-terminology">Terminology</a></li>
+						<li id="contents-branching-overview"><a href="#branching-overview">Overview</a></li>
+						<li id="contents-branching-encapsulation">
+							<a href="#branching-encapsulation">Encapsulation Branches</a>
 						</li>
-						<li>
-							<p id="contents-branching-overview">
-								<a href="#branching-overview">Overview</a>
-							</p>
-						</li>
-						<li>
-							<p id="contents-branching-encapsulation">
-								<a href="#branching-encapsulation">Encapsulation Branches</a>
-							</p>
-						</li>
-						<li>
-							<p id="contents-branching-release">
-								<a href="#branching-release">Release Branches</a>
-							</p>
-						</li>
-						<li>
-							<p id="contents-branching-initial">
-								<a href="#branching-initial">Initial Commit</a>
-							</p>
-						</li>
+						<li id="contents-branching-release"><a href="#branching-release">Release Branches</a></li>
+						<li id="contents-branching-initial"><a href="#branching-initial">Initial Commit</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -195,27 +167,13 @@
 				<section>
 					<h4>Subject Line Examples</h4>
 					<ul>
-						<li>
-							<p>fix ui/input/keyboard: correct handling of arrow keys</p>
-						</li>
-						<li>
-							<p>feat core/parser: add Unicode support</p>
-						</li>
-						<li>
-							<p>mod ui/settings/timeout: replace list with text field</p>
-						</li>
-						<li>
-							<p>opt lib/containers/concurrent-map: switch to lock-free algorithm</p>
-						</li>
-						<li>
-							<p>refactor server: split up queryDatabase() method</p>
-						</li>
-						<li>
-							<p>format: change indentation method from spaces to tabs</p>
-						</li>
-						<li>
-							<p>clean: drop Windows 7 support</p>
-						</li>
+						<li>fix ui/input/keyboard: correct handling of arrow keys</li>
+						<li>feat core/parser: add Unicode support</li>
+						<li>mod ui/settings/timeout: replace list with text field</li>
+						<li>opt lib/containers/concurrent-map: switch to lock-free algorithm</li>
+						<li>refactor server: split up queryDatabase() method</li>
+						<li>format: change indentation method from spaces to tabs</li>
+						<li>clean: drop Windows 7 support</li>
 					</ul>
 				</section>
 			</section>
@@ -276,15 +234,9 @@
 						A codebase is considered to be in a solid state when <strong>all</strong> of the following
 						conditions are met:
 						<ul>
-							<li>
-								<p>Its program part (if present) is <strong>workable</strong>.</p>
-							</li>
-							<li>
-								<p>Its documentation part (if present) is <strong>readable</strong>.</p>
-							</li>
-							<li>
-								<p>It conforms to the coding style rules.</p>
-							</li>
+							<li>Its program part (if present) is <strong>workable</strong>.</li>
+							<li>Its documentation part (if present) is <strong>readable</strong>.</li>
+							<li>It conforms to the coding style rules.</li>
 						</ul>
 					</dd>
 					<dt>Unstable state</dt>
@@ -321,22 +273,17 @@
 				</p>
 				<p>However, such scenario is often not viable in real world:</p>
 				<ul>
-					<li>
-						<p id="branching-overview-issue1">
-							The first obstacle comes from inherent complexity of any software which is larger than a
-							code example from a beginners' manual. The more abstraction layers your project consists of,
-							the harder it becomes both to retain a solid state and to keep commits compact
-							simultaneously.
-						</p>
+					<li id="branching-overview-issue1">
+						The first obstacle comes from inherent complexity of any software which is larger than a code
+						example from a beginners' manual. The more abstraction layers your project consists of, the
+						harder it becomes both to retain a solid state and to keep commits compact simultaneously.
 					</li>
-					<li>
-						<p id="branching-overview-issue2">
-							Another problem appears when the upcoming release is getting close. You have to perform
-							several final touches before announcing a new version, but suddenly understand that those
-							touches are really not needed on &quot;dev&quot; - they will hamper the future work. For
-							example, there is absolutely no necessity to improve quality of visual design if you are
-							planning to completely revisit the GUI right after the upcoming release.
-						</p>
+					<li id="branching-overview-issue2">
+						Another problem appears when the upcoming release is getting close. You have to perform several
+						final touches before announcing a new version, but suddenly understand that those touches are
+						really not needed on &quot;dev&quot; - they will hamper the future work. For example, there is
+						absolutely no necessity to improve quality of visual design if you are planning to completely
+						revisit the GUI right after the upcoming release.
 					</li>
 				</ul>
 				<p>
@@ -358,11 +305,9 @@
 				<p>Despite that this process is very intuitive, a set of mandatory rules exists:</p>
 				<ul>
 					<li>
-						<p>
-							The branch name must be written in <strong class="non-breaking">Git case</strong>. If the
-							name is hierarchical, replace the separating slash (/) with a
-							<strong class="non-breaking">hyphen (-)</strong>.
-						</p>
+						The branch name must be written in <strong class="non-breaking">Git case</strong>. If the name
+						is hierarchical, replace the separating slash (/) with a
+						<strong class="non-breaking">hyphen (-)</strong>.
 						<table>
 							<caption>Examples</caption>
 							<tr>
@@ -384,11 +329,8 @@
 						</table>
 					</li>
 					<li>
-						<p>
-							A prefix denoting the type of the merge commit being planned must precede the branch name;
-							the name and the prefix must be separated by
-							<strong class="non-breaking">slash (/)</strong>.
-						</p>
+						A prefix denoting the type of the merge commit being planned must precede the branch name; the
+						name and the prefix must be separated by <strong class="non-breaking">slash (/)</strong>.
 						<table>
 							<caption>Examples</caption>
 							<tr>
@@ -408,27 +350,19 @@
 							</tr>
 						</table>
 					</li>
+					<li><strong>Always</strong> create a merge commit; avoid fast-forward merges.</li>
 					<li>
-						<p><strong>Always</strong> create a merge commit; avoid fast-forward merges.</p>
+						Provide the merge commit with an informative <a href="#commit-messages">message</a>; do
+						<strong>not</strong> leave the default one.
 					</li>
 					<li>
-						<p>
-							Provide the merge commit with an informative <a href="#commit-messages">message</a>; do
-							<strong>not</strong> leave the default one.
-						</p>
+						The abuse of encapsulation branches can lead to an overcomplicated repository structure; so,
+						avoid creating them recursively in order to keep any encapsulation branch
+						<strong>linear</strong>.
 					</li>
-					<li>
-						<p>
-							The abuse of encapsulation branches can lead to an overcomplicated repository structure; so,
-							avoid creating them recursively in order to keep any encapsulation branch
-							<strong>linear</strong>.
-						</p>
-					</li>
-					<li>
-						<p id="branching-encapsulation-splitting-rule">
-							Keep all commits <strong class="non-breaking">small and logically separated</strong>; if you
-							have a complex task, break it down into simpler ones.
-						</p>
+					<li id="branching-encapsulation-splitting-rule">
+						Keep all commits <strong class="non-breaking">small and logically separated</strong>; if you
+						have a complex task, break it down into simpler ones.
 					</li>
 				</ul>
 			</section>
