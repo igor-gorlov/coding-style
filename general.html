@@ -13,36 +13,16 @@
 		<nav>
 			<h2 id="contents">Contents</h2>
 			<ul>
-				<li>
-					<p id="contents-terminology">
-						<a href="#terminology">Terminology</a>
-					</p>
-				</li>
-				<li>
-					<p id="contents-project">
-						<a href="#project">Project Basics</a>
-					</p>
-				</li>
-				<li>
-					<p id="contents-metafiles">
-						<a href="#metafiles">Metafiles</a>
-					</p>
+				<li id="contents-terminology"><a href="#terminology">Terminology</a></li>
+				<li id="contents-project"><a href="#project">Project Basics</a></li>
+				<li id="contents-metafiles">
+					<a href="#metafiles">Metafiles</a>
 					<ul>
-						<li>
-							<p id="contents-metafiles-architecture">
-								<a href="#metafiles-architecture">architecture.md</a>
-							</p>
+						<li id="contents-metafiles-architecture">
+							<a href="#metafiles-architecture">architecture.md</a>
 						</li>
-						<li>
-							<p id="contents-metafiles-workflow">
-								<a href="#metafiles-workflow">workflow.md</a>
-							</p>
-						</li>
-						<li>
-							<p id="contents-metafiles-readme">
-								<a href="#metafiles-readme">readme.md</a>
-							</p>
-						</li>
+						<li id="contents-metafiles-workflow"><a href="#metafiles-workflow">workflow.md</a></li>
+						<li id="contents-metafiles-readme"><a href="#metafiles-readme">readme.md</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -164,43 +144,22 @@
 			</h2>
 			<ul>
 				<li>
-					<p>
-						Encode <strong>all</strong> files within a repository in
-						<strong class="non-breaking">UTF-8</strong>.
-					</p>
+					Encode <strong>all</strong> files within a repository in
+					<strong class="non-breaking">UTF-8</strong>.
 				</li>
+				<li>Finish any file with a <strong class="non-breaking">line terminator</strong>.</li>
+				<li>Name the root directory of a project in <strong class="non-breaking">Git case</strong>.</li>
 				<li>
-					<p>Finish any file with a <strong class="non-breaking">line terminator</strong>.</p>
+					Use <strong class="non-breaking">lower snake case</strong> to name <strong>all</strong> files and
+					directories which are (recursively) located within the root directory of a project.
 				</li>
+				<li>For indentation use <strong class="non-breaking">tabs (one per level)</strong>, not spaces.</li>
+				<li>Keep line length <strong>not</strong> higher than <strong>120</strong> columns.</li>
+				<li>Do <strong>not</strong> write source files consisting of more than <strong>1000</strong> lines.</li>
 				<li>
-					<p>Name the root directory of a project in <strong class="non-breaking">Git case</strong>.</p>
-				</li>
-				<li>
-					<p>
-						Use <strong class="non-breaking">lower snake case</strong> to name <strong>all</strong> files
-						and directories which are (recursively) located within the root directory of a project.
-					</p>
-				</li>
-				<li>
-					<p>
-						For indentation use <strong class="non-breaking">tabs (one per level)</strong>,
-						not spaces.
-					</p>
-				</li>
-				<li>
-					<p>Keep line length <strong>not</strong> higher than <strong>120</strong> columns.</p>
-				</li>
-				<li>
-					<p>
-						Do <strong>not</strong> write source files consisting of more than <strong>1000</strong> lines.
-					</p>
-				</li>
-				<li>
-					<p>
-						To simplify creation of new files with initial content or insertion of frequently repeated code
-						fragments into existing files, you can make a &quot;<strong>.templates</strong>&quot; catalog
-						within the root directory of your project and store samples there.
-					</p>
+					To simplify creation of new files with initial content or insertion of frequently repeated code
+					fragments into existing files, you can make a &quot;<strong>.templates</strong>&quot; catalog within
+					the root directory of your project and store samples there.
 				</li>
 			</ul>
 		</section>
@@ -236,28 +195,20 @@
 				<p>The following is a set of rules &quot;architecture.md&quot; should comply with:</p>
 				<ul>
 					<li>
-						<p>
-							The document begins with a <strong class="non-breaking">level 1 header</strong> exactly
-							matching the name of the project.
-						</p>
+						The document begins with a <strong class="non-breaking">level 1 header</strong> exactly matching
+						the name of the project.
 					</li>
 					<li>
-						<p>
-							<strong>File</strong> archients of up to 5 next architectural layers are denoted by headers
-							of lower (2-6) level. These headers have the following syntax:
-						</p>
+						<strong>File</strong> archients of up to 5 next architectural layers are denoted by headers of
+						lower (2-6) level. These headers have the following syntax:
 						<code>&lt;archititle&gt; (&lt;file-or-directory-name&gt;) ~&lt;archiname&gt;</code>
 					</li>
 					<li>
-						<p>
-							Deeper layers are represented as elements of a multi-level bulleted list. The form of such
-							elements is:
-						</p>
+						Deeper layers are represented as elements of a multi-level bulleted list. The form of such
+						elements is:
 						<code>&lt;archititle&gt; ~&lt;archiname&gt;</code>
 					</li>
-					<li>
-						<p>Do <strong>not</strong> mention metafiles in &quot;architecture.md&quot;.</p>
-					</li>
+					<li>Do <strong>not</strong> mention metafiles in &quot;architecture.md&quot;.</li>
 				</ul>
 				<p>
 					The example below shows the contents of a real &quot;architecture.md&quot; file which had been being
