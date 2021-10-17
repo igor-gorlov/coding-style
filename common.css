@@ -41,3 +41,8 @@ nav ul, nav ol
 	white-space: nowrap;
 	hyphens: none;
 }
+
+ul.no-markers, ol.no-markers
+{
+	list-style-type: none;
+}
