@@ -157,19 +157,35 @@
 					archititle &quot;Frequently Asked Questions&quot; and archiname &quot;faq&quot; in your
 					application's user manual. When mentioning this section in a commit description, simply type the
 					scope name with a <strong class="non-breaking">tilde (~)</strong> at the beginning:
-					<strong>~faq</strong>. That's it, you just have saved
+					<code>~faq</code>. That's it, you just have saved
 					<strong class="non-breaking">22 (twenty two!)</strong> characters!
 				</p>
 				<section>
 					<h4>Subject Line Examples</h4>
-					<ul>
-						<li>fix ui/input/keyboard: correct handling of arrow keys</li>
-						<li>feat core/parser: add Unicode support</li>
-						<li>mod ui/settings/timeout: replace list with text field</li>
-						<li>opt lib/containers/concurrent-map: switch to lock-free algorithm</li>
-						<li>refactor server: split up queryDatabase() method</li>
-						<li>format: change indentation method from spaces to tabs</li>
-						<li>clean: drop Windows 7 support</li>
+					<ul class="no-markers">
+						<li>
+							<code class="non-breaking">fix ui/input/keyboard: correct handling of arrow keys</code>
+						</li>
+						<li>
+							<code class="non-breaking">feat core/parser: add Unicode support</code>
+						</li>
+						<li>
+							<code class="non-breaking">mod ui/settings/timeout: replace list with text field</code>
+						</li>
+						<li>
+							<code class="non-breaking">
+								opt lib/containers/concurrent-map: switch to lock-free algorithm
+							</code>
+						</li>
+						<li>
+							<code class="non-breaking">refactor server: split up queryDatabase() method</code>
+						</li>
+						<li>
+							<code class="non-breaking">format: change indentation method from spaces to tabs</code>
+						</li>
+						<li>
+							<code class="non-breaking">clean: drop Windows 7 support</code>
+						</li>
 					</ul>
 				</section>
 			</section>
@@ -194,7 +210,7 @@
 					A footer is used only for &quot;<strong>Fix</strong>&quot; commits to point to the problem being
 					solved. Like a subject line, a footer occupies strictly <strong>one</strong> 72-column row. It
 					consists of a <strong class="non-breaking">hash sign (#)</strong>, immediately followed by a number
-					identifying the addressed issue: <strong>#123456</strong>.
+					identifying the addressed issue: <code>#123456</code>.
 				</p>
 			</section>
 		</section>
@@ -301,16 +317,16 @@
 								<th>Resulting branch name</th>
 							</tr>
 							<tr>
-								<td>core/loader</td>
-								<td>core-loader</td>
+								<td><code>core/loader</code></td>
+								<td><code>core-loader</code></td>
 							</tr>
 							<tr>
-								<td>file-manager/search</td>
-								<td>file-manager-search</td>
+								<td><code>file-manager/search</code></td>
+								<td><code>file-manager-search</code></td>
 							</tr>
 							<tr>
-								<td>audio-formats/lossy/mp3</td>
-								<td>audio-formats-lossy-mp3</td>
+								<td><code>audio-formats/lossy/mp3</code></td>
+								<td><code>audio-formats-lossy-mp3</code></td>
 							</tr>
 						</table>
 					</li>
@@ -321,18 +337,18 @@
 							<caption>Examples</caption>
 							<tr>
 								<td>Develop a new big class named &quot;TextParser&quot;</td>
-								<td>feat/text-parser</td>
+								<td><code>feat/text-parser</code></td>
 							</tr>
 							<tr>
 								<td>Refactor a &quot;Network&quot; module consisting of many classes</td>
-								<td>refactor/network</td>
+								<td><code>refactor/network</code></td>
 							</tr>
 							<tr>
 								<td>
 									Rewrite a &quot;Server&quot; class which is a member of the &quot;Network&quot;
 									module
 								</td>
-								<td>mod/network-server</td>
+								<td><code>mod/network-server</code></td>
 							</tr>
 						</table>
 					</li>
@@ -372,7 +388,7 @@
 				<p>
 					A special &quot;<i>rel</i>&quot; prefix is used to clearly indicate a release branch; the prefix and
 					the branch name are separated by a <strong class="non-breaking">slash (/)</strong>:
-					<strong>rel/v1</strong>.
+					<code>rel/v1</code>.
 				</p>
 			</section>
 			<section>
@@ -394,7 +410,9 @@
 					<a href="#branching-encapsulation-splitting-rule">rule which requires commits to be small</a>. Such
 					initial commit is equipped with a message <strong>exactly</strong> matching the text below:
 				</p>
-				<blockquote>Import project</blockquote>
+				<p>
+					<code class="non-breaking">Import project</code>
+				</p>
 				<p>
 					When creating a project from scratch, the initial commit must consist of
 					<a href="general.html#metafiles-readme">&quot;readme.md&quot;</a> and
@@ -403,7 +421,9 @@
 					have the <strong class="non-breaking">top-level header</strong> inside it. The commit message will
 					look <strong>exactly</strong> as follows:
 				</p>
-				<blockquote>Initialize project</blockquote>
+				<p>
+					<code class="non-breaking">Initialize project</code>
+				</p>
 			</section>
 		</section>
 	</main>
