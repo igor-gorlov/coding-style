@@ -17,16 +17,7 @@ strong
 	hyphens: none;
 }
 
-dt
-{
-	font-style: italic;
-	font-weight: bold;
-	text-decoration: underline;
-	white-space: nowrap;
-	hyphens: none;
-}
-
-dfn
+dt, dfn
 {
 	font-style: italic;
 	white-space: nowrap;
