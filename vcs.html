@@ -14,9 +14,7 @@
 			In my work, I use <a href="https://git-scm.com"><strong>Git</strong></a> as the only version control system.
 			All my projects are Git repositories remotely hosted on
 			<a href="https://github.com"><strong>GitHub</strong></a> under
-			<a href="https://github.com/igor-gorlov">
-				<strong class="non-breaking">Igor Gorlov personal account</strong>
-			</a>.
+			<a href="https://github.com/igor-gorlov"><strong>Igor Gorlov personal account</strong></a>.
 		</p>
 		<nav>
 			<h2 id="contents">Contents</h2>
@@ -54,23 +52,22 @@
 		<section>
 			<h2 id="commit-messages"><a href="#contents-commit-messages">Commit Messages</a></h2>
 			<p>
-				A well-formed commit message consists of a mandatory <strong class="non-breaking">subject line</strong>,
-				an optional <strong>body</strong> and an optional <strong>footer</strong>. All these three parts are
-				separated from each other by <strong class="non-breaking"><strong>one</strong> empty line</strong>. The
-				whole message should be wrapped to <strong>72</strong> columns and should <strong>not</strong> refer to
-				any other commits.
+				A well-formed commit message consists of a mandatory <strong>subject line</strong>, an optional
+				<strong>body</strong> and an optional <strong>footer</strong>. All these three parts are separated from
+				each other by <strong>one empty line</strong>. The whole message should be wrapped to
+				<strong>72</strong> columns and should <strong>not</strong> refer to any other commits.
 			</p>
 			<p>In the next subsections, we will consider each part of a commit message in detail.</p>
 			<section>
 				<h3 id="commit-messages-subject"><a href="#contents-commit-messages-subject">Subject Line</a></h3>
 				<p>
-					A subject line is intended to express a <strong class="non-breaking">brief summary</strong> of the
-					commit, which may be used by various developer tools and services, including (but not limiting to)
-					the GitHub web interface and Git itself. In many cases, the only thing that is shown in a commit log
-					being viewed by some third-party programmer will be your subject line. Therefore, you have to make
-					it concise and abstract, letting a reader to get the high-level sense of the changes represented by
-					this commit. Unless it is really necessary, do <strong>not</strong> mention raw filenames in the
-					subject line - use <strong>archinames</strong> instead.
+					A subject line is intended to express a <strong>brief summary</strong> of the commit, which may be
+					used by various developer tools and services, including (but not limiting to) the GitHub web
+					interface and Git itself. In many cases, the only thing that is shown in a commit log being viewed
+					by some third-party programmer will be your subject line. Therefore, you have to make it concise and
+					abstract, letting a reader to get the high-level sense of the changes represented by this commit.
+					Unless it is really necessary, do <strong>not</strong> mention raw filenames in the subject line -
+					use <strong>archinames</strong> instead.
 				</p>
 				<p>Despite the hard length limit, a subject line has its own internal structure:</p>
 				<code>
@@ -137,18 +134,17 @@
 				<p>
 					A scope is denoted by an appropriate archiname. If the pointed-to architectural entity is nested (is
 					a part of a larger archient), you can create a hierarchical identifier using
-					<strong class="non-breaking">forward slash (/)</strong> as a separator; such scope name will look
-					like a filepath, although it hardly ever has something to do with real file system. If the chosen
-					architectural entity is the archiroot, a scope name should be omitted.
+					<strong>forward slash (/)</strong> as a separator; such scope name will look like a filepath,
+					although it hardly ever has something to do with real file system. If the chosen architectural
+					entity is the archiroot, a scope name should be omitted.
 				</p>
 				<p>
 					A description is here to answer the question &quot;<strong>what?</strong>&quot; instead of
 					&quot;<strong>why?</strong>&quot;. Write in a few words what exactly was done, and leave the reasons
-					(if any) for the message body. Please note that you have to use an
-					<strong class="non-breaking">imperative mood</strong> within the description (write it in the
-					<strong class="non-breaking">present tense</strong>), and the use of articles (a/an, the) is
-					<strong>not</strong> recommended. Also do <strong>not</strong> start the description with a capital
-					letter and do <strong>not</strong> finish it with a period (.).
+					(if any) for the message body. Please note that you have to use an <strong>imperative mood</strong>
+					within the description (write it in the <strong>present tense</strong>), and the use of articles
+					(a/an, the) is <strong>not</strong> recommended. Also do <strong>not</strong> start the description
+					with a capital letter and do <strong>not</strong> finish it with a period (.).
 				</p>
 				<p>
 					It is possible to refer to another scope by its name right from a description. This trick is very
@@ -156,9 +152,8 @@
 					but the archititle being mentioned is too cumbersome. For example, you have a section with
 					archititle &quot;Frequently Asked Questions&quot; and archiname &quot;faq&quot; in your
 					application's user manual. When mentioning this section in a commit description, simply type the
-					scope name with a <strong class="non-breaking">tilde (~)</strong> at the beginning:
-					<code>~faq</code>. That's it, you just have saved
-					<strong class="non-breaking">22 (twenty two!)</strong> characters!
+					scope name with a <strong>tilde (~)</strong> at the beginning: <code>~faq</code>. That's it, you
+					just have saved <strong>22 (twenty two!)</strong> characters!
 				</p>
 				<section>
 					<h4>Subject Line Examples</h4>
@@ -194,9 +189,9 @@
 				<p>
 					A subject line is typically followed by a body which tells more about the commit in a relatively
 					free form. This part of a commit message consists of an arbitrary number of paragraphs separated by
-					an <strong class="non-breaking">empty line</strong>. Here you can explain the
-					<strong>reasons</strong> the commit had been prompted by, add
-					<strong class="non-breaking">technical details</strong> and (probably) place additional information.
+					an <strong>empty line</strong>. Here you can explain the <strong>reasons</strong> the commit had
+					been prompted by, add <strong>technical details</strong> and (probably) place additional
+					information.
 				</p>
 				<p>
 					A body is <strong>less</strong> abstract than a subject line, so you are allowed to use raw
@@ -209,8 +204,8 @@
 				<p>
 					A footer is used only for &quot;<strong>Fix</strong>&quot; commits to point to the problem being
 					solved. Like a subject line, a footer occupies strictly <strong>one</strong> 72-column row. It
-					consists of a <strong class="non-breaking">hash sign (#)</strong>, immediately followed by a number
-					identifying the addressed issue: <code>#123456</code>.
+					consists of a <strong>hash sign (#)</strong>, immediately followed by a number identifying the
+					addressed issue: <code>#123456</code>.
 				</p>
 			</section>
 		</section>
@@ -226,7 +221,7 @@
 					<dt>Workable program</dt>
 					<dd>
 						A program that <strong>compiles</strong> (if required), <strong>runs</strong> and
-						<strong class="non-breaking">passes all tests</strong> (if any).
+						<strong>passes all tests</strong> (if any).
 					</dd>
 					<dt>Readable documentation</dt>
 					<dd>
@@ -245,20 +240,13 @@
 					</dd>
 					<dt>Unstable state</dt>
 					<dd>
-						A codebase is considered to be in an unstable state when
-						<strong class="non-breaking">one or more</strong> of the solid state conditions are
-						<strong>false</strong>.
+						A codebase is considered to be in an unstable state when <strong>one or more</strong> of the
+						solid state conditions are <strong>false</strong>.
 					</dd>
 					<dt>Solid commit</dt>
-					<dd>
-						A commit pointing to a codebase snapshot which is in a
-						<strong class="non-breaking">solid state</strong>.
-					</dd>
+					<dd>A commit pointing to a codebase snapshot which is in a <strong>solid state</strong>.</dd>
 					<dt>Unstable commit</dt>
-					<dd>
-						A commit pointing to a codebase snapshot which is in an
-						<strong class="non-breaking">unstable state</strong>.
-					</dd>
+					<dd>A commit pointing to a codebase snapshot which is in an <strong>unstable state</strong>.</dd>
 					<dt>Solid branch</dt>
 					<dd>A branch requiring <strong>every</strong> its commit to be <strong>solid</strong>.</dd>
 					<dt>Unstable branch</dt>
@@ -300,16 +288,15 @@
 				<p>
 					To resolve the <a href="#branching-overview-issue1">first issue</a>, we add some kind of complexity
 					management using temporary unstable branches (hereinafter -
-					<strong class="non-breaking">encapsulation branches</strong>). When a complex task rises, create a
-					new branch, do all unstable work on it, then merge back into &quot;dev&quot;, and finally delete the
-					encapsulation branch.
+					<strong>encapsulation branches</strong>). When a complex task rises, create a new branch, do all
+					unstable work on it, then merge back into &quot;dev&quot;, and finally delete the encapsulation
+					branch.
 				</p>
 				<p>Despite that this process is very intuitive, a set of mandatory rules exists:</p>
 				<ul>
 					<li>
-						The branch name must be written in <strong class="non-breaking">Git case</strong>. If the name
-						is hierarchical, replace the separating slash (/) with a
-						<strong class="non-breaking">hyphen (-)</strong>.
+						The branch name must be written in <strong>Git case</strong>. If the name is hierarchical,
+						replace the separating slash (/) with a <strong>hyphen (-)</strong>.
 						<table>
 							<caption>Examples</caption>
 							<tr>
@@ -332,7 +319,7 @@
 					</li>
 					<li>
 						A prefix denoting the type of the merge commit being planned must precede the branch name; the
-						name and the prefix must be separated by <strong class="non-breaking">slash (/)</strong>.
+						name and the prefix must be separated by <strong>slash (/)</strong>.
 						<table>
 							<caption>Examples</caption>
 							<tr>
@@ -363,8 +350,8 @@
 						<strong>linear</strong>.
 					</li>
 					<li id="branching-encapsulation-splitting-rule">
-						Keep all commits <strong class="non-breaking">small and logically separated</strong>; if you
-						have a complex task, break it down into simpler ones.
+						Keep all commits <strong>small and logically separated</strong>; if you have a complex task,
+						break it down into simpler ones.
 					</li>
 				</ul>
 			</section>
@@ -387,8 +374,7 @@
 				</p>
 				<p>
 					A special &quot;<i>rel</i>&quot; prefix is used to clearly indicate a release branch; the prefix and
-					the branch name are separated by a <strong class="non-breaking">slash (/)</strong>:
-					<code>rel/v1</code>.
+					the branch name are separated by a <strong>slash (/)</strong>: <code>rel/v1</code>.
 				</p>
 			</section>
 			<section>
@@ -418,8 +404,8 @@
 					<a href="general.html#metafiles-readme">&quot;readme.md&quot;</a> and
 					<a href="general.html#metafiles-architecture">&quot;architecture.md&quot;</a> documents. The former
 					metafile follows the regular conventions established for &quot;readme.md&quot;; the latter must only
-					have the <strong class="non-breaking">top-level header</strong> inside it. The commit message will
-					look <strong>exactly</strong> as follows:
+					have the <strong>top-level header</strong> inside it. The commit message will look
+					<strong>exactly</strong> as follows:
 				</p>
 				<p>
 					<code class="non-breaking">Initialize project</code>

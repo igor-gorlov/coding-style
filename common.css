@@ -10,16 +10,20 @@ h2, h3, h4, h5, h6
 	text-align: center;
 }
 
-dt
+strong
 {
-	font-style: italic;
+	font-weight: bold;
 	white-space: nowrap;
 	hyphens: none;
 }
 
-strong>strong
+dt
 {
+	font-style: italic;
+	font-weight: bold;
 	text-decoration: underline;
+	white-space: nowrap;
+	hyphens: none;
 }
 
 dfn
