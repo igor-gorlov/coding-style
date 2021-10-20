@@ -28,8 +28,8 @@
 				<li>Use <strong>C++17</strong>.</li>
 				<li>Do <strong>not</strong> use global variables.</li>
 				<li>
-					Use <strong class="non-breaking">#pragma once</strong> in order to prevent multiple inclusions of
-					single file. Do <strong>not</strong> use conditional compilation for this purpose.
+					Use <strong>#pragma once</strong> in order to prevent multiple inclusions of single file. Do
+					<strong>not</strong> use conditional compilation for this purpose.
 				</li>
 				<li>Use <strong>struct</strong> keyword for plain old data types.</li>
 			</ul>
@@ -58,9 +58,8 @@
 				<li>Give include files <strong>.h</strong> extension.</li>
 				<li>Give <strong>.cpp</strong> extension to files that should be compiled directly to binaries.</li>
 				<li>
-					Use <strong class="non-breaking">upper camel case</strong> for namespace and type names (except of
-					aliases for arithmetic types, which should be written in
-					<strong class="non-breaking">lower camel case</strong>).
+					Use <strong>upper camel case</strong> for namespace and type names (except of aliases for arithmetic
+					types, which should be written in <strong>lower camel case</strong>).
 					<table>
 						<caption>Examples</caption>
 						<tr>
@@ -84,7 +83,7 @@
 					</table>
 				</li>
 				<li>
-					Use <strong class="non-breaking">lower camel case</strong> to name functions and variables.
+					Use <strong>lower camel case</strong> to name functions and variables.
 					<table>
 						<caption>Examples</caption>
 						<tr>
@@ -102,7 +101,7 @@
 					</table>
 				</li>
 				<li>
-					Use <strong class="non-breaking">upper snake case</strong> for preprocessor identifiers.
+					Use <strong>upper snake case</strong> for preprocessor identifiers.
 					<table>
 						<tr>
 							<td>Example</td>
@@ -167,7 +166,7 @@
 				</li>
 				<li>
 					Bool variables, as well as functions returning bool, may have names in the form of
-					<strong class="non-breaking">yes-no question</strong>.
+					<strong>yes-no question</strong>.
 					<table>
 						<caption>Examples</caption>
 						<tr>
@@ -186,8 +185,7 @@
 				</li>
 				<li>
 					If a variable stores amount of some items, give it a name with <strong>numberOf</strong> prefix; but
-					if such a variable contains an actual list of items, use
-					<strong class="non-breaking">simple plural</strong>.
+					if such a variable contains an actual list of items, use <strong>simple plural</strong>.
 					<table>
 						<tr>
 							<td>Example</td>
@@ -206,43 +204,37 @@
 					Organize each source file according to the following template:
 					<ol>
 						<li>
-							An optional <strong class="non-breaking">multiline comment</strong> briefly
-							describing this file and its contents, followed by
-							<strong class="non-breaking">two empty lines</strong>.
+							An optional <strong>multiline comment</strong> briefly describing this file and its
+							contents, followed by <strong>two empty lines</strong>.
 						</li>
 						<li>
-							An optional <strong class="non-breaking">#pragma once</strong>, followed by
-							<strong class="non-breaking">two empty lines</strong>.
+							An optional <strong>#pragma once</strong>, followed by <strong>two empty lines</strong>.
 						</li>
 						<li>
-							An optional sequence of
-							<strong class="non-breaking">standard includes in alphabetical order</strong>,
-							followed by <strong class="non-breaking">one empty line</strong>.
+							An optional sequence of <strong>standard includes in alphabetical order</strong>, followed
+							by <strong>one empty line</strong>.
 						</li>
 						<li>
-							An optional sequence of
-							<strong class="non-breaking">system includes in alphabetical order</strong>,
-							followed by <strong class="non-breaking">one empty line</strong>.
+							An optional sequence of <strong>system includes in alphabetical order</strong>, followed by
+							<strong>one empty line</strong>.
 						</li>
 						<li>
-							An optional sequence of
-							<strong class="non-breaking">third-party includes in alphabetical order</strong>,
-							followed by <strong class="non-breaking">one empty line</strong>.
+							An optional sequence of <strong>third-party includes in alphabetical order</strong>,
+							followed by <strong>one empty line</strong>.
 						</li>
 						<li>
 							An optional sequence of
-							<strong class="non-breaking">includes from current project in alphabetical order</strong>,
-							followed by <strong class="non-breaking">one empty line</strong>.
+							<strong>includes from current project in alphabetical order</strong>, followed by
+							<strong>one empty line</strong>.
 						</li>
 						<li>
-							A sequence of <strong class="non-breaking">declarations and definitions</strong>, optionally
-							divided into paragraphs by <strong class="non-breaking">one or two empty lines</strong>.
+							A sequence of <strong>declarations and definitions</strong>, optionally divided into
+							paragraphs by <strong>one or two empty lines</strong>.
 						</li>
 					</ol>
 				</li>
 				<li>
-					Place each curly brace, which encloses a scope, on a
-					<strong class="non-breaking">separate line</strong>.
+					Place each curly brace, which encloses a scope, on a <strong>separate line</strong>.
 					<table>
 						<tr>
 							<td>Example</td>
@@ -254,7 +246,7 @@
 				</li>
 				<li>
 					If a pair of curly braces is empty, place <strong>both</strong> these braces on
-					<strong class="non-breaking">one separate line without any whitespaces between them</strong>.
+					<strong>one separate line without any whitespaces between them</strong>.
 					<table>
 						<tr>
 							<td>Example</td>
@@ -299,10 +291,7 @@
 						</tr>
 					</table>
 				</li>
-				<li>
-					Indent comments in the
-					<strong class="non-breaking">exactly same</strong> manner as code.
-				</li>
+				<li>Indent comments in the <strong>exactly same</strong> manner as code.</li>
 			</ul>
 		</section>
 		<section>
@@ -310,9 +299,9 @@
 			<ul>
 				<li>
 					When finishing a class or namespace body which occupies a lot of vertical space, put a
-					<strong class="non-breaking">single-line comment</strong> right after the closing curly brace
-					(right after semicolon in case of class). The mentioned comment should be
-					<strong class="non-breaking">equivalent to the header</strong> of this class or namespace.
+					<strong>single-line comment</strong> right after the closing curly brace (right after semicolon in
+					case of class). The mentioned comment should be <strong>equivalent to the header</strong> of this
+					class or namespace.
 					<table>
 						<caption>Examples</caption>
 						<tr>
@@ -331,15 +320,13 @@
 				</li>
 				<li>
 					If a single-line comment (//...) does not fit on one line, use a
-					<strong class="non-breaking">multiline variant (/*...*/)</strong> instead.
+					<strong>multiline variant (/*...*/)</strong> instead.
 				</li>
 				<li>
 					Try to comment on any code that is
 					<span class="non-breaking"><strong>not</strong> self-documented</span>.
 				</li>
-				<li>
-					Finish <strong>any</strong> comment with a <strong class="non-breaking">period (.)</strong>.
-				</li>
+				<li>Finish <strong>any</strong> comment with a <strong>period (.)</strong>.</li>
 			</ul>
 		</section>
 		<a href="#contents">Back to the table of contents</a>
