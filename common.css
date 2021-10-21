@@ -1,3 +1,13 @@
+/* Set the default proportional font and the default monospace font */
+*
+{
+	font-family: "Times New Roman", serif;
+}
+code, code *, pre, pre *
+{
+	font-family: Consolas, monospace;
+}
+
 h1
 {
 	text-align: center;
