@@ -90,17 +90,17 @@
 						<th>Description</th>
 					</tr>
 					<tr>
-						<td>fix</td>
+						<td><code>fix</code></td>
 						<td>Fix</td>
 						<td>Fixes a bug or addresses an issue</td>
 					</tr>
 					<tr>
-						<td>feat</td>
+						<td><code>feat</code></td>
 						<td>Feature</td>
 						<td>Adds new functionality</td>
 					</tr>
 					<tr>
-						<td>mod</td>
+						<td><code>mod</code></td>
 						<td>Modification</td>
 						<td>
 							Changes existing functionality in order to get a new behavior, but <strong>not</strong> to
@@ -108,7 +108,7 @@
 						</td>
 					</tr>
 					<tr>
-						<td>opt</td>
+						<td><code>opt</code></td>
 						<td>Optimization</td>
 						<td>
 							Reduces the amount of resources needed for execution of the code, such as CPU time, memory
@@ -116,17 +116,17 @@
 						</td>
 					</tr>
 					<tr>
-						<td>refactor</td>
+						<td><code>refactor</code></td>
 						<td>Refactoring</td>
 						<td>Restructures the code for readability without any impact on its semantics</td>
 					</tr>
 					<tr>
-						<td>format</td>
+						<td><code>format</code></td>
 						<td>Format</td>
 						<td>Changes formatting of the code, but does <strong>not</strong> affect its meaning at all</td>
 					</tr>
 					<tr>
-						<td>clean</td>
+						<td><code>clean</code></td>
 						<td>Clean</td>
 						<td>Removes unneeded code</td>
 					</tr>
@@ -150,7 +150,7 @@
 					It is possible to refer to another scope by its name right from a description. This trick is very
 					helpful in circumstances when you are exceeding the length limit and need to save your characters,
 					but the archititle being mentioned is too cumbersome. For example, you have a section with
-					archititle &quot;Frequently Asked Questions&quot; and archiname &quot;faq&quot; in your
+					archititle &quot;Frequently Asked Questions&quot; and archiname <code>faq</code> in your
 					application's user manual. When mentioning this section in a commit description, simply type the
 					scope name with a <strong>tilde (~)</strong> at the beginning: <code>~faq</code>. That's it, you
 					just have saved <strong>22 (twenty two!)</strong> characters!
@@ -256,9 +256,9 @@
 			<section>
 				<h3 id="branching-overview"><a href="#contents-branching-overview">Overview</a></h3>
 				<p>
-					Every repository is built around the default branch called &quot;<dfn>dev</dfn>&quot;. This is
-					a <strong>solid</strong> branch, it represents the main stream of development. Ideally, the whole
-					history of the project should be linearly stored on &quot;dev&quot; as a series of small and
+					Every repository is built around the default branch called <code>dev</code>. This is a
+					<strong>solid</strong> branch, it represents the main stream of development. Ideally, the whole
+					history of the project should be linearly stored on <code>dev</code> as a series of small and
 					distinct commits.
 				</p>
 				<p>However, such scenario is often not viable in real world:</p>
@@ -271,7 +271,7 @@
 					<li id="branching-overview-issue2">
 						Another problem appears when the upcoming release is getting close. You have to perform several
 						final touches before announcing a new version, but suddenly understand that those touches are
-						really not needed on &quot;dev&quot; - they will hamper the future work. For example, there is
+						really not needed on <code>dev</code> - they will hamper the future work. For example, there is
 						absolutely no necessity to improve quality of visual design if you are planning to completely
 						revisit the GUI right after the upcoming release.
 					</li>
@@ -289,7 +289,7 @@
 					To resolve the <a href="#branching-overview-issue1">first issue</a>, we add some kind of complexity
 					management using temporary unstable branches (hereinafter - <dfn>encapsulation branches</dfn>). When
 					a complex task rises, create a new branch, do all unstable work on it, then merge back into
-					&quot;dev&quot;, and finally delete the encapsulation branch.
+					<code>dev</code>, and finally delete the encapsulation branch.
 				</p>
 				<p>Despite that this process is very intuitive, a set of mandatory rules exists:</p>
 				<ul>
@@ -322,16 +322,16 @@
 						<table>
 							<caption>Examples</caption>
 							<tr>
-								<td>Develop a new big class named &quot;TextParser&quot;</td>
+								<td>Develop a new big class named <code>TextParser</code></td>
 								<td><code>feat/text-parser</code></td>
 							</tr>
 							<tr>
-								<td>Refactor a &quot;Network&quot; module consisting of many classes</td>
+								<td>Refactor a <code>Network</code> module consisting of many classes</td>
 								<td><code>refactor/network</code></td>
 							</tr>
 							<tr>
 								<td>
-									Rewrite a &quot;Server&quot; class which is a member of the &quot;Network&quot;
+									Rewrite a <code>Server</code> class which is a member of the <code>Network</code>
 									module
 								</td>
 								<td><code>mod/network-server</code></td>
@@ -368,11 +368,11 @@
 					<strong>never</strong> gets deleted.
 				</p>
 				<p>
-					Release branches are <strong>solid</strong>. Similarly to &quot;dev&quot;, any of them can be (but
+					Release branches are <strong>solid</strong>. Similarly to <code>dev</code>, any of them can be (but
 					not always is) a base for its own encapsulation branches.
 				</p>
 				<p>
-					A special &quot;<i>rel</i>&quot; prefix is used to clearly indicate a release branch; the prefix and
+					A special <code>rel</code> prefix is used to clearly indicate a release branch; the prefix and
 					the branch name are separated by a <strong>slash (/)</strong>: <code>rel/v1</code>.
 				</p>
 			</section>
@@ -382,7 +382,7 @@
 					A new repository may begin its life either from scratch (when there are no files yet) or by
 					importing an existing codebase. Regardless of the origin of the contents being added, the history of
 					the project has to start from some <i class="non-breaking">initial commit</i>, which is the root of
-					&quot;dev&quot; branch and thus must be <strong>solid</strong>. An initial commit is special in the
+					<code>dev</code> branch and thus must be <strong>solid</strong>. An initial commit is special in the
 					sense that its message requirements have nothing to do with the regular
 					<a href="#commit-messages"><span class="non-breaking">commit message rules</span></a> (see next
 					paragraphs for details). Also, by definition, it is impossible for a repository to have more than 1
@@ -400,10 +400,10 @@
 				</p>
 				<p>
 					When creating a project from scratch, the initial commit must consist of
-					<a href="general.html#metafiles-readme">&quot;readme.md&quot;</a> and
-					<a href="general.html#metafiles-architecture">&quot;architecture.md&quot;</a> documents. The former
-					metafile follows the regular conventions established for &quot;readme.md&quot;; the latter must only
-					have the <strong>top-level header</strong> inside it. The commit message will look
+					<a href="general.html#metafiles-readme"><code>readme.md</code></a> and
+					<a href="general.html#metafiles-architecture"><code>architecture.md</code></a> documents. The former
+					metafile follows the regular conventions established for <code>readme.md</code>; the latter must
+					only have the <strong>top-level header</strong> inside it. The commit message will look
 					<strong>exactly</strong> as follows:
 				</p>
 				<p>
