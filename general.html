@@ -151,8 +151,8 @@
 				<li>Do <strong>not</strong> write source files consisting of more than <strong>1000</strong> lines.</li>
 				<li>
 					To simplify creation of new files with initial content or insertion of frequently repeated code
-					fragments into existing files, you can make a &quot;<strong>.templates</strong>&quot; catalog within
-					the root directory of your project and store samples there.
+					fragments into existing files, you can make a <code>.templates</code> catalog within the root
+					directory of your project and store samples there.
 				</li>
 			</ul>
 		</section>
@@ -172,8 +172,8 @@
 				<h3 id="metafiles-architecture"><a href="#contents-metafiles-architecture">architecture.md</a></h3>
 				<p>
 					This <strong>mandatory</strong> metafile maps archititles to appropriate archinames, and therefore
-					serves as a reminder for developers. Also, &quot;architecture.md&quot; has an auxiliary function: it
-					gives a quick high-level overview of the codebase and helps to understand relations between all
+					serves as a reminder for developers. Also, <code>architecture.md</code> has an auxiliary function:
+					it gives a quick high-level overview of the codebase and helps to understand relations between all
 					components.
 				</p>
 				<p>
@@ -181,7 +181,7 @@
 					<strong>every archichange</strong>. The update is performed by the <strong>same</strong> commit
 					which applies the architectural change itself.
 				</p>
-				<p>The following is a set of rules &quot;architecture.md&quot; should comply with:</p>
+				<p>The following is a set of rules <code>architecture.md</code> should comply with:</p>
 				<ul>
 					<li>
 						The document begins with a <strong>level 1 header</strong> exactly matching the name of the
@@ -203,11 +203,11 @@
 							<code class="non-breaking">&lt;archititle&gt; ~&lt;archiname&gt;</code>
 						</p>
 					</li>
-					<li>Do <strong>not</strong> mention metafiles in &quot;architecture.md&quot;.</li>
+					<li>Do <strong>not</strong> mention metafiles in <code>architecture.md</code>.</li>
 				</ul>
 				<p>
-					The example below shows the contents of a real &quot;architecture.md&quot; file which had been being
-					using in this coding style documentation at one of its development stages.
+					The example below shows the contents of a real <code>architecture.md</code> file which had been
+					being using in this coding style documentation at one of its development stages.
 				</p>
 				<iframe src="snippets/architecture.html"></iframe>
 			</section>
@@ -216,22 +216,22 @@
 				<p>
 					A project can define its own set of rules overriding both the general and the per-language
 					instructions. Such local rules should be described by an <strong>optional</strong> metafile called
-					&quot;<dfn>workflow.md</dfn>&quot; which resides in the root directory of the project and is
-					written in Markdown. The form of &quot;workflow.md&quot; is unspecified.
+					<code>workflow.md</code> which resides in the root directory of the project and is written in
+					Markdown. The form of <code>workflow.md</code> is unspecified.
 				</p>
 			</section>
 			<section>
 				<h3 id="metafiles-readme"><a href="#contents-metafiles-readme">readme.md</a></h3>
 				<p>
-					Every project must have a &quot;<dfn>readme.md</dfn>&quot; file within its root directory. This is a
+					Every project must have a <code>readme.md</code> file within its root directory. This is a
 					<strong>Markdown</strong> document which describes the project, defines its goals and ideology,
-					gives some basic instructions on building and/or using the product. However, &quot;readme.md&quot;
+					gives some basic instructions on building and/or using the product. However, <code>readme.md</code>
 					is <strong>not</strong> a replacement for regular documentation; it only declares the essentials.
 				</p>
-				<p>The form of &quot;readme.md&quot; is free except of the following:</p>
+				<p>The form of <code>readme.md</code> is free except of the following:</p>
 				<ol>
 					<li>A link to the coding style guide revision used in the current repository is required.</li>
-					<li>A link to &quot;workflow.md&quot; is required if the latter exists.</li>
+					<li>A link to <code>workflow.md</code> is required if the latter exists.</li>
 				</ol>
 			</section>
 		</section>
