@@ -34,7 +34,6 @@
 * General ~general
 * Naming ~naming
 * Formatting ~formatting
-* Indentation ~indentation
 * Commenting ~commenting
 
 ## Common Stylesheet (common.css) ~common-style
