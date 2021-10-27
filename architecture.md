@@ -29,6 +29,10 @@
   * Release Branches ~release
   * Initial Commit ~initial
 
+## Markup Guide (markup.html) ~markup
+
+* Partition ~partition
+
 ## C++ Coding Style Guide (cpp.html) ~cpp
 
 * General ~general
