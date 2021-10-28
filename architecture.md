@@ -31,6 +31,7 @@
 
 ## Markup Guide (markup.html) ~markup
 
+* Terminology ~terminology
 * Partition ~partition
 
 ## C++ Coding Style Guide (cpp.html) ~cpp
