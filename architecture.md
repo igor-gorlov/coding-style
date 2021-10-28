@@ -33,6 +33,7 @@
 
 * Terminology ~terminology
 * Partition ~partition
+* Emphasis ~emphasis
 
 ## C++ Coding Style Guide (cpp.html) ~cpp
 
