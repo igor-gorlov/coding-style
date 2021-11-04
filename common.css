@@ -34,6 +34,11 @@ dt, dfn
 	hyphens: none;
 }
 
+a
+{
+	text-decoration: blue;
+}
+
 nav ul, nav ol
 {
 	list-style-type: none;
