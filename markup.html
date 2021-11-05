@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Markup Guide by Igor Gorlov</title>
+	<link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+	<header>
+		<h1>Markup Guide by Igor Gorlov</h1>
+		<p>
+			This guide aims to define both visual and semantic structure which, in my opinion, is optimal for the
+			overwhelming majority of technical documents. No specific markup languages are discussed here, cause many of
+			them have well-known generic subset of features (like multilevel headers and bulleted lists). However, some
+			of the rules below involve advanced styling provided by powerful solutions (for example,
+			<code class="non-breaking">HTML + CSS</code>) but not supported in lightweight systems (such as
+			<code>Markdown</code>). In the meantime, complex technologies could be a bad choice when you need quickly
+			write a simple document for which the contents is much more important than its visual representation. In the
+			latter case, full-featured solutions usually produce a lot of boilerplate and hence should be given up in
+			favor of more primitive tools. It is absolutely fair: a developer have all rights to select a method that
+			works better on the current task. If your chosen technology doesn't implement a particular feature, feel
+			free to ignore all rules that require this feature.
+		</p>
+		<nav>
+			<h2 id="contents">Contents</h2>
+			<ul>
+				<li id="contents-terminology"><a href="#terminology">Terminology</a></li>
+				<li id="contents-partition"><a href="#partition">Partition</a></li>
+				<li id="contents-emphasis"><a href="#emphasis">Emphasis</a></li>
+				<li id="contents-misc"><a href="#misc">Miscellaneous</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<h2 id="terminology"><a href="#contents-terminology">Terminology</a></h2>
+			<dl>
+				<dt>Computer</dt>
+				<dd><strong>Any</strong> electronic computing device.</dd>
+				<dt>Natural text</dt>
+				<dd>Text written in a <strong>natural</strong> language and bearing the main semantic load.</dd>
+				<dt>Computer text</dt>
+				<dd>
+					Text that is one or more of the following:
+					<ul>
+						<li>Written in one of programming languages or in pseudocode.</li>
+						<li>Output of a computer program.</li>
+						<li>Input made by a user of a computer.</li>
+						<li>
+							Names representing hardware or software components of a computing system, such as CPU
+							architecture, OS version, installed applications, and so on.
+						</li>
+					</ul>
+				</dd>
+				<dt>Exclusive emphasis technique (EET)</dt>
+				<dd>
+					A method of text highlighting that is <strong>never</strong> combined with other exclusive emphasis
+					techniques (including itself).
+				</dd>
+				<dt>Code emphasis</dt>
+				<dd>
+					An exclusive emphasis technique which uses a <strong>monospaced</strong> font and (if possible)
+					semantically marks the text being emphasized as <strong>program code</strong> (for example, with
+					<code>&lt;code&gt;</code> HTML tag).
+				</dd>
+				<dt>Term introduction emphasis (TIE)</dt>
+				<dd>
+					An exclusive emphasis technique that works on a <strong>short</strong> text fragment and makes it
+					<strong>non-breaking italic</strong>.
+				</dd>
+				<dt>Important fragment emphasis (IFE)</dt>
+				<dd>
+					An exclusive emphasis technique that works on a <strong>short</strong> text fragment and makes it
+					<strong>non-breaking bold</strong>.
+				</dd>
+				<dt>Emphasis conflict</dt>
+				<dd>
+					A situation when more than 1 exclusive emphasis technique should theoretically be applied to the
+					same word or phrase.
+				</dd>
+				<dt>Combinable emphasis technique (CET)</dt>
+				<dd>
+					A method of text highlighting permitted to be used in combination with any number of other
+					highlighting methods including itself.
+				</dd>
+				<dt>Internal link</dt>
+				<dd>A hyperlink referring to an element of the <strong>same</strong> document it is located in.</dd>
+			</dl>
+		</section>
+		<section>
+			<h2 id="partition"><a href="#contents-partition">Partition</a></h2>
+			<ul>
+				<li>
+					Begin a document with a title in the form of a <dfn>top-level header</dfn> (that is, a
+					<strong>header of level 1</strong>). There must be <strong>exactly one</strong> top-level header in
+					each individual document.
+				</li>
+				<li>Split large documents into logical <i>sections</i> with <strong>headers of level 2</strong>.</li>
+				<li>
+					Split large sections into logical <dfn>subsections</dfn> with <strong>headers of level 3</strong>.
+				</li>
+				<li>
+					If a section or a subsection can be presented as a sequence of short statements, split it into
+					<dfn>clauses</dfn> by using a (potentially multi-level) <strong>list</strong>.
+				</li>
+				<li>
+					If a section or a subsection can be presented as a sequence of statements, but these statements are
+					too long, make regular <strong>paragraphs</strong> instead of clauses.
+				</li>
+				<li>Clauses and paragraphs can be mixed up together within a section or a subsection.</li>
+			</ul>
+		</section>
+		<section>
+			<h2 id="emphasis"><a href="#contents-emphasis">Emphasis</a></h2>
+			<ul>
+				<li>Always use a <strong>proportional</strong> font for natural text.</li>
+				<li>Use <strong>code emphasis</strong> for all computer text.</li>
+				<li>Use <strong>term introduction emphasis</strong> for the first occurrence of every new term.</li>
+				<li>Use <strong>important fragment emphasis</strong> for the most valuable words and phrases.</li>
+				<li>
+					TIE and IFE highlightings should <strong>not</strong> span long pieces of text (only critical
+					fragments are to be emphasized) and should <strong>not</strong> appear too frequently.
+					<table>
+						<caption>Examples</caption>
+						<tr>
+							<td>An unacceptably long emphasis</td>
+							<td>
+								In our community, it is
+								<strong>not allowed to insult other people or to impersonate the administrator</strong>.
+							</td>
+						</tr>
+						<tr>
+							<td>Too many relatively short highlightings</td>
+							<td>
+								In our community, it is <strong>not allowed</strong> to
+								<strong>insult other people</strong> or to
+								<strong>impersonate the administrator</strong>.
+							</td>
+						</tr>
+						<tr>
+							<td>The recommended level of emphasis</td>
+							<td>
+								In our community, it is <strong>not</strong> allowed to insult other people or to
+								impersonate the administrator.
+							</td>
+						</tr>
+					</table>
+				</li>
+				<li>
+					If an emphasis conflict takes place, the exclusive technique which is higher in the following
+					priority list is picked:
+					<ol>
+						<li>Code emphasis.</li>
+						<li>Term introduction emphasis.</li>
+						<li>Important fragment emphasis.</li>
+					</ol>
+				</li>
+				<li>Set <strong>blue</strong> color for links, do <strong>not</strong> underline them.</li>
+				<li>
+					Highlight headers of all levels with <strong>bold</strong>; the top-level header
+					<strong>should</strong> be underlined.
+				</li>
+				<li>
+					The highlighting methods for headers and links are considered
+					<strong>Combinable emphasis techniques</strong> with all the ensuing consequences.
+				</li>
+				<li>
+					Do <strong>not</strong> apply any exclusive emphasis technique to
+					<a href="general.html#metafiles-workflow"><code>workflow.md</code> metafile</a>.
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h2 id="misc"><a href="#contents-misc">Miscellaneous</a></h2>
+			<ul>
+				<li>
+					A large document should have a <dfn>table of contents</dfn> at the beginning; this is a
+					<strong>2-level list</strong> of internal links to sections and subsections, it has
+					<strong>no</strong> markers preceding the elements.
+				</li>
+				<li>
+					If a table of contents is present, the document is also required to have
+					<code class="non-breaking">Back to the table of contents</code> link at the bottom.
+				</li>
+				<li>
+					Quotation marks (&quot;...&quot;) are used around:
+					<ul>
+						<li>
+							Direct speech.
+							<table>
+								<tr>
+									<td>Example</td>
+									<td>The speaker said, &quot;Well, now look at the next slide.&quot;</td>
+								</tr>
+							</table>
+						</li>
+						<li>
+							Inline quotes.
+							<table>
+								<tr>
+									<td>Example</td>
+									<td>
+										According to Stroustrup, C++ is &quot;the invisible foundation of
+										everything.&quot;
+									</td>
+								</tr>
+							</table>
+						</li>
+						<li>
+							Titles of books, films, paintings or other artworks.
+							<table>
+								<tr>
+									<td>Example</td>
+									<td>
+										Have you ever read a free book &quot;Game Programming Patterns&quot; by Robert
+										Nystrom?
+									</td>
+								</tr>
+							</table>
+						</li>
+						<li>
+							Words or phrases which are used in a figurative, non-standard way.
+							<table>
+								<tr>
+									<td>Example</td>
+									<td>
+										The interpreter &quot;knows&quot; about all variables along with their types.
+									</td>
+								</tr>
+							</table>
+						</li>
+					</ul>
+				</li>
+				<li>
+					Quotation marks (&quot;...&quot;) are forbidden around:
+					<ul>
+						<li>
+							Computer text.
+							<table>
+								<caption>Examples</caption>
+								<tr>
+									<td>Sentence 1, a wrong way</td>
+									<td>
+										Press &quot;<code class="non-breaking">Alt + F4</code>&quot; to close the
+										window.
+									</td>
+								</tr>
+								<tr>
+									<td>Sentence 1, the right way</td>
+									<td>Press <code class="non-breaking">Alt + F4</code> to close the window.</td>
+								</tr>
+								<tr>
+									<td>Sentence 2, a wrong way</td>
+									<td>
+										The new version of &quot;<code>iOS</code>&quot; has finally been released to the
+										public.
+									</td>
+								</tr>
+								<tr>
+									<td>Sentence 2, the right way</td>
+									<td>
+										The new version of <code>iOS</code> has finally been released to the public.
+									</td>
+								</tr>
+							</table>
+						</li>
+						<li>
+							Organization titles.
+							<table>
+								<caption>Examples</caption>
+								<tr>
+									<td>Wrong</td>
+									<td>&quot;Apple&quot; built their own closed ecosystem of products.</td>
+								</tr>
+								<tr>
+									<td>Right</td>
+									<td>Apple built their own closed ecosystem of products.</td>
+								</tr>
+							</table>
+						</li>
+					</ul>
+				</li>
+				<li>
+					In special cases not described above, the decision about when to use quotation marks is left out for
+					the developer.
+				</li>
+			</ul>
+		</section>
+	</main>
+	<a href="#contents">Back to the table of contents</a>
+</body>
+
+</html>
