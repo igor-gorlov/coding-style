@@ -45,7 +45,7 @@
 
 ## Common Stylesheet (common.css) ~common-style
 
-## Templates (.templates/) ~templates
+## Templates (templates/) ~templates
 
 ### Document (document.html) ~document
 
