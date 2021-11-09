@@ -54,8 +54,8 @@
 			<p>
 				A well-formed commit message consists of a mandatory <strong>subject line</strong>, an optional
 				<strong>body</strong> and an optional <strong>footer</strong>. All these three parts are separated from
-				each other by <strong>one empty line</strong>. The whole message should be wrapped to
-				<strong>72</strong> columns and should <strong>not</strong> refer to any other commits.
+				each other by <strong>one empty line</strong>. The whole message must be wrapped to <strong>72</strong>
+				columns and must <strong>not</strong> refer to any other commits.
 			</p>
 			<p>In the next subsections, we will consider each part of a commit message in detail.</p>
 			<section>
@@ -136,7 +136,7 @@
 					a part of a larger archient), you can create a hierarchical identifier using
 					<strong>forward slash (/)</strong> as a separator; such scope name will look like a filepath,
 					although it hardly ever has something to do with real file system. If the chosen architectural
-					entity is the archiroot, a scope name should be omitted.
+					entity is the archiroot, omit a scope name.
 				</p>
 				<p>
 					A description is here to answer the question &quot;<strong>what?</strong>&quot; instead of
@@ -387,7 +387,7 @@
 					within particular history.
 				</p>
 				<p>
-					In case of existing code, <strong>all</strong> imported data should be included in
+					In case of existing code, <strong>all</strong> imported data must be included in
 					<strong>one</strong> monolithic initial commit. This is an exception to the
 					<a href="#branching-encapsulation-splitting-rule">rule which requires commits to be small</a>. Such
 					initial commit is equipped with a message <strong>exactly</strong> matching the text below:
