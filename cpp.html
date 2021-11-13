@@ -28,7 +28,7 @@
 				<li>Do <strong>not</strong> use global variables.</li>
 				<li>
 					Use <code class="non-breaking">#pragma once</code> in order to prevent multiple inclusions of the
-					same file. Do <strong>not</strong> use conditional compilation for this purpose.
+					same file; do <strong>not</strong> use conditional compilation for this purpose.
 				</li>
 				<li>Use <code class="non-breaking">struct</code> keyword for plain old data types.</li>
 			</ul>
@@ -133,7 +133,7 @@
 					</table>
 				</li>
 				<li>
-					Prefer <strong>verbs</strong> for function names and <strong>nouns</strong> for type, namespace and
+					Prefer <strong>verbs</strong> for function names; and <strong>nouns</strong> for type, namespace and
 					variable names.
 					<table>
 						<caption>Examples</caption>
@@ -164,7 +164,7 @@
 					</table>
 				</li>
 				<li>
-					Bool variables, as well as functions returning bool, have names in the form of
+					Bool variables as well as functions returning bool have names in the form of
 					<strong>yes-no question</strong>.
 					<table>
 						<caption>Examples</caption>
@@ -203,34 +203,32 @@
 					Organize each source file according to the following template:
 					<ol>
 						<li>
-							An optional multiline comment briefly describing this file and its contents, followed by two
+							An optional multiline comment briefly describing this file and its contents followed by two
 							empty lines.
 						</li>
+						<li>An optional <code class="non-breaking">#pragma once</code> followed by two empty lines.</li>
 						<li>
-							An optional <code class="non-breaking">#pragma once</code>, followed by two empty lines.
+							An optional sequence of standard includes in alphabetical order followed by one empty line.
 						</li>
 						<li>
-							An optional sequence of standard includes in alphabetical order, followed by one empty line.
+							An optional sequence of system includes in alphabetical order followed by one empty line.
 						</li>
 						<li>
-							An optional sequence of system includes in alphabetical order, followed by one empty line.
-						</li>
-						<li>
-							An optional sequence of third-party includes in alphabetical order, followed by one empty
+							An optional sequence of third-party includes in alphabetical order followed by one empty
 							line.
 						</li>
 						<li>
-							An optional sequence of includes from current project in alphabetical order, followed by one
+							An optional sequence of includes from current project in alphabetical order followed by one
 							empty line.
 						</li>
 						<li>
-							A sequence of declarations and definitions, optionally divided into paragraphs by one or two
+							A sequence of declarations and definitions optionally divided into paragraphs by one or two
 							empty lines.
 						</li>
 					</ol>
 				</li>
 				<li>
-					Place each curly brace, which encloses a scope, on a <strong>separate line</strong>.
+					Place each curly brace which encloses a scope on a <strong>separate line</strong>.
 					<table>
 						<tr>
 							<td>Example</td>

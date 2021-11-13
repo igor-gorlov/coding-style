@@ -53,7 +53,7 @@
 			<h2 id="commit-messages"><a href="#contents-commit-messages">Commit Messages</a></h2>
 			<p>
 				A well-formed commit message consists of a mandatory <strong>subject line</strong>, an optional
-				<strong>body</strong> and an optional <strong>footer</strong>. All these three parts are separated from
+				<strong>body</strong>, and an optional <strong>footer</strong>. All these three parts are separated from
 				each other by <strong>one empty line</strong>. The whole message must be wrapped to <strong>72</strong>
 				columns and must <strong>not</strong> refer to any other commits.
 			</p>
@@ -67,7 +67,7 @@
 					shown in a commit log being viewed by some third-party programmer will be your subject line.
 					Therefore, you have to make it concise and abstract, letting a reader to get the high-level sense of
 					the changes represented by this commit. Unless it is really necessary, do <strong>not</strong>
-					mention raw filenames in the subject line - use <strong>archinames</strong> instead.
+					mention raw filenames in the subject line&nbsp;&mdash; use <strong>archinames</strong> instead.
 				</p>
 				<p>Despite the hard length limit, a subject line has its own internal structure:</p>
 				<code>
@@ -103,7 +103,7 @@
 						<td><code>mod</code></td>
 						<td><code>Modification</code></td>
 						<td>
-							Changes existing functionality in order to get a new behavior, but <strong>not</strong> to
+							Changes existing functionality in order to get a new behavior but <strong>not</strong> to
 							fix a bug
 						</td>
 					</tr>
@@ -140,7 +140,7 @@
 				</p>
 				<p>
 					A description is here to answer the question &quot;<strong>what?</strong>&quot; instead of
-					&quot;<strong>why?</strong>&quot;. Write in a few words what exactly was done, and leave the reasons
+					&quot;<strong>why?</strong>&quot;. Write in a few words what exactly was done and leave the reasons
 					(if any) for the message body. Please note that you have to use an <strong>imperative mood</strong>
 					within the description (write it in the <strong>present tense</strong>), and the use of articles
 					(a/an, the) is <strong>not</strong> recommended. Also do <strong>not</strong> start the description
@@ -190,12 +190,12 @@
 					A subject line is typically followed by a body which tells more about the commit in a relatively
 					free form. This part of a commit message consists of an arbitrary number of paragraphs separated by
 					an <strong>empty line</strong>. Here you can explain the <strong>reasons</strong> the commit had
-					been prompted by, add <strong>technical details</strong> and (probably) place additional
+					been prompted by, add <strong>technical details</strong>, and (probably) place additional
 					information.
 				</p>
 				<p>
 					A body is <strong>less</strong> abstract than a subject line, so you are allowed to use raw
-					filenames, not only scope references. However, avoid abusing this low level style - do
+					filenames, not only scope references. However, avoid abusing this low level style&nbsp;&mdash; do
 					<strong>not</strong> turn your commit message into pseudocode.
 				</p>
 			</section>
@@ -204,7 +204,7 @@
 				<p>
 					A footer is used only for <code>Fix</code> commits to point to the problem being
 					solved. Like a subject line, a footer occupies strictly <strong>one</strong> 72-column row. It
-					consists of a <strong>hash sign (#)</strong>, immediately followed by a number identifying the
+					consists of a <strong>hash sign (#)</strong> immediately followed by a number identifying the
 					addressed issue: <code>#123456</code>.
 				</p>
 			</section>
@@ -267,9 +267,9 @@
 					<li id="branching-overview-issue2">
 						Another problem appears when the upcoming release is getting close. You have to perform several
 						final touches before announcing a new version, but suddenly understand that those touches are
-						really not needed on <code>dev</code> - they will hamper the future work. For example, there is
-						absolutely no necessity to improve quality of visual design if you are planning to completely
-						revisit the GUI right after the upcoming release.
+						really not needed on <code>dev</code>&nbsp;&mdash; they will hamper the future work. For
+						example, there is absolutely no necessity to improve quality of visual design if you are
+						planning to completely revisit the GUI right after the upcoming release.
 					</li>
 				</ul>
 				<p>
@@ -283,9 +283,9 @@
 				</h3>
 				<p>
 					To resolve the <a href="#branching-overview-issue1">first issue</a>, we add some kind of complexity
-					management using temporary unstable branches (hereinafter - <dfn>encapsulation branches</dfn>). When
-					a complex task rises, create a new branch, do all unstable work on it, then merge back into
-					<code>dev</code>, and finally delete the encapsulation branch.
+					management using temporary unstable branches (hereinafter&nbsp;&mdash;
+					<dfn>encapsulation branches</dfn>). When a complex task rises, create a new branch, do all unstable
+					work on it, then merge back into <code>dev</code>, and finally delete the encapsulation branch.
 				</p>
 				<p>Despite that this process is very intuitive, a set of mandatory rules exists:</p>
 				<ul>
@@ -340,7 +340,7 @@
 						<strong>not</strong> leave the default one.
 					</li>
 					<li>
-						The abuse of encapsulation branches can lead to an overcomplicated repository structure; so,
+						The abuse of encapsulation branches can lead to an overcomplicated repository structure; so
 						avoid creating them recursively in order to keep any encapsulation branch
 						<strong>linear</strong>.
 					</li>
