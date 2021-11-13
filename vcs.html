@@ -67,7 +67,7 @@
 					shown in a commit log being viewed by some third-party programmer will be your subject line.
 					Therefore, you have to make it concise and abstract, letting a reader to get the high-level sense of
 					the changes represented by this commit. Unless it is really necessary, do <strong>not</strong>
-					mention raw filenames in the subject line - use <strong>archinames</strong> instead.
+					mention raw filenames in the subject line&nbsp;&mdash; use <strong>archinames</strong> instead.
 				</p>
 				<p>Despite the hard length limit, a subject line has its own internal structure:</p>
 				<code>
@@ -195,7 +195,7 @@
 				</p>
 				<p>
 					A body is <strong>less</strong> abstract than a subject line, so you are allowed to use raw
-					filenames, not only scope references. However, avoid abusing this low level style - do
+					filenames, not only scope references. However, avoid abusing this low level style&nbsp;&mdash; do
 					<strong>not</strong> turn your commit message into pseudocode.
 				</p>
 			</section>
@@ -267,9 +267,9 @@
 					<li id="branching-overview-issue2">
 						Another problem appears when the upcoming release is getting close. You have to perform several
 						final touches before announcing a new version, but suddenly understand that those touches are
-						really not needed on <code>dev</code> - they will hamper the future work. For example, there is
-						absolutely no necessity to improve quality of visual design if you are planning to completely
-						revisit the GUI right after the upcoming release.
+						really not needed on <code>dev</code>&nbsp;&mdash; they will hamper the future work. For
+						example, there is absolutely no necessity to improve quality of visual design if you are
+						planning to completely revisit the GUI right after the upcoming release.
 					</li>
 				</ul>
 				<p>
@@ -283,9 +283,9 @@
 				</h3>
 				<p>
 					To resolve the <a href="#branching-overview-issue1">first issue</a>, we add some kind of complexity
-					management using temporary unstable branches (hereinafter - <dfn>encapsulation branches</dfn>). When
-					a complex task rises, create a new branch, do all unstable work on it, then merge back into
-					<code>dev</code>, and finally delete the encapsulation branch.
+					management using temporary unstable branches (hereinafter&nbsp;&mdash;
+					<dfn>encapsulation branches</dfn>). When a complex task rises, create a new branch, do all unstable
+					work on it, then merge back into <code>dev</code>, and finally delete the encapsulation branch.
 				</p>
 				<p>Despite that this process is very intuitive, a set of mandatory rules exists:</p>
 				<ul>
