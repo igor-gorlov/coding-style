@@ -36,6 +36,10 @@
 	<main>
 		<section>
 			<h2 id="terminology"><a href="#contents-terminology">Terminology</a></h2>
+			<p>
+				Some terms present here may redefine (or ambiguously intersect with) existing well-known concepts. If
+				you are in doubt, use interpretations suggested in <strong>this section</strong>.
+			</p>
 			<dl>
 				<dt>Computer</dt>
 				<dd><strong>Any</strong> electronic computing device.</dd>
@@ -87,6 +91,40 @@
 				</dd>
 				<dt>Internal link</dt>
 				<dd>A hyperlink referring to an element of the <strong>same</strong> document it is located in.</dd>
+				<dt>Typographic quotes</dt>
+				<dd>
+					<strong>Double quotation marks</strong> which most important properties are described in the
+					following table:
+					<table>
+						<tr>
+							<th></th>
+							<th>Glyph</th>
+							<th>Hexadecimal <code>Unicode</code> number</th>
+							<th>Decimal <code>Unicode</code> number</th>
+							<th><code>HTML</code> entity</th>
+						</tr>
+						<tr>
+							<td>Left (opening) double quote</td>
+							<td>&ldquo;</td>
+							<td>U+201C</td>
+							<td>8220</td>
+							<td><code>&amp;ldquo;</code></td>
+						</tr>
+						<tr>
+							<td>Right (closing) double quote</td>
+							<td>&rdquo;</td>
+							<td>U+201D</td>
+							<td>8221</td>
+							<td><code>&amp;rdquo;</code></td>
+						</tr>
+					</table>
+				</dd>
+				<dt>Neutral quotes</dt>
+				<dd>
+					The standard <strong>typewriter quotation marks</strong>. Both their opening and closing variants
+					have identical glyphs (&quot;), <code>Unicode</code> numbers (hexadecimal &mdash; U+0022, decimal
+					&mdash; 34), and <code>HTML</code> entities (<code>&amp;quot;</code>).
+				</dd>
 			</dl>
 		</section>
 		<section>
@@ -184,15 +222,16 @@
 					If a table of contents is present, the document is also required to have
 					<code class="non-breaking">Back to the table of contents</code> link at the bottom.
 				</li>
+				<li>Use typographic quotes if they are supported; consider neutral ones a fallback.</li>
 				<li>
-					Quotation marks (&quot;...&quot;) are used around:
+					Quotation marks are placed around:
 					<ul>
 						<li>
 							Direct speech.
 							<table>
 								<tr>
 									<td>Example</td>
-									<td>The speaker said, &quot;Well, now look at the next slide.&quot;</td>
+									<td>The speaker said, &ldquo;Well, now look at the next slide&rdquo;.</td>
 								</tr>
 							</table>
 						</li>
@@ -202,8 +241,8 @@
 								<tr>
 									<td>Example</td>
 									<td>
-										According to Stroustrup, C++ is &quot;the invisible foundation of
-										everything.&quot;
+										According to Stroustrup, C++ is &ldquo;the invisible foundation of
+										everything&rdquo;.
 									</td>
 								</tr>
 							</table>
@@ -214,7 +253,7 @@
 								<tr>
 									<td>Example</td>
 									<td>
-										Have you ever read a free book &quot;Game Programming Patterns&quot; by Robert
+										Have you ever read a free book &ldquo;Game Programming Patterns&rdquo; by Robert
 										Nystrom?
 									</td>
 								</tr>
@@ -226,7 +265,7 @@
 								<tr>
 									<td>Example</td>
 									<td>
-										The interpreter &quot;knows&quot; about all variables along with their types.
+										The interpreter &ldquo;knows&rdquo; about all variables along with their types.
 									</td>
 								</tr>
 							</table>
@@ -234,7 +273,7 @@
 					</ul>
 				</li>
 				<li>
-					Quotation marks (&quot;...&quot;) are forbidden around:
+					Quotation marks are forbidden around:
 					<ul>
 						<li>
 							Computer text.
@@ -243,7 +282,7 @@
 								<tr>
 									<td>Sentence 1, a wrong way</td>
 									<td>
-										Press &quot;<code class="non-breaking">Alt + F4</code>&quot; to close the
+										Press &ldquo;<code class="non-breaking">Alt + F4</code>&rdquo; to close the
 										window.
 									</td>
 								</tr>
@@ -254,8 +293,8 @@
 								<tr>
 									<td>Sentence 2, a wrong way</td>
 									<td>
-										The new version of &quot;<code>iOS</code>&quot; has finally been released to the
-										public.
+										The new version of &ldquo;<code>iOS</code>&rdquo; has finally been released to
+										the public.
 									</td>
 								</tr>
 								<tr>
@@ -272,7 +311,7 @@
 								<caption>Examples</caption>
 								<tr>
 									<td>Wrong</td>
-									<td>&quot;Apple&quot; built their own closed ecosystem of products.</td>
+									<td>&ldquo;Apple&rdquo; built their own closed ecosystem of products.</td>
 								</tr>
 								<tr>
 									<td>Right</td>
@@ -285,6 +324,21 @@
 				<li>
 					In special cases not described above, the decision about when to use quotation marks is left out for
 					the developer.
+				</li>
+				<li>
+					If a sentence ends with both a closing quotation mark and a dot (.), the dot is placed
+					<strong>after</strong> the closing quotation mark.
+					<table>
+						<caption>Examples</caption>
+						<tr>
+							<td>Wrong</td>
+							<td>I thought, &ldquo;We will hardly ever meet in real.&rdquo;</td>
+						</tr>
+						<tr>
+							<td>Right</td>
+							<td>I thought, &ldquo;We will hardly ever meet in real&rdquo;.</td>
+						</tr>
+					</table>
 				</li>
 			</ul>
 		</section>
