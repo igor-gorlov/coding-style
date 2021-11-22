@@ -356,10 +356,10 @@
 				<p>
 					This addresses the <a href="#branching-overview-issue2">second issue</a>. If the new version of your
 					product needs additional pre-release tuning which has nothing to do with the subsequent (starting
-					after this new version) development, create a dedicated <i class="non-breaking">release branch</i>
-					and do all the preparatory work there. When the project is absolutely ready to be released, tag the
-					tip of the release branch, and you are done. However, if you maintain several generations of the
-					product in parallel (like Microsoft does with its <code class="non-breaking">Windows 10</code> and
+					after this new version) development, create a dedicated <dfn>release branch</dfn> and do all the
+					preparatory work there. When the project is absolutely ready to be released, tag the tip of the
+					release branch, and you are done. However, if you maintain several generations of the product in
+					parallel (like Microsoft does with its <code class="non-breaking">Windows 10</code> and
 					<code class="non-breaking">Windows 11</code> operating systems), it might be sine to develop updates
 					and fixes for each generation right on that generation's release branch (after the major release
 					tag). Anyway, a release branch persistently remains alive and <strong>never</strong> gets deleted.
@@ -378,9 +378,9 @@
 				<p>
 					A new repository may begin its life either from scratch (when there are no files yet) or by
 					importing an existing codebase. Regardless of the origin of the contents being added, the history of
-					the project has to start from some <i class="non-breaking">initial commit</i>, which is the root of
-					<code>dev</code> branch and thus must be <strong>solid</strong>. An initial commit is special in the
-					sense that its message requirements have nothing to do with the regular
+					the project has to start from some <dfn>initial commit</dfn>, which is the root of <code>dev</code>
+					branch and thus must be <strong>solid</strong>. An initial commit is special in the sense that its
+					message requirements have nothing to do with the regular
 					<a href="#commit-messages"><span class="non-breaking">commit message rules</span></a> (see next
 					paragraphs for details). Also, by definition, it is impossible for a repository to have more than 1
 					initial commit as well as not to have it at all; therefore, the initial commit is always unique
