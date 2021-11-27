@@ -37,6 +37,7 @@
 * Punctuation ~punct
   * Quotation Marks ~quotes
   * Em Dashes, En Dashes, and Hyphens ~dashes
+* Numerals ~num
 * Miscellaneous ~misc
 
 ## C++ Coding Style Guide (cpp.html) ~cpp
