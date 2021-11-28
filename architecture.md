@@ -9,7 +9,7 @@
 
 ## General Guidelines (general.html) ~general
 
-* Terminology ~terminology
+* Terminology ~terms
 * Project Basics ~project
 * Metafiles ~metafiles
   * architecture.md ~architecture
