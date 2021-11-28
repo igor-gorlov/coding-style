@@ -55,7 +55,7 @@
 
 ## Snippets (snippets/) ~snippets
 
-### Architecture (architecture.html) ~architecture
+### Architecture (architecture.html) ~arch
 
 ### C++ Example 1 (cpp_example_1.html) ~cpp-ex1
 
