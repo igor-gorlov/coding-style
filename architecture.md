@@ -11,7 +11,7 @@
 
 * Terminology ~terms
 * Project Basics ~project
-* Metafiles ~metafiles
+* Metafiles ~meta
   * architecture.md ~architecture
   * workflow.md ~workflow
   * readme.md ~readme
