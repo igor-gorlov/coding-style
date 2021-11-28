@@ -47,7 +47,7 @@
 * Formatting ~format
 * Commenting ~comments
 
-## Common Stylesheet (common.css) ~common-style
+## Common Stylesheet (common.css) ~common-css
 
 ## Templates (templates/) ~templates
 
