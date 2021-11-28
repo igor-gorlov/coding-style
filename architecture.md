@@ -25,7 +25,7 @@
 * Branching ~branching
   * Terminology ~terms
   * Overview ~overview
-  * Encapsulation Branches ~encapsulation
+  * Encapsulation Branches ~encaps
   * Release Branches ~release
   * Initial Commit ~initial
 
