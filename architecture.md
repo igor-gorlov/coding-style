@@ -51,7 +51,7 @@
 
 ## Templates (templates/) ~templates
 
-### Document (document.html) ~document
+### Document (document.html) ~doc
 
 ## Snippets (snippets/) ~snippets
 
