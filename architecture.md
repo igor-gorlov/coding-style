@@ -3,7 +3,7 @@
 ## Main Page (index.html) ~main
 
 * Motivation ~mtv
-* Natural Language ~language
+* Natural Language ~lang
 * Generic Instructions ~generic
 * Language-Specific Instructions ~per-language
 
