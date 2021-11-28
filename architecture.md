@@ -45,7 +45,7 @@
 * General ~general
 * Naming ~naming
 * Formatting ~format
-* Commenting ~commenting
+* Commenting ~comments
 
 ## Common Stylesheet (common.css) ~common-style
 
