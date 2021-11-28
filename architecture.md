@@ -5,7 +5,7 @@
 * Motivation ~mtv
 * Natural Language ~lang
 * Generic Instructions ~generic
-* Language-Specific Instructions ~per-language
+* Language-Specific Instructions ~specific
 
 ## General Guidelines (general.html) ~general
 
