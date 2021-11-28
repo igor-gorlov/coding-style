@@ -57,26 +57,26 @@
 
 ### Architecture (architecture.html) ~architecture
 
-### C++ Example 1 (cpp_example_1.html) ~cpp-example1
+### C++ Example 1 (cpp_example_1.html) ~cpp-ex1
 
-### C++ Example 2 (cpp_example_2.html) ~cpp-example2
+### C++ Example 2 (cpp_example_2.html) ~cpp-ex2
 
-### C++ Example 3 (cpp_example_3.html) ~cpp-example3
+### C++ Example 3 (cpp_example_3.html) ~cpp-ex3
 
-### C++ Example 4 (cpp_example_4.html) ~cpp-example4
+### C++ Example 4 (cpp_example_4.html) ~cpp-ex4
 
-### C++ Example 5 (cpp_example_5.html) ~cpp-example5
+### C++ Example 5 (cpp_example_5.html) ~cpp-ex5
 
-### C++ Example 6 (cpp_example_6.html) ~cpp-example6
+### C++ Example 6 (cpp_example_6.html) ~cpp-ex6
 
-### C++ Example 7 (cpp_example_7.html) ~cpp-example7
+### C++ Example 7 (cpp_example_7.html) ~cpp-ex7
 
-### C++ Example 8 (cpp_example_8.html) ~cpp-example8
+### C++ Example 8 (cpp_example_8.html) ~cpp-ex8
 
-### C++ Example 9 (cpp_example_9.html) ~cpp-example9
+### C++ Example 9 (cpp_example_9.html) ~cpp-ex9
 
-### C++ Example 10 (cpp_example_10.html) ~cpp-example10
+### C++ Example 10 (cpp_example_10.html) ~cpp-ex10
 
-### C++ Example 11 (cpp_example_11.html) ~cpp-example11
+### C++ Example 11 (cpp_example_11.html) ~cpp-ex11
 
-### C++ Example 12 (cpp_example_12.html) ~cpp-example12
+### C++ Example 12 (cpp_example_12.html) ~cpp-ex12
