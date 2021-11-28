@@ -32,7 +32,7 @@
 ## Markup Guide (markup.html) ~markup
 
 * Terminology ~terms
-* Partition ~partition
+* Partition ~parts
 * Emphasis ~emphasis
 * Punctuation ~punct
   * Quotation Marks ~quotes
