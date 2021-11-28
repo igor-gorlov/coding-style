@@ -31,7 +31,7 @@
 
 ## Markup Guide (markup.html) ~markup
 
-* Terminology ~terminology
+* Terminology ~terms
 * Partition ~partition
 * Emphasis ~emphasis
 * Punctuation ~punct
