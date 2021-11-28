@@ -23,7 +23,7 @@
   * Body ~body
   * Footer ~footer
 * Branching ~branching
-  * Terminology ~terminology
+  * Terminology ~terms
   * Overview ~overview
   * Encapsulation Branches ~encapsulation
   * Release Branches ~release
