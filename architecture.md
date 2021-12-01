@@ -12,7 +12,7 @@
 * Terminology ~terms
 * Project Basics ~project
 * Metafiles ~meta
-  * architecture.md ~architecture
+  * architecture.md ~arch
   * workflow.md ~workflow
   * readme.md ~readme
 
