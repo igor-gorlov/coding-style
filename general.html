@@ -198,8 +198,9 @@
 				<strong>never</strong> fall into this category.
 			</p>
 			<p>
-				Some metafiles are <strong>mandatory</strong>, others are <strong>optional</strong>; such status is
-				explicitly pointed out for each document (see the next subsections).
+				Some metafiles are <strong>mandatory</strong>, others are <strong>optional</strong>; each of them has a
+				fixed archiname, which is preserved for this particular metafile and cannot be assigned to any custom
+				archient. See the next subsections for details.
 			</p>
 			<section>
 				<h3 id="metafiles-architecture">
@@ -209,7 +210,7 @@
 					This <strong>mandatory</strong> metafile maps archititles to appropriate archinames and therefore
 					serves as a reminder for developers. Also, <code>architecture.md</code> has an auxiliary function:
 					it gives a quick high-level overview of the codebase and helps to understand relations between all
-					components.
+					components. Use archiname <code>arch</code> to mention this document within commit messages.
 				</p>
 				<p>
 					The document must remain actual at any time and thus is required to be updated on
@@ -253,7 +254,7 @@
 				<p>
 					A project can define its own set of rules overriding both the general and the per-language
 					instructions. Such local rules are described by an <strong>optional</strong> metafile called
-					<code>workflow.md</code> which has an unspecified form.
+					<code>workflow.md</code> which has an unspecified form. Its archiname is fixed to <code>flow</code>.
 				</p>
 			</section>
 			<section>
@@ -271,6 +272,7 @@
 					<li>A link to the coding style guide revision used in the current repository is required.</li>
 					<li>A link to <code>workflow.md</code> is required if the latter exists.</li>
 				</ol>
+				<p>The fixed archiname assigned to <code>readme.md</code> is <code>readme</code>.</p>
 			</section>
 		</section>
 	</main>
