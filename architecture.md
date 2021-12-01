@@ -13,7 +13,7 @@
 * Project Basics ~project
 * Metafiles ~meta
   * architecture.md ~arch
-  * workflow.md ~workflow
+  * workflow.md ~flow
   * readme.md ~readme
 
 ## Version Control Guide (vcs.html) ~vcs
