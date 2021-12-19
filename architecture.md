@@ -28,7 +28,7 @@
   * Overview ~overview
   * Encapsulation Branches ~encaps
   * Release Branches ~release
-  * Initial Commit ~initial
+  * The Initial Commit ~initial
 
 ## Markup Guide (markup.html) ~markup
 
