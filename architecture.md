@@ -30,7 +30,7 @@
   * Release Branches ~release
   * The Initial Commit ~initial
 
-## Markup Guide (markup.html) ~markup
+## Document Requirements (document.html) ~doc
 
 * Terminology ~terms
 * Partition ~parts
