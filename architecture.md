@@ -21,6 +21,7 @@
 * Archichanges ~archch
 * Commit Messages ~messages
   * Subject Line ~subject
+    * Commit Type ~type
     * Subject Line Examples ~ex
   * Body ~body
   * Footer ~footer
