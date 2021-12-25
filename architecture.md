@@ -33,13 +33,13 @@
 
 ## Document Requirements (document.html) ~doc
 
+* Basics ~basics
 * Terminology ~terms
 * Emphasis ~emphasis
 * Punctuation ~punct
   * Quotation Marks ~quotes
   * Em Dashes, En Dashes, and Hyphens ~dashes
 * Numerals ~nums
-* Miscellaneous ~misc
 
 ## C++ Coding Style Guide (cpp.html) ~cpp
 

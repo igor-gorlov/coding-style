@@ -27,6 +27,7 @@
 			<h2 id="contents">Contents</h2>
 			<ul>
 				<li id="contents-terminology"><a href="#terminology">Terminology</a></li>
+				<li id="contents-basics"><a href="#basics">Basics</a></li>
 				<li id="contents-emphasis"><a href="#emphasis">Emphasis</a></li>
 				<li id="contents-punctuation">
 					<a href="#punctuation">Punctuation</a>
@@ -38,7 +39,6 @@
 					</ul>
 				</li>
 				<li id="contents-num"><a href="#num">Numerals</a></li>
-				<li id="contents-misc"><a href="#misc">Miscellaneous</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -189,6 +189,53 @@
 					contents.
 				</dd>
 			</dl>
+		</section>
+		<section>
+			<h2 id="basics"><a href="#contents-basics">Basics</a></h2>
+			<ul>
+				<li>
+					Begin a document with a title in the form of a <dfn>top-level header</dfn> (that is, a
+					<strong>header of level one</strong>). There must be <strong>exactly one</strong> top-level header
+					in each individual document.
+				</li>
+				<li>All headers, titles, and table captions are written in <strong>header case</strong>.</li>
+				<li>
+					If a header, a title or a table caption contains computer text, this computer text retains its
+					native capitalization without any changes.
+					<table>
+						<caption>Examples</caption>
+						<tr>
+							<td>
+								Mentioning a file called <code>lib.h</code> in a header, a <strong>wrong</strong> way
+							</td>
+							<td><code>Lib.h</code> Overview</td>
+						</tr>
+						<tr>
+							<td>
+								Mentioning a file called <code>lib.h</code> in a header, the <strong>right</strong> way
+							</td>
+							<td><code>lib.h</code> Overview</td>
+						</tr>
+						<tr>
+							<td>Mentioning <code>Windows</code> OS in a header, a <strong>wrong</strong> way</td>
+							<td><code>windows</code> Environment Variables</td>
+						</tr>
+						<tr>
+							<td>Mentioning <code>Windows</code> OS in a header, the <strong>right</strong> way</td>
+							<td><code>Windows</code> Environment Variables</td>
+						</tr>
+					</table>
+				</li>
+				<li>
+					A large document should have a <dfn>table of contents</dfn> at the beginning; this is a
+					<strong>2-level list</strong> of internal links to sections and subsections, it has
+					<strong>no</strong> markers preceding the elements.
+				</li>
+				<li>
+					If a table of contents is present, the document is also required to have
+					<code class="non-breaking">Back to the table of contents</code> link at the bottom.
+				</li>
+			</ul>
 		</section>
 		<section>
 			<h2 id="emphasis"><a href="#contents-emphasis">Emphasis</a></h2>
@@ -485,53 +532,6 @@
 							</td>
 						</tr>
 					</table>
-				</li>
-			</ul>
-		</section>
-		<section>
-			<h2 id="misc"><a href="#contents-misc">Miscellaneous</a></h2>
-			<ul>
-				<li>
-					Begin a document with a title in the form of a <dfn>top-level header</dfn> (that is, a
-					<strong>header of level one</strong>). There must be <strong>exactly one</strong> top-level header
-					in each individual document.
-				</li>
-				<li>All headers, titles, and table captions are written in <strong>header case</strong>.</li>
-				<li>
-					If a header, a title or a table caption contains computer text, this computer text retains its
-					native capitalization without any changes.
-					<table>
-						<caption>Examples</caption>
-						<tr>
-							<td>
-								Mentioning a file called <code>lib.h</code> in a header, a <strong>wrong</strong> way
-							</td>
-							<td><code>Lib.h</code> Overview</td>
-						</tr>
-						<tr>
-							<td>
-								Mentioning a file called <code>lib.h</code> in a header, the <strong>right</strong> way
-							</td>
-							<td><code>lib.h</code> Overview</td>
-						</tr>
-						<tr>
-							<td>Mentioning <code>Windows</code> OS in a header, a <strong>wrong</strong> way</td>
-							<td><code>windows</code> Environment Variables</td>
-						</tr>
-						<tr>
-							<td>Mentioning <code>Windows</code> OS in a header, the <strong>right</strong> way</td>
-							<td><code>Windows</code> Environment Variables</td>
-						</tr>
-					</table>
-				</li>
-				<li>
-					A large document should have a <dfn>table of contents</dfn> at the beginning; this is a
-					<strong>2-level list</strong> of internal links to sections and subsections, it has
-					<strong>no</strong> markers preceding the elements.
-				</li>
-				<li>
-					If a table of contents is present, the document is also required to have
-					<code class="non-breaking">Back to the table of contents</code> link at the bottom.
 				</li>
 			</ul>
 		</section>
