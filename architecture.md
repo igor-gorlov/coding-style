@@ -34,7 +34,6 @@
 ## Document Requirements (document.html) ~doc
 
 * Terminology ~terms
-* Partitioning ~parts
 * Emphasis ~emphasis
 * Punctuation ~punct
   * Quotation Marks ~quotes
