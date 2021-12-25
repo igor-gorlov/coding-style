@@ -87,90 +87,102 @@
 					<code>&lt;scope&gt;</code> is an optional name of the architectural entity this commit is related
 					to, <code>&lt;description&gt;</code> is a very brief summary of the changes.
 				</p>
-				<p>
-					All possible commit types are listed in the table below. Please note that in subject lines you have
-					to use commit type <strong>identifiers</strong>, not their names.
-				</p>
-				<table>
-					<caption>Commit Types</caption>
-					<tr>
-						<th>Identifier</th>
-						<th>Name</th>
-						<th>Description</th>
-					</tr>
-					<tr>
-						<td><code>fix</code></td>
-						<td><code>Fix</code></td>
-						<td>Fixes a bug or addresses an issue</td>
-					</tr>
-					<tr>
-						<td><code>feat</code></td>
-						<td><code>Feature</code></td>
-						<td>Adds new functionality</td>
-					</tr>
-					<tr>
-						<td><code>mod</code></td>
-						<td><code>Modification</code></td>
-						<td>
-							Changes existing functionality in order to get a new behavior but <strong>not</strong> to
-							fix a bug
-						</td>
-					</tr>
-					<tr>
-						<td><code>opt</code></td>
-						<td><code>Optimization</code></td>
-						<td>
-							Reduces the amount of resources needed for execution of the code, such as CPU time, memory
-							consumption, binary size etc.
-						</td>
-					</tr>
-					<tr>
-						<td><code>refactor</code></td>
-						<td><code>Refactoring</code></td>
-						<td>Restructures the code for readability without any impact on its semantics</td>
-					</tr>
-					<tr>
-						<td><code>format</code></td>
-						<td><code>Format</code></td>
-						<td>Changes formatting of the code, but does <strong>not</strong> affect its meaning at all</td>
-					</tr>
-					<tr>
-						<td><code>clean</code></td>
-						<td><code>Clean</code></td>
-						<td>Removes unneeded code</td>
-					</tr>
-				</table>
-				<p>
-					A scope is denoted by an appropriate archiname. If the pointed-to architectural entity is nested (is
-					a part of a larger archient), you can create a hierarchical identifier using
-					<strong>forward slash (/)</strong> as a separator; such scope name will look like a filepath,
-					although it hardly ever has something to do with real file system. If the chosen architectural
-					entity is the archiroot, omit a scope name.
-				</p>
-				<p>
-					A description is here to answer the question &ldquo;<strong>what?</strong>&rdquo; instead of
-					&ldquo;<strong>why?</strong>&rdquo;. Write in a few words what exactly was done and leave the
-					reasons (if any) for the message body. Apart from the above, the following rules are applied:
-				</p>
-				<ul>
-					<li>
-						Use an <strong>imperative mood</strong> within a description (write it in the
-						<strong>present tense</strong>).
-					</li>
-					<li>The use of articles (a/an, the) is <strong>not</strong> recommended.</li>
-					<li>Do <strong>not</strong> start a description with a capital letter.</li>
-					<li>Do <strong>not</strong> finish a description with a period (.).</li>
-					<li>Within a description, write all numbers <strong>digitally</strong>.</li>
-				</ul>
-				<p>
-					It is possible to refer to another scope by its name right from a description. This trick is very
-					helpful in circumstances when you are exceeding the length limit and need to save your characters,
-					but the archititle being mentioned is too cumbersome. For example, you have a section with
-					archititle &ldquo;Frequently Asked Questions&rdquo; and archiname <code>faq</code> in your
-					application's user manual. When mentioning this section in a commit description, simply type the
-					scope name with a <strong>tilde (~)</strong> at the beginning: <code>~faq</code>. That's it, you
-					just have saved <strong>twenty-two</strong> characters!
-				</p>
+				<section>
+					<h4>Commit Type</h4>
+					<p>
+						All possible commit types are listed in the table below. Please note that in subject lines you
+						have
+						to use commit type <strong>identifiers</strong>, not their names.
+					</p>
+					<table>
+						<caption>Commit Types</caption>
+						<tr>
+							<th>Identifier</th>
+							<th>Name</th>
+							<th>Description</th>
+						</tr>
+						<tr>
+							<td><code>fix</code></td>
+							<td><code>Fix</code></td>
+							<td>Fixes a bug or addresses an issue</td>
+						</tr>
+						<tr>
+							<td><code>feat</code></td>
+							<td><code>Feature</code></td>
+							<td>Adds new functionality</td>
+						</tr>
+						<tr>
+							<td><code>mod</code></td>
+							<td><code>Modification</code></td>
+							<td>
+								Changes existing functionality in order to get a new behavior but <strong>not</strong>
+								to fix a bug
+							</td>
+						</tr>
+						<tr>
+							<td><code>opt</code></td>
+							<td><code>Optimization</code></td>
+							<td>
+								Reduces the amount of resources needed for execution of the code, such as CPU time,
+								memory consumption, binary size etc.
+							</td>
+						</tr>
+						<tr>
+							<td><code>refactor</code></td>
+							<td><code>Refactoring</code></td>
+							<td>Restructures the code for readability without any impact on its semantics</td>
+						</tr>
+						<tr>
+							<td><code>format</code></td>
+							<td><code>Format</code></td>
+							<td>
+								Changes formatting of the code, but does <strong>not</strong> affect its meaning at all
+							</td>
+						</tr>
+						<tr>
+							<td><code>clean</code></td>
+							<td><code>Clean</code></td>
+							<td>Removes unneeded code</td>
+						</tr>
+					</table>
+				</section>
+				<section>
+					<h4>Commit Scope</h4>
+					<p>
+						A scope is denoted by an appropriate archiname. If the pointed-to architectural entity is nested
+						(is a part of a larger archient), you can create a hierarchical identifier using
+						<strong>forward slash (/)</strong> as a separator; such scope name will look like a filepath,
+						although it hardly ever has something to do with real file system. If the chosen architectural
+						entity is the archiroot, omit a scope name.
+					</p>
+				</section>
+				<section>
+					<h4>Commit Description</h4>
+					<p>
+						A description is here to answer the question &ldquo;<strong>what?</strong>&rdquo; instead of
+						&ldquo;<strong>why?</strong>&rdquo;. Write in a few words what exactly was done and leave the
+						reasons (if any) for the message body. Apart from the above, the following rules are applied:
+					</p>
+					<ul>
+						<li>
+							Use an <strong>imperative mood</strong> within a description (write it in the
+							<strong>present tense</strong>).
+						</li>
+						<li>The use of articles (a/an, the) is <strong>not</strong> recommended.</li>
+						<li>Do <strong>not</strong> start a description with a capital letter.</li>
+						<li>Do <strong>not</strong> finish a description with a period (.).</li>
+						<li>Within a description, write all numbers <strong>digitally</strong>.</li>
+					</ul>
+					<p>
+						It is possible to refer to another scope by its name right from a description. This trick is
+						very helpful in circumstances when you are exceeding the length limit and need to save your
+						characters, but the archititle being mentioned is too cumbersome. For example, you have a
+						section with archititle &ldquo;Frequently Asked Questions&rdquo; and archiname <code>faq</code>
+						in your application's user manual. When mentioning this section in a commit description, simply
+						type the scope name with a <strong>tilde (~)</strong> at the beginning: <code>~faq</code>.
+						That's it, you just have saved <strong>twenty-two</strong> characters!
+					</p>
+				</section>
 				<section>
 					<h4>Subject Line Examples</h4>
 					<ul class="no-markers">
