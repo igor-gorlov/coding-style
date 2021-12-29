@@ -1,442 +1,454 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Version Control Guide by Igor Gorlov</title>
+		<link rel="stylesheet" href="common.css" />
+	</head>
 
-<head>
-	<meta charset="UTF-8">
-	<title>Version Control Guide by Igor Gorlov</title>
-	<link rel="stylesheet" href="common.css">
-</head>
-
-<body>
-	<header>
-		<h1>Version Control Guide by Igor Gorlov</h1>
-		<p>
-			In my work, I use <a href="https://git-scm.com"><code>Git</code></a> as the only version control system. All
-			my projects are <code>Git</code> repositories remotely hosted on
-			<a href="https://github.com"><code>GitHub</code></a> under
-			<a href="https://github.com/igor-gorlov">Igor Gorlov personal account</a>.
-		</p>
-		<nav>
-			<h2 id="contents">Contents</h2>
-			<ul>
-				<li id="contents-archichanges"><a href="#archichanges">Archichanges</a></li>
-				<li id="contents-commit-messages">
-					<a href="#commit-messages">Commit Messages</a>
-					<ul>
-						<li id="contents-commit-messages-subject">
-							<a href="#commit-messages-subject">Subject Line</a>
-						</li>
-						<li id="contents-commit-messages-body">
-							<a href="#commit-messages-body">Body</a>
-						</li>
-						<li id="contents-commit-messages-footer">
-							<a href="#commit-messages-footer">Footer</a>
-						</li>
-					</ul>
-				</li>
-				<li id="contents-branching">
-					<a href="#branching">Branching</a>
-					<ul>
-						<li id="contents-branching-terminology"><a href="#branching-terminology">Terminology</a></li>
-						<li id="contents-branching-overview"><a href="#branching-overview">Overview</a></li>
-						<li id="contents-branching-encapsulation">
-							<a href="#branching-encapsulation">Encapsulation Branches</a>
-						</li>
-						<li id="contents-branching-release"><a href="#branching-release">Release Branches</a></li>
-						<li id="contents-branching-initial"><a href="#branching-initial">The Initial Commit</a></li>
-					</ul>
-				</li>
-			</ul>
-		</nav>
-	</header>
-	<main>
-		<section>
-			<h2 id="archichanges"><a href="#contents-archichanges">Archichanges</a></h2>
+	<body>
+		<header>
+			<h1>Version Control Guide by Igor Gorlov</h1>
 			<p>
-				The <a href="general.html#metafiles-architecture"><code>architecture.md</code> metafile</a> must remain
-				actual at any time and thus is required to be updated on <strong>every archichange</strong>. The update
-				is performed by the <strong>same</strong> commit which applies the architectural change itself.
+				In my work, I use <a href="https://git-scm.com"><code>Git</code></a> as the only version control system.
+				All my projects are <code>Git</code> repositories remotely hosted on
+				<a href="https://github.com"><code>GitHub</code></a> under
+				<a href="https://github.com/igor-gorlov">Igor Gorlov personal account</a>.
 			</p>
-		</section>
-		<section>
-			<h2 id="commit-messages"><a href="#contents-commit-messages">Commit Messages</a></h2>
-			<p>
-				A well-formed commit message consists of a mandatory <strong>subject line</strong>, an optional
-				<strong>body</strong>, and an optional <strong>footer</strong>. All these three parts are separated from
-				each other by <strong>one empty line</strong>. The whole message must be wrapped to
-				<strong>seventy-two</strong> columns and must <strong>not</strong> refer to any other commits.
-			</p>
-			<p>In the next subsections, we will consider each part of a commit message in detail.</p>
-			<section>
-				<h3 id="commit-messages-subject"><a href="#contents-commit-messages-subject">Subject Line</a></h3>
-				<p>
-					A subject line is intended to express a <strong>brief summary</strong> of the commit, which may be
-					used by various developer tools and services, including (but not limiting to) the
-					<code>GitHub</code> web interface and <code>Git</code> itself. In many cases, the only thing that is
-					shown in a commit log being viewed by some third-party programmer will be your subject line.
-					Therefore, you have to make it concise and abstract, letting a reader to get the high-level sense of
-					the changes represented by this commit. Unless it is really necessary, do <strong>not</strong>
-					mention raw filenames in the subject line&nbsp;&mdash; use <strong>archinames</strong> instead.
-				</p>
-				<p>Despite the hard length limit, a subject line has its own internal structure:</p>
-				<code>
-					&lt;type&gt;[ &lt;scope&gt;]: &lt;description&gt;
-				</code>
-				<p>
-					Here, <code>&lt;type&gt;</code> is an identifier denoting the current commit type,
-					<code>&lt;scope&gt;</code> is an optional name of the architectural entity this commit is related
-					to, <code>&lt;description&gt;</code> is a very brief summary of the changes.
-				</p>
-				<section>
-					<h4>Commit Type</h4>
-					<p>
-						All possible commit types are listed in the table below. Please note that in subject lines you
-						have
-						to use commit type <strong>identifiers</strong>, not their names.
-					</p>
-					<table>
-						<caption>Commit Types</caption>
-						<tr>
-							<th>Identifier</th>
-							<th>Name</th>
-							<th>Description</th>
-						</tr>
-						<tr>
-							<td><code>fix</code></td>
-							<td><code>Fix</code></td>
-							<td>Fixes a bug or addresses an issue</td>
-						</tr>
-						<tr>
-							<td><code>feat</code></td>
-							<td><code>Feature</code></td>
-							<td>Adds new functionality</td>
-						</tr>
-						<tr>
-							<td><code>mod</code></td>
-							<td><code>Modification</code></td>
-							<td>
-								Changes existing functionality in order to get a new behavior but <strong>not</strong>
-								to fix a bug
-							</td>
-						</tr>
-						<tr>
-							<td><code>opt</code></td>
-							<td><code>Optimization</code></td>
-							<td>
-								Reduces the amount of resources needed for execution of the code, such as CPU time,
-								memory consumption, binary size etc.
-							</td>
-						</tr>
-						<tr>
-							<td><code>refactor</code></td>
-							<td><code>Refactoring</code></td>
-							<td>Restructures the code for readability without any impact on its semantics</td>
-						</tr>
-						<tr>
-							<td><code>format</code></td>
-							<td><code>Format</code></td>
-							<td>
-								Changes formatting of the code, but does <strong>not</strong> affect its meaning at all
-							</td>
-						</tr>
-						<tr>
-							<td><code>clean</code></td>
-							<td><code>Clean</code></td>
-							<td>Removes unneeded code</td>
-						</tr>
-					</table>
-				</section>
-				<section>
-					<h4>Commit Scope</h4>
-					<p>
-						A scope is denoted by an appropriate archiname. If the pointed-to architectural entity is nested
-						(is a part of a larger archient), you can create a hierarchical identifier using
-						<strong>forward slash (/)</strong> as a separator; such scope name will look like a filepath,
-						although it hardly ever has something to do with real file system. If the chosen architectural
-						entity is the archiroot, omit a scope name.
-					</p>
-				</section>
-				<section>
-					<h4>Commit Description</h4>
-					<p>
-						A description is here to answer the question &ldquo;<strong>what?</strong>&rdquo; instead of
-						&ldquo;<strong>why?</strong>&rdquo;. Write in a few words what exactly was done and leave the
-						reasons (if any) for the message body. Apart from the above, the following rules are applied:
-					</p>
-					<ul>
-						<li>
-							Use an <strong>imperative mood</strong> within a description (write it in the
-							<strong>present tense</strong>).
-						</li>
-						<li>The use of articles (a/an, the) is <strong>not</strong> recommended.</li>
-						<li>Do <strong>not</strong> start a description with a capital letter.</li>
-						<li>Do <strong>not</strong> finish a description with a period (.).</li>
-						<li>Within a description, write all numbers <strong>digitally</strong>.</li>
-					</ul>
-					<p>
-						It is possible to refer to another scope by its name right from a description. This trick is
-						very helpful in circumstances when you are exceeding the length limit and need to save your
-						characters, but the archititle being mentioned is too cumbersome. For example, you have a
-						section with archititle &ldquo;Frequently Asked Questions&rdquo; and archiname <code>faq</code>
-						in your application's user manual. When mentioning this section in a commit description, simply
-						type the scope name with a <strong>tilde (~)</strong> at the beginning: <code>~faq</code>.
-						That's it, you just have saved <strong>twenty-two</strong> characters!
-					</p>
-				</section>
-				<section>
-					<h4>Subject Line Examples</h4>
-					<ul class="no-markers">
-						<li>
-							<code class="non-breaking">fix ui/input/keyboard: correct handling of arrow keys</code>
-						</li>
-						<li>
-							<code class="non-breaking">feat core/parser: add Unicode support</code>
-						</li>
-						<li>
-							<code class="non-breaking">mod ui/settings/timeout: replace list with text field</code>
-						</li>
-						<li>
-							<code class="non-breaking">
-								opt lib/containers/concurrent-map: switch to lock-free algorithm
-							</code>
-						</li>
-						<li>
-							<code class="non-breaking">refactor server: split up queryDatabase() method</code>
-						</li>
-						<li>
-							<code class="non-breaking">format: change indentation method from spaces to tabs</code>
-						</li>
-						<li>
-							<code class="non-breaking">clean: drop Windows 7 support</code>
-						</li>
-					</ul>
-				</section>
-			</section>
-			<section>
-				<h3 id="commit-messages-body"><a href="#contents-commit-messages-body">Body</a></h3>
-				<p>
-					A subject line is typically followed by a body, which tells more about the commit in a relatively
-					free form. This part of a commit message consists of an arbitrary number of paragraphs separated by
-					an <strong>empty line</strong>. Here you can explain the <strong>reasons</strong> the commit had
-					been prompted by, add <strong>technical details</strong>, and (probably) place additional
-					information.
-				</p>
-				<p>
-					A body is <strong>less</strong> abstract than a subject line, so you are allowed to use raw
-					filenames, not only scope references. However, avoid abusing this low level style&nbsp;&mdash; do
-					<strong>not</strong> turn your commit message into pseudocode.
-				</p>
-			</section>
-			<section>
-				<h3 id="commit-messages-footer"><a href="#contents-commit-messages-footer">Footer</a></h3>
-				<p>
-					A footer is used only for <code>Fix</code> commits to point to the problem being
-					solved. Like a subject line, a footer occupies strictly <strong>one</strong> row of seventy-two
-					columns. It consists of a <strong>hash sign (#)</strong> immediately followed by a number
-					identifying the addressed issue: <code>#123456</code>.
-				</p>
-			</section>
-		</section>
-		<section>
-			<h2 id="branching"><a href="#contents-branching">Branching</a></h2>
-			<section>
-				<h3 id="branching-terminology"><a href="#contents-branching-terminology">Terminology</a></h3>
-				<p>
-					Here is the basic set of terms needed to get started with Igor Gorlov's branching model. Additional
-					terms will be introduced later during further explanation.
-				</p>
-				<dl>
-					<dt>Workable program</dt>
-					<dd>A program that compiles (if required), runs and passes all tests (if any).</dd>
-					<dt>Readable documentation</dt>
-					<dd>
-						Unambiguous and consistent documentation which has <strong>no</strong> internal contradictions
-						and/or incomplete sections, but (probably) still needs additions and/or improvements.
-					</dd>
-					<dt>Solid state</dt>
-					<dd>
-						A codebase is in a solid state when <strong>all</strong> of the following conditions are met:
+			<nav>
+				<h2 id="contents">Contents</h2>
+				<ul>
+					<li id="contents-archichanges"><a href="#archichanges">Archichanges</a></li>
+					<li id="contents-commit-messages">
+						<a href="#commit-messages">Commit Messages</a>
 						<ul>
-							<li>Its program part (if present) is <strong>workable</strong>.</li>
-							<li>Its documentation part (if present) is <strong>readable</strong>.</li>
-							<li>It conforms to the coding style rules.</li>
+							<li id="contents-commit-messages-subject">
+								<a href="#commit-messages-subject">Subject Line</a>
+							</li>
+							<li id="contents-commit-messages-body">
+								<a href="#commit-messages-body">Body</a>
+							</li>
+							<li id="contents-commit-messages-footer">
+								<a href="#commit-messages-footer">Footer</a>
+							</li>
 						</ul>
-					</dd>
-					<dt>Unstable state</dt>
-					<dd>
-						A codebase is in an unstable state when <strong>one or more</strong> of the solid state
-						conditions are <strong>false</strong>.
-					</dd>
-					<dt>Solid commit</dt>
-					<dd>A commit pointing to a codebase snapshot which is in a <strong>solid state</strong>.</dd>
-					<dt>Unstable commit</dt>
-					<dd>A commit pointing to a codebase snapshot which is in an <strong>unstable state</strong>.</dd>
-					<dt>Solid branch</dt>
-					<dd>A branch requiring every its commit to be <strong>solid</strong>.</dd>
-					<dt>Unstable branch</dt>
-					<dd>A branch on which unstable commits are <strong>permitted</strong>.</dd>
-				</dl>
-			</section>
-			<section>
-				<h3 id="branching-overview"><a href="#contents-branching-overview">Overview</a></h3>
-				<p>
-					Every repository is built around the default branch called <code>dev</code>. This is a
-					<strong>solid</strong> branch, it represents the main stream of development. Ideally, the whole
-					history of the project should be linearly stored on <code>dev</code> as a series of small and
-					distinct commits.
-				</p>
-				<p>However, such scenario is often not viable in real world:</p>
-				<ul>
-					<li id="branching-overview-issue1">
-						The first obstacle comes from inherent complexity of any software which is larger than a code
-						example from a beginners' manual. The more abstraction layers your project consists of, the
-						harder it becomes both to retain a solid state and to keep commits compact simultaneously.
 					</li>
-					<li id="branching-overview-issue2">
-						Another problem appears when the upcoming release is getting close. You have to perform several
-						final touches before announcing a new version, but suddenly understand that those touches are
-						really not needed on <code>dev</code>&nbsp;&mdash; they will hamper the future work. For
-						example, there is absolutely no necessity to improve quality of visual design if you are
-						planning to completely revisit the GUI right after the upcoming release.
+					<li id="contents-branching">
+						<a href="#branching">Branching</a>
+						<ul>
+							<li id="contents-branching-terminology"
+								><a href="#branching-terminology">Terminology</a></li
+							>
+							<li id="contents-branching-overview"><a href="#branching-overview">Overview</a></li>
+							<li id="contents-branching-encapsulation">
+								<a href="#branching-encapsulation">Encapsulation Branches</a>
+							</li>
+							<li id="contents-branching-release"><a href="#branching-release">Release Branches</a></li>
+							<li id="contents-branching-initial"><a href="#branching-initial">The Initial Commit</a></li>
+						</ul>
 					</li>
 				</ul>
+			</nav>
+		</header>
+		<main>
+			<section>
+				<h2 id="archichanges"><a href="#contents-archichanges">Archichanges</a></h2>
 				<p>
-					The branching strategy covered in the remaining subsections proposes several workarounds for the
-					issues listed above.
+					The <a href="general.html#metafiles-architecture"><code>architecture.md</code> metafile</a> must
+					remain actual at any time and thus is required to be updated on <strong>every archichange</strong>.
+					The update is performed by the <strong>same</strong> commit which applies the architectural change
+					itself.
 				</p>
 			</section>
 			<section>
-				<h3 id="branching-encapsulation">
-					<a href="#contents-branching-encapsulation">Encapsulation Branches</a>
-				</h3>
+				<h2 id="commit-messages"><a href="#contents-commit-messages">Commit Messages</a></h2>
 				<p>
-					To resolve the <a href="#branching-overview-issue1">first issue</a>, we add some kind of complexity
-					management using temporary unstable branches (hereinafter&nbsp;&mdash;
-					<dfn>encapsulation branches</dfn>). When a complex task rises, create a new branch, do all unstable
-					work on it, then merge back into <code>dev</code>, and finally delete the encapsulation branch.
+					A well-formed commit message consists of a mandatory <strong>subject line</strong>, an optional
+					<strong>body</strong>, and an optional <strong>footer</strong>. All these three parts are separated
+					from each other by <strong>one empty line</strong>. The whole message must be wrapped to
+					<strong>seventy-two</strong> columns and must <strong>not</strong> refer to any other commits.
 				</p>
-				<p>Despite that this process is very intuitive, a set of mandatory rules exists:</p>
-				<ul>
-					<li>
-						The branch name must be written in <strong>Git case</strong>. If the name is hierarchical,
-						replace the separating slash (/) with a <strong>hyphen (-)</strong>.
+				<p>In the next subsections, we will consider each part of a commit message in detail.</p>
+				<section>
+					<h3 id="commit-messages-subject"><a href="#contents-commit-messages-subject">Subject Line</a></h3>
+					<p>
+						A subject line is intended to express a <strong>brief summary</strong> of the commit, which may
+						be used by various developer tools and services, including (but not limiting to) the
+						<code>GitHub</code> web interface and <code>Git</code> itself. In many cases, the only thing
+						that is shown in a commit log being viewed by some third-party programmer will be your subject
+						line. Therefore, you have to make it concise and abstract, letting a reader to get the
+						high-level sense of the changes represented by this commit. Unless it is really necessary, do
+						<strong>not</strong> mention raw filenames in the subject line&nbsp;&mdash; use
+						<strong>archinames</strong> instead.
+					</p>
+					<p>Despite the hard length limit, a subject line has its own internal structure:</p>
+					<code> &lt;type&gt;[ &lt;scope&gt;]: &lt;description&gt; </code>
+					<p>
+						Here, <code>&lt;type&gt;</code> is an identifier denoting the current commit type,
+						<code>&lt;scope&gt;</code> is an optional name of the architectural entity this commit is
+						related to, <code>&lt;description&gt;</code> is a very brief summary of the changes.
+					</p>
+					<section>
+						<h4>Commit Type</h4>
+						<p>
+							All possible commit types are listed in the table below. Please note that in subject lines
+							you have to use commit type <strong>identifiers</strong>, not their names.
+						</p>
 						<table>
-							<caption>Examples</caption>
+							<caption>Commit Types</caption>
 							<tr>
-								<th>Source hierarchical name</th>
-								<th>Resulting branch name</th>
+								<th>Identifier</th>
+								<th>Name</th>
+								<th>Description</th>
 							</tr>
 							<tr>
-								<td><code>core/loader</code></td>
-								<td><code>core-loader</code></td>
+								<td><code>fix</code></td>
+								<td><code>Fix</code></td>
+								<td>Fixes a bug or addresses an issue</td>
 							</tr>
 							<tr>
-								<td><code>file-manager/search</code></td>
-								<td><code>file-manager-search</code></td>
+								<td><code>feat</code></td>
+								<td><code>Feature</code></td>
+								<td>Adds new functionality</td>
 							</tr>
 							<tr>
-								<td><code>audio-formats/lossy/mp3</code></td>
-								<td><code>audio-formats-lossy-mp3</code></td>
-							</tr>
-						</table>
-					</li>
-					<li>
-						A prefix denoting the type of the merge commit being planned must precede the branch name; the
-						name and the prefix must be separated by <strong>slash (/)</strong>.
-						<table>
-							<caption>Examples</caption>
-							<tr>
-								<td>Develop a new big class named <code>TextParser</code></td>
-								<td><code>feat/text-parser</code></td>
-							</tr>
-							<tr>
-								<td>Refactor a <code>Network</code> module consisting of many classes</td>
-								<td><code>refactor/network</code></td>
-							</tr>
-							<tr>
+								<td><code>mod</code></td>
+								<td><code>Modification</code></td>
 								<td>
-									Rewrite a <code>Server</code> class which is a member of the <code>Network</code>
-									module
+									Changes existing functionality in order to get a new behavior but
+									<strong>not</strong>
+									to fix a bug
 								</td>
-								<td><code>mod/network-server</code></td>
+							</tr>
+							<tr>
+								<td><code>opt</code></td>
+								<td><code>Optimization</code></td>
+								<td>
+									Reduces the amount of resources needed for execution of the code, such as CPU time,
+									memory consumption, binary size etc.
+								</td>
+							</tr>
+							<tr>
+								<td><code>refactor</code></td>
+								<td><code>Refactoring</code></td>
+								<td>Restructures the code for readability without any impact on its semantics</td>
+							</tr>
+							<tr>
+								<td><code>format</code></td>
+								<td><code>Format</code></td>
+								<td>
+									Changes formatting of the code, but does <strong>not</strong> affect its meaning at
+									all
+								</td>
+							</tr>
+							<tr>
+								<td><code>clean</code></td>
+								<td><code>Clean</code></td>
+								<td>Removes unneeded code</td>
 							</tr>
 						</table>
-					</li>
-					<li><strong>Always</strong> create a merge commit; avoid fast-forward merges.</li>
-					<li>
-						Provide the merge commit with an informative <a href="#commit-messages">message</a>; do
-						<strong>not</strong> leave the default one.
-					</li>
-					<li>
-						The abuse of encapsulation branches can lead to an overcomplicated repository structure; so
-						avoid creating them recursively in order to keep any encapsulation branch
-						<strong>linear</strong>.
-					</li>
-					<li id="branching-encapsulation-splitting-rule">
-						Keep all commits <strong>small and logically separated</strong>; if you have a complex task,
-						break it down into simpler ones.
-					</li>
-				</ul>
+					</section>
+					<section>
+						<h4>Commit Scope</h4>
+						<p>
+							A scope is denoted by an appropriate archiname. If the pointed-to architectural entity is
+							nested (is a part of a larger archient), you can create a hierarchical identifier using
+							<strong>forward slash (/)</strong> as a separator; such scope name will look like a
+							filepath, although it hardly ever has something to do with real file system. If the chosen
+							architectural entity is the archiroot, omit a scope name.
+						</p>
+					</section>
+					<section>
+						<h4>Commit Description</h4>
+						<p>
+							A description is here to answer the question &ldquo;<strong>what?</strong>&rdquo; instead of
+							&ldquo;<strong>why?</strong>&rdquo;. Write in a few words what exactly was done and leave
+							the reasons (if any) for the message body. Apart from the above, the following rules are
+							applied:
+						</p>
+						<ul>
+							<li>
+								Use an <strong>imperative mood</strong> within a description (write it in the
+								<strong>present tense</strong>).
+							</li>
+							<li>The use of articles (a/an, the) is <strong>not</strong> recommended.</li>
+							<li>Do <strong>not</strong> start a description with a capital letter.</li>
+							<li>Do <strong>not</strong> finish a description with a period (.).</li>
+							<li>Within a description, write all numbers <strong>digitally</strong>.</li>
+						</ul>
+						<p>
+							It is possible to refer to another scope by its name right from a description. This trick is
+							very helpful in circumstances when you are exceeding the length limit and need to save your
+							characters, but the archititle being mentioned is too cumbersome. For example, you have a
+							section with archititle &ldquo;Frequently Asked Questions&rdquo; and archiname
+							<code>faq</code> in your application's user manual. When mentioning this section in a commit
+							description, simply type the scope name with a <strong>tilde (~)</strong> at the beginning:
+							<code>~faq</code>. That's it, you just have saved <strong>twenty-two</strong> characters!
+						</p>
+					</section>
+					<section>
+						<h4>Subject Line Examples</h4>
+						<ul class="no-markers">
+							<li>
+								<code class="non-breaking">fix ui/input/keyboard: correct handling of arrow keys</code>
+							</li>
+							<li>
+								<code class="non-breaking">feat core/parser: add Unicode support</code>
+							</li>
+							<li>
+								<code class="non-breaking">mod ui/settings/timeout: replace list with text field</code>
+							</li>
+							<li>
+								<code class="non-breaking">
+									opt lib/containers/concurrent-map: switch to lock-free algorithm
+								</code>
+							</li>
+							<li>
+								<code class="non-breaking">refactor server: split up queryDatabase() method</code>
+							</li>
+							<li>
+								<code class="non-breaking">format: change indentation method from spaces to tabs</code>
+							</li>
+							<li>
+								<code class="non-breaking">clean: drop Windows 7 support</code>
+							</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<h3 id="commit-messages-body"><a href="#contents-commit-messages-body">Body</a></h3>
+					<p>
+						A subject line is typically followed by a body, which tells more about the commit in a
+						relatively free form. This part of a commit message consists of an arbitrary number of
+						paragraphs separated by an <strong>empty line</strong>. Here you can explain the
+						<strong>reasons</strong> the commit had been prompted by, add
+						<strong>technical details</strong>, and (probably) place additional information.
+					</p>
+					<p>
+						A body is <strong>less</strong> abstract than a subject line, so you are allowed to use raw
+						filenames, not only scope references. However, avoid abusing this low level style&nbsp;&mdash;
+						do <strong>not</strong> turn your commit message into pseudocode.
+					</p>
+				</section>
+				<section>
+					<h3 id="commit-messages-footer"><a href="#contents-commit-messages-footer">Footer</a></h3>
+					<p>
+						A footer is used only for <code>Fix</code> commits to point to the problem being solved. Like a
+						subject line, a footer occupies strictly <strong>one</strong> row of seventy-two columns. It
+						consists of a <strong>hash sign (#)</strong> immediately followed by a number identifying the
+						addressed issue: <code>#123456</code>.
+					</p>
+				</section>
 			</section>
 			<section>
-				<h3 id="branching-release"><a href="#contents-branching-release">Release Branches</a></h3>
-				<p>
-					This addresses the <a href="#branching-overview-issue2">second issue</a>. If the new version of your
-					product needs additional pre-release tuning which has nothing to do with the subsequent (starting
-					after this new version) development, create a dedicated <dfn>release branch</dfn> and do all the
-					preparatory work there. When the project is absolutely ready to be released, tag the tip of the
-					release branch, and you are done. However, if you maintain several generations of the product in
-					parallel (like Microsoft does with its <code class="non-breaking">Windows 10</code> and
-					<code class="non-breaking">Windows 11</code> operating systems), it might be sine to develop updates
-					and fixes for each generation right on that generation's release branch (after the major release
-					tag). Anyway, a release branch persistently remains alive and <strong>never</strong> gets deleted.
-				</p>
-				<p>
-					Release branches are <strong>solid</strong>. Similarly to <code>dev</code>, any of them can be (but
-					not always is) a base for its own encapsulation branches.
-				</p>
-				<p>
-					A special <code>rel</code> prefix is used to clearly indicate a release branch; the prefix and
-					the branch name are separated by a <strong>slash (/)</strong>: <code>rel/v1</code>.
-				</p>
+				<h2 id="branching"><a href="#contents-branching">Branching</a></h2>
+				<section>
+					<h3 id="branching-terminology"><a href="#contents-branching-terminology">Terminology</a></h3>
+					<p>
+						Here is the basic set of terms needed to get started with Igor Gorlov's branching model.
+						Additional terms will be introduced later during further explanation.
+					</p>
+					<dl>
+						<dt>Workable program</dt>
+						<dd>A program that compiles (if required), runs and passes all tests (if any).</dd>
+						<dt>Readable documentation</dt>
+						<dd>
+							Unambiguous and consistent documentation which has <strong>no</strong> internal
+							contradictions and/or incomplete sections, but (probably) still needs additions and/or
+							improvements.
+						</dd>
+						<dt>Solid state</dt>
+						<dd>
+							A codebase is in a solid state when <strong>all</strong> of the following conditions are
+							met:
+							<ul>
+								<li>Its program part (if present) is <strong>workable</strong>.</li>
+								<li>Its documentation part (if present) is <strong>readable</strong>.</li>
+								<li>It conforms to the coding style rules.</li>
+							</ul>
+						</dd>
+						<dt>Unstable state</dt>
+						<dd>
+							A codebase is in an unstable state when <strong>one or more</strong> of the solid state
+							conditions are <strong>false</strong>.
+						</dd>
+						<dt>Solid commit</dt>
+						<dd>A commit pointing to a codebase snapshot which is in a <strong>solid state</strong>.</dd>
+						<dt>Unstable commit</dt>
+						<dd
+							>A commit pointing to a codebase snapshot which is in an
+							<strong>unstable state</strong>.</dd
+						>
+						<dt>Solid branch</dt>
+						<dd>A branch requiring every its commit to be <strong>solid</strong>.</dd>
+						<dt>Unstable branch</dt>
+						<dd>A branch on which unstable commits are <strong>permitted</strong>.</dd>
+					</dl>
+				</section>
+				<section>
+					<h3 id="branching-overview"><a href="#contents-branching-overview">Overview</a></h3>
+					<p>
+						Every repository is built around the default branch called <code>dev</code>. This is a
+						<strong>solid</strong> branch, it represents the main stream of development. Ideally, the whole
+						history of the project should be linearly stored on <code>dev</code> as a series of small and
+						distinct commits.
+					</p>
+					<p>However, such scenario is often not viable in real world:</p>
+					<ul>
+						<li id="branching-overview-issue1">
+							The first obstacle comes from inherent complexity of any software which is larger than a
+							code example from a beginners' manual. The more abstraction layers your project consists of,
+							the harder it becomes both to retain a solid state and to keep commits compact
+							simultaneously.
+						</li>
+						<li id="branching-overview-issue2">
+							Another problem appears when the upcoming release is getting close. You have to perform
+							several final touches before announcing a new version, but suddenly understand that those
+							touches are really not needed on <code>dev</code>&nbsp;&mdash; they will hamper the future
+							work. For example, there is absolutely no necessity to improve quality of visual design if
+							you are planning to completely revisit the GUI right after the upcoming release.
+						</li>
+					</ul>
+					<p>
+						The branching strategy covered in the remaining subsections proposes several workarounds for the
+						issues listed above.
+					</p>
+				</section>
+				<section>
+					<h3 id="branching-encapsulation">
+						<a href="#contents-branching-encapsulation">Encapsulation Branches</a>
+					</h3>
+					<p>
+						To resolve the <a href="#branching-overview-issue1">first issue</a>, we add some kind of
+						complexity management using temporary unstable branches (hereinafter&nbsp;&mdash;
+						<dfn>encapsulation branches</dfn>). When a complex task rises, create a new branch, do all
+						unstable work on it, then merge back into <code>dev</code>, and finally delete the encapsulation
+						branch.
+					</p>
+					<p>Despite that this process is very intuitive, a set of mandatory rules exists:</p>
+					<ul>
+						<li>
+							The branch name must be written in <strong>Git case</strong>. If the name is hierarchical,
+							replace the separating slash (/) with a <strong>hyphen (-)</strong>.
+							<table>
+								<caption>Examples</caption>
+								<tr>
+									<th>Source hierarchical name</th>
+									<th>Resulting branch name</th>
+								</tr>
+								<tr>
+									<td><code>core/loader</code></td>
+									<td><code>core-loader</code></td>
+								</tr>
+								<tr>
+									<td><code>file-manager/search</code></td>
+									<td><code>file-manager-search</code></td>
+								</tr>
+								<tr>
+									<td><code>audio-formats/lossy/mp3</code></td>
+									<td><code>audio-formats-lossy-mp3</code></td>
+								</tr>
+							</table>
+						</li>
+						<li>
+							A prefix denoting the type of the merge commit being planned must precede the branch name;
+							the name and the prefix must be separated by <strong>slash (/)</strong>.
+							<table>
+								<caption>Examples</caption>
+								<tr>
+									<td>Develop a new big class named <code>TextParser</code></td>
+									<td><code>feat/text-parser</code></td>
+								</tr>
+								<tr>
+									<td>Refactor a <code>Network</code> module consisting of many classes</td>
+									<td><code>refactor/network</code></td>
+								</tr>
+								<tr>
+									<td>
+										Rewrite a <code>Server</code> class which is a member of the
+										<code>Network</code>
+										module
+									</td>
+									<td><code>mod/network-server</code></td>
+								</tr>
+							</table>
+						</li>
+						<li><strong>Always</strong> create a merge commit; avoid fast-forward merges.</li>
+						<li>
+							Provide the merge commit with an informative <a href="#commit-messages">message</a>; do
+							<strong>not</strong> leave the default one.
+						</li>
+						<li>
+							The abuse of encapsulation branches can lead to an overcomplicated repository structure; so
+							avoid creating them recursively in order to keep any encapsulation branch
+							<strong>linear</strong>.
+						</li>
+						<li id="branching-encapsulation-splitting-rule">
+							Keep all commits <strong>small and logically separated</strong>; if you have a complex task,
+							break it down into simpler ones.
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h3 id="branching-release"><a href="#contents-branching-release">Release Branches</a></h3>
+					<p>
+						This addresses the <a href="#branching-overview-issue2">second issue</a>. If the new version of
+						your product needs additional pre-release tuning which has nothing to do with the subsequent
+						(starting after this new version) development, create a dedicated <dfn>release branch</dfn> and
+						do all the preparatory work there. When the project is absolutely ready to be released, tag the
+						tip of the release branch, and you are done. However, if you maintain several generations of the
+						product in parallel (like Microsoft does with its
+						<code class="non-breaking">Windows 10</code> and
+						<code class="non-breaking">Windows 11</code> operating systems), it might be sine to develop
+						updates and fixes for each generation right on that generation's release branch (after the major
+						release tag). Anyway, a release branch persistently remains alive and
+						<strong>never</strong> gets deleted.
+					</p>
+					<p>
+						Release branches are <strong>solid</strong>. Similarly to <code>dev</code>, any of them can be
+						(but not always is) a base for its own encapsulation branches.
+					</p>
+					<p>
+						A special <code>rel</code> prefix is used to clearly indicate a release branch; the prefix and
+						the branch name are separated by a <strong>slash (/)</strong>: <code>rel/v1</code>.
+					</p>
+				</section>
+				<section>
+					<h3 id="branching-initial"><a href="#contents-branching-initial">The Initial Commit</a></h3>
+					<p>
+						A new repository may begin its life either from scratch (when there are no files yet) or by
+						importing an existing codebase. Regardless of the origin of the contents being added, the
+						history of the project has to start from some <dfn>initial commit</dfn>, which is the root of
+						<code>dev</code> branch and thus must be <strong>solid</strong>. An initial commit is special in
+						the sense that its message requirements have nothing to do with the regular
+						<a href="#commit-messages"><span class="non-breaking">commit message rules</span></a> (see next
+						paragraphs for details). Also, by definition, it is impossible for a repository to have more
+						than 1 initial commit as well as not to have it at all; therefore, the initial commit is always
+						unique within particular history.
+					</p>
+					<p>
+						In case of existing code, <strong>all</strong> imported data must be included in
+						<strong>one</strong> monolithic initial commit. This is an exception to the
+						<a href="#branching-encapsulation-splitting-rule">rule which requires commits to be small</a>.
+						Such initial commit is equipped with a message <strong>exactly</strong> matching the text below:
+					</p>
+					<p>
+						<code class="non-breaking">Import project</code>
+					</p>
+					<p>
+						When creating a project from scratch, the initial commit must consist of
+						<a href="general.html#metafiles-readme"><code>readme.md</code></a> and
+						<a href="general.html#metafiles-architecture"><code>architecture.md</code></a> documents. The
+						former metafile follows the regular conventions established for <code>readme.md</code>; the
+						latter must only have the <strong>top-level header</strong> inside it. The commit message will
+						look <strong>exactly</strong> as follows:
+					</p>
+					<p>
+						<code class="non-breaking">Initialize project</code>
+					</p>
+				</section>
 			</section>
-			<section>
-				<h3 id="branching-initial"><a href="#contents-branching-initial">The Initial Commit</a></h3>
-				<p>
-					A new repository may begin its life either from scratch (when there are no files yet) or by
-					importing an existing codebase. Regardless of the origin of the contents being added, the history of
-					the project has to start from some <dfn>initial commit</dfn>, which is the root of <code>dev</code>
-					branch and thus must be <strong>solid</strong>. An initial commit is special in the sense that its
-					message requirements have nothing to do with the regular
-					<a href="#commit-messages"><span class="non-breaking">commit message rules</span></a> (see next
-					paragraphs for details). Also, by definition, it is impossible for a repository to have more than 1
-					initial commit as well as not to have it at all; therefore, the initial commit is always unique
-					within particular history.
-				</p>
-				<p>
-					In case of existing code, <strong>all</strong> imported data must be included in
-					<strong>one</strong> monolithic initial commit. This is an exception to the
-					<a href="#branching-encapsulation-splitting-rule">rule which requires commits to be small</a>. Such
-					initial commit is equipped with a message <strong>exactly</strong> matching the text below:
-				</p>
-				<p>
-					<code class="non-breaking">Import project</code>
-				</p>
-				<p>
-					When creating a project from scratch, the initial commit must consist of
-					<a href="general.html#metafiles-readme"><code>readme.md</code></a> and
-					<a href="general.html#metafiles-architecture"><code>architecture.md</code></a> documents. The former
-					metafile follows the regular conventions established for <code>readme.md</code>; the latter must
-					only have the <strong>top-level header</strong> inside it. The commit message will look
-					<strong>exactly</strong> as follows:
-				</p>
-				<p>
-					<code class="non-breaking">Initialize project</code>
-				</p>
-			</section>
-		</section>
-	</main>
-	<a href="#contents">Back to the table of contents</a>
-</body>
-
+		</main>
+		<a href="#contents">Back to the table of contents</a>
+	</body>
 </html>

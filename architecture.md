@@ -2,53 +2,53 @@
 
 ## Main Page (index.html) ~main
 
-* Motivation ~mtv
-* Natural Language ~lang
-* Generic Instructions ~generic
-* Language-Specific Instructions ~specific
+-   Motivation ~mtv
+-   Natural Language ~lang
+-   Generic Instructions ~generic
+-   Language-Specific Instructions ~specific
 
 ## General Guidelines (general.html) ~general
 
-* Terminology ~terms
-* Project Basics ~project
-* Metafiles ~meta
-  * architecture.md ~arch
-  * workflow.md ~flow
-  * readme.md ~readme
+-   Terminology ~terms
+-   Project Basics ~project
+-   Metafiles ~meta
+    -   architecture.md ~arch
+    -   workflow.md ~flow
+    -   readme.md ~readme
 
 ## Version Control Guide (vcs.html) ~vcs
 
-* Archichanges ~archch
-* Commit Messages ~messages
-  * Subject Line ~subject
-    * Commit Type ~type
-    * Commit Scope ~scope
-    * Subject Line Examples ~ex
-  * Body ~body
-  * Footer ~footer
-* Branching ~branching
-  * Terminology ~terms
-  * Overview ~overview
-  * Encapsulation Branches ~encaps
-  * Release Branches ~release
-  * The Initial Commit ~initial
+-   Archichanges ~archch
+-   Commit Messages ~messages
+    -   Subject Line ~subject
+        -   Commit Type ~type
+        -   Commit Scope ~scope
+        -   Subject Line Examples ~ex
+    -   Body ~body
+    -   Footer ~footer
+-   Branching ~branching
+    -   Terminology ~terms
+    -   Overview ~overview
+    -   Encapsulation Branches ~encaps
+    -   Release Branches ~release
+    -   The Initial Commit ~initial
 
 ## Document Requirements (document.html) ~doc
 
-* Basics ~basics
-* Terminology ~terms
-* Emphasis ~emphasis
-* Punctuation ~punct
-  * Quotation Marks ~quotes
-  * Em Dashes, En Dashes, and Hyphens ~dashes
-* Numerals ~nums
+-   Basics ~basics
+-   Terminology ~terms
+-   Emphasis ~emphasis
+-   Punctuation ~punct
+    -   Quotation Marks ~quotes
+    -   Em Dashes, En Dashes, and Hyphens ~dashes
+-   Numerals ~nums
 
 ## C++ Coding Style Guide (cpp.html) ~cpp
 
-* General ~general
-* Naming ~naming
-* Formatting ~format
-* Commenting ~comments
+-   General ~general
+-   Naming ~naming
+-   Formatting ~format
+-   Commenting ~comments
 
 ## Common Stylesheet (common.css) ~common-css
 

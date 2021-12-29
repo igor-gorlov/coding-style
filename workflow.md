@@ -4,7 +4,8 @@
 
 To add a **single-line** fragment of raw program code into a document:
 
-1. Escape less-than characters (`<`), greater-than characters (`>`) and quotation marks (`"`) with appropriate HTML entities.
+1. Escape less-than characters (`<`), greater-than characters (`>`) and quotation marks (`"`) with appropriate HTML
+   entities.
 2. Surround the code with `<code>...</code>` tags.
 
 To add a **multiline** fragment:

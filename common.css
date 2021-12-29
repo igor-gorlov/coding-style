@@ -1,61 +1,60 @@
-*
-{
+* {
 	hyphens: none;
 }
 
 /* Set the default proportional font and the default monospace font */
-*
-{
+* {
 	font-family: "Times New Roman", serif;
 }
-code, code *, pre, pre *
-{
+code,
+code *,
+pre,
+pre * {
 	font-family: Consolas, monospace;
 }
 
-h1
-{
+h1 {
 	text-align: center;
 	text-decoration: underline;
 	font-weight: bold;
 }
 
-h2, h3, h4, h5, h6
-{
+h2,
+h3,
+h4,
+h5,
+h6 {
 	text-align: center;
 }
 
-strong
-{
+strong {
 	font-weight: bold;
 	white-space: nowrap;
 	hyphens: none;
 }
 
-dt, dfn
-{
+dt,
+dfn {
 	font-style: italic;
 	white-space: nowrap;
 	hyphens: none;
 }
 
-a
-{
+a {
 	text-decoration: blue;
 }
 
-nav ul, nav ol
-{
+nav ul,
+nav ol {
 	list-style-type: none;
 }
 
-.non-breaking
-{
+.non-breaking {
 	white-space: nowrap;
 	hyphens: none;
 }
 
-ul.no-markers, ol.no-markers
-{
+ul.no-markers,
+ol.no-markers {
 	list-style-type: none;
 }
