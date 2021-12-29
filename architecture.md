@@ -10,6 +10,7 @@
 ## General Guidelines (general.html) ~general
 
 -   Terminology ~terms
+    -   Phrase Writing Methods ~cases
 -   Project Basics ~project
 -   Metafiles ~meta
     -   architecture.md ~arch

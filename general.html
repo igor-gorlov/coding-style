@@ -12,7 +12,14 @@
 			<nav>
 				<h2 id="contents">Contents</h2>
 				<ul>
-					<li id="contents-terminology"><a href="#terminology">Terminology</a></li>
+					<li id="contents-terminology"
+						><a href="#terminology">Terminology</a>
+						<ul>
+							<li id="contents-terminology-cases">
+								<a href="#terminology-cases">Phrase Writing Methods</a>
+							</li>
+						</ul>
+					</li>
 					<li id="contents-project"><a href="#project">Project Basics</a></li>
 					<li id="contents-metafiles">
 						<a href="#metafiles">Metafiles</a>
@@ -35,94 +42,103 @@
 			<section>
 				<h2 id="terminology"><a href="#contents-terminology">Terminology</a></h2>
 				<p>The following are some common terms used throughout the whole coding style documentation.</p>
+				<section>
+					<h3 id="terminology-cases">
+						<a href="#contents-terminology-cases">Phrase Writing Methods</a>
+					</h3>
+					<dl>
+						<dt>Spaceless case</dt>
+						<dd>
+							A collective name for several styles of phrase writing in which whitespaces are
+							<strong>not</strong>
+							used.
+						</dd>
+						<dt>Spaceful case</dt>
+						<dd>
+							A collective name for several styles of phrase writing where spaces are used as word
+							delimiters.
+						</dd>
+						<dt>Header case</dt>
+						<dd>
+							A <strong>spaceful</strong> case which capitalizes all <strong>notional</strong> parts of
+							speech within the phrase being written, while the first word is
+							<strong>unconditionally</strong>
+							capitalized.
+							<table>
+								<tr>
+									<td>Example</td>
+									<td>An Occurrence at Owl Creek Bridge</td>
+								</tr>
+							</table>
+						</dd>
+						<dt>Upper camel case</dt>
+						<dd>
+							A <strong>spaceless</strong> case where each word of the phrase being written begins with a
+							capital letter.
+							<table>
+								<tr>
+									<td>Example</td>
+									<td>
+										<code>SpacesAreNotAllowedHere</code>
+									</td>
+								</tr>
+							</table>
+						</dd>
+						<dt>Lower camel case</dt>
+						<dd>
+							A <strong>spaceless</strong> case where each word of the phrase being written except of the
+							first one begins with a capital letter.
+							<table>
+								<tr>
+									<td>Example</td>
+									<td>
+										<code>spacesAreNotAllowedHere</code>
+									</td>
+								</tr>
+							</table>
+						</dd>
+						<dt>Upper snake case</dt>
+						<dd>
+							A <strong>spaceless</strong> case using an underscore character (_) as a word separator and
+							requiring <strong>all</strong> letters to be capital.
+							<table>
+								<tr>
+									<td>Example</td>
+									<td>
+										<code>SPACES_ARE_NOT_ALLOWED_HERE</code>
+									</td>
+								</tr>
+							</table>
+						</dd>
+						<dt>Lower snake case</dt>
+						<dd>
+							A <strong>spaceless</strong> case using an underscore character (_) as a word separator and
+							<strong>totally prohibiting</strong> capital letters.
+							<table>
+								<tr>
+									<td>Example</td>
+									<td>
+										<code>spaces_are_not_allowed_here</code>
+									</td>
+								</tr>
+							</table>
+						</dd>
+						<dt>Git case</dt>
+						<dd>
+							A <strong>spaceless</strong> case using hyphen character (-) as a word separator and
+							<strong>totally prohibiting</strong> capital letters.
+							<table>
+								<tr>
+									<td>Example</td>
+									<td>
+										<code>spaces-are-not-allowed-here</code>
+									</td>
+								</tr>
+							</table>
+						</dd>
+					</dl>
+				</section>
 				<dl>
-					<dt>Spaceless case</dt>
-					<dd>
-						A collective name for several styles of phrase writing in which whitespaces are
-						<strong>not</strong>
-						used.
-					</dd>
-					<dt>Spaceful case</dt>
-					<dd>
-						A collective name for several styles of phrase writing where spaces are used as word delimiters.
-					</dd>
-					<dt>Header case</dt>
-					<dd>
-						A <strong>spaceful</strong> case which capitalizes all <strong>notional</strong> parts of speech
-						within the phrase being written, while the first word is <strong>unconditionally</strong>
-						capitalized.
-						<table>
-							<tr>
-								<td>Example</td>
-								<td>An Occurrence at Owl Creek Bridge</td>
-							</tr>
-						</table>
-					</dd>
-					<dt>Upper camel case</dt>
-					<dd>
-						A <strong>spaceless</strong> case where each word of the phrase being written begins with a
-						capital letter.
-						<table>
-							<tr>
-								<td>Example</td>
-								<td>
-									<code>SpacesAreNotAllowedHere</code>
-								</td>
-							</tr>
-						</table>
-					</dd>
-					<dt>Lower camel case</dt>
-					<dd>
-						A <strong>spaceless</strong> case where each word of the phrase being written except of the
-						first one begins with a capital letter.
-						<table>
-							<tr>
-								<td>Example</td>
-								<td>
-									<code>spacesAreNotAllowedHere</code>
-								</td>
-							</tr>
-						</table>
-					</dd>
-					<dt>Upper snake case</dt>
-					<dd>
-						A <strong>spaceless</strong> case using an underscore character (_) as a word separator and
-						requiring <strong>all</strong> letters to be capital.
-						<table>
-							<tr>
-								<td>Example</td>
-								<td>
-									<code>SPACES_ARE_NOT_ALLOWED_HERE</code>
-								</td>
-							</tr>
-						</table>
-					</dd>
-					<dt>Lower snake case</dt>
-					<dd>
-						A <strong>spaceless</strong> case using an underscore character (_) as a word separator and
-						<strong>totally prohibiting</strong> capital letters.
-						<table>
-							<tr>
-								<td>Example</td>
-								<td>
-									<code>spaces_are_not_allowed_here</code>
-								</td>
-							</tr>
-						</table>
-					</dd>
-					<dt>Git case</dt>
-					<dd>
-						A <strong>spaceless</strong> case using hyphen character (-) as a word separator and
-						<strong>totally prohibiting</strong> capital letters.
-						<table>
-							<tr>
-								<td>Example</td>
-								<td>
-									<code>spaces-are-not-allowed-here</code>
-								</td>
-							</tr>
-						</table>
-					</dd>
 					<dt>Archient (architectural entity)</dt>
 					<dd>
 						A relatively independent part of a codebase (for example, a class or a module) which can (but is
