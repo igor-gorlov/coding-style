@@ -1,0 +1,11 @@
+{
+	"printWidth": 120,
+	"tabWidth": 4,
+	"useTabs": true,
+	"trailingComma": "none",
+	"bracketSpacing": false,
+	"bracketSameLine": true,
+	"proseWrap": "always",
+	"endOfLine": "crlf",
+	"htmlWhitespaceSensitivity": "strict"
+}
