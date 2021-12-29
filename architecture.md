@@ -12,6 +12,7 @@
 -   Terminology ~terms
     -   Phrase Writing Methods ~cases
     -   Project Architecture ~arch
+    -   Miscellaneous ~misc
 -   Project Basics ~project
 -   Metafiles ~meta
     -   architecture.md ~arch
