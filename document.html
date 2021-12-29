@@ -27,7 +27,13 @@
 				<ul>
 					<li id="contents-terminology"><a href="#terminology">Terminology</a></li>
 					<li id="contents-basics"><a href="#basics">Basics</a></li>
-					<li id="contents-emphasis"><a href="#emphasis">Emphasis</a></li>
+					<li id="contents-emphasis"
+						><a href="#emphasis">Emphasis</a>
+						<ul>
+							<li id="contents-emphasis-terminology"><a href="#emphasis-terminology">Terminology</a></li>
+							<li id="contents-emphasis-rules"><a href="#emphasis-rules">The Rules of Emphasis</a></li>
+						</ul>
+					</li>
 					<li id="contents-punctuation">
 						<a href="#punctuation">Punctuation</a>
 						<ul>
@@ -75,37 +81,6 @@
 								</table>
 							</li>
 						</ul>
-					</dd>
-					<dt>Exclusive emphasis technique (EET)</dt>
-					<dd>
-						A method of text highlighting that is <strong>never</strong> combined with other exclusive
-						emphasis techniques (including itself).
-					</dd>
-					<dt>Code emphasis</dt>
-					<dd>
-						An exclusive emphasis technique which uses a <strong>monospaced</strong> font and (if possible)
-						semantically marks the text being emphasized as <strong>program code</strong> (for example, with
-						<code>&lt;code&gt;</code> HTML tag).
-					</dd>
-					<dt>Term introduction emphasis (TIE)</dt>
-					<dd>
-						An exclusive emphasis technique that works on a <strong>short</strong> text fragment and makes
-						it <strong>non-breaking italic</strong>.
-					</dd>
-					<dt>Important fragment emphasis (IFE)</dt>
-					<dd>
-						An exclusive emphasis technique that works on a <strong>short</strong> text fragment and makes
-						it <strong>non-breaking bold</strong>.
-					</dd>
-					<dt>Emphasis conflict</dt>
-					<dd>
-						A situation when more than one exclusive emphasis technique should theoretically be applied to
-						the same word or phrase.
-					</dd>
-					<dt>Combinable emphasis technique (CET)</dt>
-					<dd>
-						A method of text highlighting permitted to be used in combination with any number of other
-						highlighting methods including itself.
 					</dd>
 					<dt>Partition</dt>
 					<dd>
@@ -240,68 +215,112 @@
 			</section>
 			<section>
 				<h2 id="emphasis"><a href="#contents-emphasis">Emphasis</a></h2>
-				<ul>
-					<li>Always use a <strong>proportional</strong> font for natural text.</li>
-					<li>Use <strong>code emphasis</strong> for all computer text.</li>
-					<li>
-						Use <strong>term introduction emphasis</strong> for the first occurrence of every new term
-						within the internal text.
-					</li>
-					<li>Use <strong>important fragment emphasis</strong> for the most valuable words and phrases.</li>
-					<li>
-						TIE and IFE highlightings should <strong>not</strong> span long pieces of text (only critical
-						fragments are to be emphasized) and should <strong>not</strong> appear too frequently.
-						<table>
-							<caption>Examples</caption>
-							<tr>
-								<td>An unacceptably long emphasis</td>
-								<td>
-									In our community, it is
-									<strong
-										>not allowed to insult other people or to impersonate the administrator</strong
-									>.
-								</td>
-							</tr>
-							<tr>
-								<td>Too many relatively short highlightings</td>
-								<td>
-									In our community, it is <strong>not allowed</strong> to
-									<strong>insult other people</strong> or to
-									<strong>impersonate the administrator</strong>.
-								</td>
-							</tr>
-							<tr>
-								<td>The recommended level of emphasis</td>
-								<td>
-									In our community, it is <strong>not</strong> allowed to insult other people or to
-									impersonate the administrator.
-								</td>
-							</tr>
-						</table>
-					</li>
-					<li>
-						If an emphasis conflict takes place, the exclusive technique which is higher in the following
-						priority list is picked:
-						<ol>
-							<li>Code emphasis.</li>
-							<li>Term introduction emphasis.</li>
-							<li>Important fragment emphasis.</li>
-						</ol>
-					</li>
-					<li>Set <strong>blue</strong> color for links, do <strong>not</strong> underline them.</li>
-					<li>
-						Highlight headers of all levels with <strong>bold</strong>; the top-level header should be
-						<strong>underlined</strong>.
-					</li>
-					<li>
-						The highlighting methods for headers and links are considered
-						<strong>Combinable emphasis techniques</strong> with all the ensuing consequences.
-					</li>
-					<li>
-						Do <strong>not</strong> apply any exclusive emphasis technique to
-						<a href="general.html#metafiles-workflow"><code>workflow.md</code> metafile</a>.
-					</li>
-				</ul>
+				<section>
+					<h3 id="emphasis-terminology"><a href="#contents-emphasis-terminology">Terminology</a></h3>
+					<dl>
+						<dt>Exclusive emphasis technique (EET)</dt>
+						<dd>
+							A method of text highlighting that is <strong>never</strong> combined with other exclusive
+							emphasis techniques (including itself).
+						</dd>
+						<dt>Code emphasis</dt>
+						<dd>
+							An exclusive emphasis technique which uses a <strong>monospaced</strong> font and (if
+							possible) semantically marks the text being emphasized as <strong>program code</strong> (for
+							example, with <code>&lt;code&gt;</code> HTML tag).
+						</dd>
+						<dt>Term introduction emphasis (TIE)</dt>
+						<dd>
+							An exclusive emphasis technique that works on a <strong>short</strong> text fragment and
+							makes it <strong>non-breaking italic</strong>.
+						</dd>
+						<dt>Important fragment emphasis (IFE)</dt>
+						<dd>
+							An exclusive emphasis technique that works on a <strong>short</strong> text fragment and
+							makes it <strong>non-breaking bold</strong>.
+						</dd>
+						<dt>Emphasis conflict</dt>
+						<dd>
+							A situation when more than one exclusive emphasis technique should theoretically be applied
+							to the same word or phrase.
+						</dd>
+						<dt>Combinable emphasis technique (CET)</dt>
+						<dd>
+							A method of text highlighting permitted to be used in combination with any number of other
+							highlighting methods including itself.
+						</dd>
+					</dl>
+				</section>
+				<section>
+					<h3 id="emphasis-rules"><a href="#contents-emphasis-rules">The Rules of Emphasis</a></h3>
+					<ul>
+						<li>Always use a <strong>proportional</strong> font for natural text.</li>
+						<li>Use <strong>code emphasis</strong> for all computer text.</li>
+						<li>
+							Use <strong>term introduction emphasis</strong> for the first occurrence of every new term
+							within the internal text.
+						</li>
+						<li
+							>Use <strong>important fragment emphasis</strong> for the most valuable words and
+							phrases.</li
+						>
+						<li>
+							TIE and IFE highlightings should <strong>not</strong> span long pieces of text (only
+							critical fragments are to be emphasized) and should <strong>not</strong> appear too
+							frequently.
+							<table>
+								<caption>Examples</caption>
+								<tr>
+									<td>An unacceptably long emphasis</td>
+									<td>
+										In our community, it is
+										<strong
+											>not allowed to insult other people or to impersonate the
+											administrator</strong
+										>.
+									</td>
+								</tr>
+								<tr>
+									<td>Too many relatively short highlightings</td>
+									<td>
+										In our community, it is <strong>not allowed</strong> to
+										<strong>insult other people</strong> or to
+										<strong>impersonate the administrator</strong>.
+									</td>
+								</tr>
+								<tr>
+									<td>The recommended level of emphasis</td>
+									<td>
+										In our community, it is <strong>not</strong> allowed to insult other people or
+										to impersonate the administrator.
+									</td>
+								</tr>
+							</table>
+						</li>
+						<li>
+							If an emphasis conflict takes place, the exclusive technique which is higher in the
+							following priority list is picked:
+							<ol>
+								<li>Code emphasis.</li>
+								<li>Term introduction emphasis.</li>
+								<li>Important fragment emphasis.</li>
+							</ol>
+						</li>
+						<li>Set <strong>blue</strong> color for links, do <strong>not</strong> underline them.</li>
+						<li>
+							Highlight headers of all levels with <strong>bold</strong>; the top-level header should be
+							<strong>underlined</strong>.
+						</li>
+						<li>
+							The highlighting methods for headers and links are considered
+							<strong>Combinable emphasis techniques</strong> with all the ensuing consequences.
+						</li>
+						<li>
+							Do <strong>not</strong> apply any exclusive emphasis technique to
+							<a href="general.html#metafiles-workflow"><code>workflow.md</code> metafile</a>.
+						</li>
+					</ul>
+				</section>
 			</section>
 			<section>
 				<h2 id="punctuation"><a href="#contents-punctuation">Punctuation</a></h2>
