@@ -38,8 +38,8 @@
 
 ## Document Requirements (document.html) ~doc
 
--   Basics ~basics
 -   Terminology ~terms
+-   Basics ~basics
 -   Emphasis ~emphasis
 -   Punctuation ~punct
     -   Quotation Marks ~quotes
