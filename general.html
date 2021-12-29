@@ -12,7 +12,20 @@
 			<nav>
 				<h2 id="contents">Contents</h2>
 				<ul>
-					<li id="contents-terminology"><a href="#terminology">Terminology</a></li>
+					<li id="contents-terminology"
+						><a href="#terminology">Terminology</a>
+						<ul>
+							<li id="contents-terminology-cases">
+								<a href="#terminology-cases">Phrase Writing Methods</a>
+							</li>
+							<li id="contents-terminology-architecture">
+								<a href="#terminology-architecture">Project Architecture</a>
+							</li>
+							<li id="contents-terminology-misc">
+								<a href="#terminology-misc">Miscellaneous</a>
+							</li>
+						</ul>
+					</li>
 					<li id="contents-project"><a href="#project">Project Basics</a></li>
 					<li id="contents-metafiles">
 						<a href="#metafiles">Metafiles</a>
@@ -35,156 +48,177 @@
 			<section>
 				<h2 id="terminology"><a href="#contents-terminology">Terminology</a></h2>
 				<p>The following are some common terms used throughout the whole coding style documentation.</p>
-				<dl>
-					<dt>Spaceless case</dt>
-					<dd>
-						A collective name for several styles of phrase writing in which whitespaces are
-						<strong>not</strong>
-						used.
-					</dd>
-					<dt>Spaceful case</dt>
-					<dd>
-						A collective name for several styles of phrase writing where spaces are used as word delimiters.
-					</dd>
-					<dt>Header case</dt>
-					<dd>
-						A <strong>spaceful</strong> case which capitalizes all <strong>notional</strong> parts of speech
-						within the phrase being written, while the first word is <strong>unconditionally</strong>
-						capitalized.
-						<table>
-							<tr>
-								<td>Example</td>
-								<td>An Occurrence at Owl Creek Bridge</td>
-							</tr>
-						</table>
-					</dd>
-					<dt>Upper camel case</dt>
-					<dd>
-						A <strong>spaceless</strong> case where each word of the phrase being written begins with a
-						capital letter.
-						<table>
-							<tr>
-								<td>Example</td>
-								<td>
-									<code>SpacesAreNotAllowedHere</code>
-								</td>
-							</tr>
-						</table>
-					</dd>
-					<dt>Lower camel case</dt>
-					<dd>
-						A <strong>spaceless</strong> case where each word of the phrase being written except of the
-						first one begins with a capital letter.
-						<table>
-							<tr>
-								<td>Example</td>
-								<td>
-									<code>spacesAreNotAllowedHere</code>
-								</td>
-							</tr>
-						</table>
-					</dd>
-					<dt>Upper snake case</dt>
-					<dd>
-						A <strong>spaceless</strong> case using an underscore character (_) as a word separator and
-						requiring <strong>all</strong> letters to be capital.
-						<table>
-							<tr>
-								<td>Example</td>
-								<td>
-									<code>SPACES_ARE_NOT_ALLOWED_HERE</code>
-								</td>
-							</tr>
-						</table>
-					</dd>
-					<dt>Lower snake case</dt>
-					<dd>
-						A <strong>spaceless</strong> case using an underscore character (_) as a word separator and
-						<strong>totally prohibiting</strong> capital letters.
-						<table>
-							<tr>
-								<td>Example</td>
-								<td>
-									<code>spaces_are_not_allowed_here</code>
-								</td>
-							</tr>
-						</table>
-					</dd>
-					<dt>Git case</dt>
-					<dd>
-						A <strong>spaceless</strong> case using hyphen character (-) as a word separator and
-						<strong>totally prohibiting</strong> capital letters.
-						<table>
-							<tr>
-								<td>Example</td>
-								<td>
-									<code>spaces-are-not-allowed-here</code>
-								</td>
-							</tr>
-						</table>
-					</dd>
-					<dt>Archient (architectural entity)</dt>
-					<dd>
-						A relatively independent part of a codebase (for example, a class or a module) which can (but is
-						not required to) include other archients. Very small code fragments, such as getter/setter
-						methods in
-						<code>C++</code>, are <strong>never</strong> considered archients.
-					</dd>
-					<dt>Archichange (architectural change)</dt>
-					<dd>An act of creating, deleting, renaming, replacing or relocating archients.</dd>
-					<dt>Archiname (architectural name)</dt>
-					<dd>A short <strong>Git-cased</strong> identifier of an archient.</dd>
-					<dt>Archititle (architectural title)</dt>
-					<dd>
-						A real name of an archient by which this archient is known across the codebase (for example, an
-						exact name of a class).
-					</dd>
-					<dt>File archient</dt>
-					<dd>An archient exactly matching a single filesystem object (a file or a directory).</dd>
-					<dt>Archiroot (architectural root)</dt>
-					<dd>
-						The topmost archient which includes all other archients the project comprizes of. An archiroot
-						have
-						<strong>no</strong> archiname, and its archititle is identical to the project name.
-					</dd>
-					<dt>Line terminator</dt>
-					<dd>
-						A character intended to finish a line of text, also widely known as end-of-line, newline or
-						linebreak (for example, <code>CRLF</code> on <code>Windows</code> or <code>LF</code> on
-						<code>Unix-compatible</code> systems).
-					</dd>
-					<dt>Compound word</dt>
-					<dd>A word consisting of two or more hyphen-separated parts.</dd>
-					<dt>To represent (a number) digitally</dt>
-					<dd>
-						To write a number using <strong>digits</strong>.
-						<table>
-							<caption>Examples</caption>
-							<tr>
-								<td>Arabic decimal</td>
-								<td>126</td>
-							</tr>
-							<tr>
-								<td>Hexadecimal</td>
-								<td>0x7e</td>
-							</tr>
-							<tr>
-								<td>Roman</td>
-								<td>CXXVII</td>
-							</tr>
-						</table>
-					</dd>
-					<dt>To represent (a number) in full</dt>
-					<dd>
-						To write a number using <strong>words</strong>.
-						<table>
-							<tr>
-								<td>Example</td>
-								<td>One hundred and twenty-six</td>
-							</tr>
-						</table>
-					</dd>
-				</dl>
+				<section>
+					<h3 id="terminology-cases">
+						<a href="#contents-terminology-cases">Phrase Writing Methods</a>
+					</h3>
+					<dl>
+						<dt>Spaceless case</dt>
+						<dd>
+							A collective name for several styles of phrase writing in which whitespaces are
+							<strong>not</strong>
+							used.
+						</dd>
+						<dt>Spaceful case</dt>
+						<dd>
+							A collective name for several styles of phrase writing where spaces are used as word
+							delimiters.
+						</dd>
+						<dt>Header case</dt>
+						<dd>
+							A <strong>spaceful</strong> case which capitalizes all <strong>notional</strong> parts of
+							speech within the phrase being written, while the first word is
+							<strong>unconditionally</strong>
+							capitalized.
+							<table>
+								<tr>
+									<td>Example</td>
+									<td>An Occurrence at Owl Creek Bridge</td>
+								</tr>
+							</table>
+						</dd>
+						<dt>Upper camel case</dt>
+						<dd>
+							A <strong>spaceless</strong> case where each word of the phrase being written begins with a
+							capital letter.
+							<table>
+								<tr>
+									<td>Example</td>
+									<td>
+										<code>SpacesAreNotAllowedHere</code>
+									</td>
+								</tr>
+							</table>
+						</dd>
+						<dt>Lower camel case</dt>
+						<dd>
+							A <strong>spaceless</strong> case where each word of the phrase being written except of the
+							first one begins with a capital letter.
+							<table>
+								<tr>
+									<td>Example</td>
+									<td>
+										<code>spacesAreNotAllowedHere</code>
+									</td>
+								</tr>
+							</table>
+						</dd>
+						<dt>Upper snake case</dt>
+						<dd>
+							A <strong>spaceless</strong> case using an underscore character (_) as a word separator and
+							requiring <strong>all</strong> letters to be capital.
+							<table>
+								<tr>
+									<td>Example</td>
+									<td>
+										<code>SPACES_ARE_NOT_ALLOWED_HERE</code>
+									</td>
+								</tr>
+							</table>
+						</dd>
+						<dt>Lower snake case</dt>
+						<dd>
+							A <strong>spaceless</strong> case using an underscore character (_) as a word separator and
+							<strong>totally prohibiting</strong> capital letters.
+							<table>
+								<tr>
+									<td>Example</td>
+									<td>
+										<code>spaces_are_not_allowed_here</code>
+									</td>
+								</tr>
+							</table>
+						</dd>
+						<dt>Git case</dt>
+						<dd>
+							A <strong>spaceless</strong> case using hyphen character (-) as a word separator and
+							<strong>totally prohibiting</strong> capital letters.
+							<table>
+								<tr>
+									<td>Example</td>
+									<td>
+										<code>spaces-are-not-allowed-here</code>
+									</td>
+								</tr>
+							</table>
+						</dd>
+					</dl>
+				</section>
+				<section>
+					<h3 id="terminology-architecture">
+						<a href="#contents-terminology-architecture">Project Architecture</a>
+					</h3>
+					<dl>
+						<dt>Archient (architectural entity)</dt>
+						<dd>
+							A relatively independent part of a codebase (for example, a class or a module) which can
+							(but is not required to) include other archients. Very small code fragments, such as
+							getter/setter methods in
+							<code>C++</code>, are <strong>never</strong> considered archients.
+						</dd>
+						<dt>Archichange (architectural change)</dt>
+						<dd>An act of creating, deleting, renaming, replacing or relocating archients.</dd>
+						<dt>Archiname (architectural name)</dt>
+						<dd>A short <strong>Git-cased</strong> identifier of an archient.</dd>
+						<dt>Archititle (architectural title)</dt>
+						<dd>
+							A real name of an archient by which this archient is known across the codebase (for example,
+							an exact name of a class).
+						</dd>
+						<dt>File archient</dt>
+						<dd>An archient exactly matching a single filesystem object (a file or a directory).</dd>
+						<dt>Archiroot (architectural root)</dt>
+						<dd>
+							The topmost archient which includes all other archients the project comprizes of. An
+							archiroot have
+							<strong>no</strong> archiname, and its archititle is identical to the project name.
+						</dd>
+					</dl>
+				</section>
+				<section>
+					<h3 id="terminology-misc">
+						<a href="#contents-terminology-misc">Miscellaneous</a>
+					</h3>
+					<dl>
+						<dt>Line terminator</dt>
+						<dd>
+							A character intended to finish a line of text, also widely known as end-of-line, newline or
+							linebreak (for example, <code>CRLF</code> on <code>Windows</code> or <code>LF</code> on
+							<code>Unix-compatible</code> systems).
+						</dd>
+						<dt>Compound word</dt>
+						<dd>A word consisting of two or more hyphen-separated parts.</dd>
+						<dt>To represent (a number) digitally</dt>
+						<dd>
+							To write a number using <strong>digits</strong>.
+							<table>
+								<caption>Examples</caption>
+								<tr>
+									<td>Arabic decimal</td>
+									<td>126</td>
+								</tr>
+								<tr>
+									<td>Hexadecimal</td>
+									<td>0x7e</td>
+								</tr>
+								<tr>
+									<td>Roman</td>
+									<td>CXXVII</td>
+								</tr>
+							</table>
+						</dd>
+						<dt>To represent (a number) in full</dt>
+						<dd>
+							To write a number using <strong>words</strong>.
+							<table>
+								<tr>
+									<td>Example</td>
+									<td>One hundred and twenty-six</td>
+								</tr>
+							</table>
+						</dd>
+					</dl>
+				</section>
 			</section>
 			<section>
 				<h2 id="project"><a href="#contents-project">Project Basics</a></h2>
