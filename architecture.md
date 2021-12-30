@@ -40,6 +40,7 @@
 
 -   Terminology ~terms
     -   General ~general
+    -   Partitioning ~parts
 -   Basics ~basics
 -   Emphasis ~emphasis
     -   Terminology ~terms
