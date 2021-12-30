@@ -25,7 +25,12 @@
 			<nav>
 				<h2 id="contents">Contents</h2>
 				<ul>
-					<li id="contents-terminology"><a href="#terminology">Terminology</a></li>
+					<li id="contents-terminology">
+						<a href="#terminology">Terminology</a>
+						<ul>
+							<li id="contents-terminology-general"><a href="#terminology-general">General</a></li>
+						</ul>
+					</li>
 					<li id="contents-basics"><a href="#basics">Basics</a></li>
 					<li id="contents-emphasis"
 						><a href="#emphasis">Emphasis</a>
@@ -54,75 +59,83 @@
 					Some terms present here may redefine (or ambiguously intersect with) existing well-known concepts.
 					If you are in doubt, use interpretations suggested in <strong>this section</strong>.
 				</p>
+				<section>
+					<h3 id="terminology-general"><a href="#contents-terminology-general">General</a></h3>
+					<dl>
+						<dt>Computer</dt>
+						<dd><strong>Any</strong> electronic computing device.</dd>
+						<dt>Natural text</dt>
+						<dd>Text written in a <strong>natural</strong> language and bearing the main semantic load.</dd>
+						<dt>Computer text</dt>
+						<dd>
+							Text that is one or more of the following:
+							<ul>
+								<li>Written in one of programming languages or in pseudocode.</li>
+								<li>Output of a computer program.</li>
+								<li>Input made by a user of a computer.</li>
+								<li>
+									A name representing a hardware or a software component of a computing system, such
+									as CPU architecture, OS version, an installed application, and so on.
+								</li>
+								<li>
+									A compound word containing one or more parts which are fallen under one or more of
+									the previous clauses.
+									<table>
+										<tr>
+											<td>Example</td>
+											<td>A <code>Unix-compatible</code> operating system.</td>
+										</tr>
+									</table>
+								</li>
+							</ul>
+						</dd>
+						<dt>Internal text</dt>
+						<dd>
+							Text that is located <strong>neither</strong> within a header <strong>nor</strong> within a
+							table of contents.
+						</dd>
+						<dt>Internal link</dt>
+						<dd
+							>A hyperlink referring to an element of the <strong>same</strong> document it is located
+							in.</dd
+						>
+						<dt>Typographic quotes</dt>
+						<dd>
+							<strong>Double quotation marks</strong> which most important properties are described in the
+							following table:
+							<table>
+								<tr>
+									<th></th>
+									<th>Glyph</th>
+									<th>Hexadecimal <code>Unicode</code> number</th>
+									<th>Decimal <code>Unicode</code> number</th>
+									<th><code>HTML</code> entity</th>
+								</tr>
+								<tr>
+									<td>Left (opening) double quote</td>
+									<td>&ldquo;</td>
+									<td>U+201C</td>
+									<td>8220</td>
+									<td><code>&amp;ldquo;</code></td>
+								</tr>
+								<tr>
+									<td>Right (closing) double quote</td>
+									<td>&rdquo;</td>
+									<td>U+201D</td>
+									<td>8221</td>
+									<td><code>&amp;rdquo;</code></td>
+								</tr>
+							</table>
+						</dd>
+						<dt>Neutral quotes</dt>
+						<dd>
+							The standard <strong>typewriter quotation marks</strong>. Both their opening and closing
+							variants have identical glyphs (&quot;), <code>Unicode</code> numbers (hexadecimal &mdash;
+							U+0022, decimal &mdash; 34), and <code>HTML</code> entities (<code>&amp;quot;</code>).
+						</dd>
+					</dl>
+				</section>
 				<dl>
-					<dt>Computer</dt>
-					<dd><strong>Any</strong> electronic computing device.</dd>
-					<dt>Natural text</dt>
-					<dd>Text written in a <strong>natural</strong> language and bearing the main semantic load.</dd>
-					<dt>Computer text</dt>
-					<dd>
-						Text that is one or more of the following:
-						<ul>
-							<li>Written in one of programming languages or in pseudocode.</li>
-							<li>Output of a computer program.</li>
-							<li>Input made by a user of a computer.</li>
-							<li>
-								A name representing a hardware or a software component of a computing system, such as
-								CPU architecture, OS version, an installed application, and so on.
-							</li>
-							<li>
-								A compound word containing one or more parts which are fallen under one or more of the
-								previous clauses.
-								<table>
-									<tr>
-										<td>Example</td>
-										<td>A <code>Unix-compatible</code> operating system.</td>
-									</tr>
-								</table>
-							</li>
-						</ul>
-					</dd>
-					<dt>Internal text</dt>
-					<dd>
-						Text that is located <strong>neither</strong> within a header <strong>nor</strong> within a
-						table of contents.
-					</dd>
-					<dt>Internal link</dt>
-					<dd>A hyperlink referring to an element of the <strong>same</strong> document it is located in.</dd>
-					<dt>Typographic quotes</dt>
-					<dd>
-						<strong>Double quotation marks</strong> which most important properties are described in the
-						following table:
-						<table>
-							<tr>
-								<th></th>
-								<th>Glyph</th>
-								<th>Hexadecimal <code>Unicode</code> number</th>
-								<th>Decimal <code>Unicode</code> number</th>
-								<th><code>HTML</code> entity</th>
-							</tr>
-							<tr>
-								<td>Left (opening) double quote</td>
-								<td>&ldquo;</td>
-								<td>U+201C</td>
-								<td>8220</td>
-								<td><code>&amp;ldquo;</code></td>
-							</tr>
-							<tr>
-								<td>Right (closing) double quote</td>
-								<td>&rdquo;</td>
-								<td>U+201D</td>
-								<td>8221</td>
-								<td><code>&amp;rdquo;</code></td>
-							</tr>
-						</table>
-					</dd>
-					<dt>Neutral quotes</dt>
-					<dd>
-						The standard <strong>typewriter quotation marks</strong>. Both their opening and closing
-						variants have identical glyphs (&quot;), <code>Unicode</code> numbers (hexadecimal &mdash;
-						U+0022, decimal &mdash; 34), and <code>HTML</code> entities (<code>&amp;quot;</code>).
-					</dd>
 					<dt>Partition</dt>
 					<dd>
 						A logically complete text fragment which starts with a <strong>header</strong> and (potentially)

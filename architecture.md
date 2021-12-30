@@ -39,6 +39,7 @@
 ## Document Requirements (document.html) ~doc
 
 -   Terminology ~terms
+    -   General ~general
 -   Basics ~basics
 -   Emphasis ~emphasis
     -   Terminology ~terms
