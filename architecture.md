@@ -39,8 +39,12 @@
 ## Document Requirements (document.html) ~doc
 
 -   Terminology ~terms
+    -   General ~general
+    -   Partitioning ~parts
 -   Basics ~basics
 -   Emphasis ~emphasis
+    -   Terminology ~terms
+    -   The Rules of Emphasis ~rules
 -   Punctuation ~punct
     -   Quotation Marks ~quotes
     -   Em Dashes, En Dashes, and Hyphens ~dashes
