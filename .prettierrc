@@ -7,5 +7,5 @@
 	"bracketSameLine": true,
 	"proseWrap": "always",
 	"endOfLine": "crlf",
-	"htmlWhitespaceSensitivity": "strict"
+	"htmlWhitespaceSensitivity": "css"
 }
