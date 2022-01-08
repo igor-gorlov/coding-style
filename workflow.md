@@ -15,3 +15,9 @@ To add a **multiline** fragment:
 3. Escape `<`, `>` characters and quotation marks with appropriate HTML entities.
 4. Surround the code with `<pre><code>...</code></pre>` tags.
 5. Show this file's contents in a target document using **iframe**.
+
+## Creating a New `HTML` Document
+
+1. Copy the document template file (`templates/doc.html`) to where you want to create a new document.
+2. Modify its contents at your preference.
+3. Optionally substitute appropriate values instead of the placeholders (enclosed in brackets).
