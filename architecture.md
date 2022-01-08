@@ -58,6 +58,8 @@
 -   Formatting ~format
 -   Commenting ~comments
 
+## Style Guide for HTML, CSS, and Markdown (html-css-md.html) ~html-css-md
+
 ## Common Stylesheet (common.css) ~common-css
 
 ## Templates (templates/) ~templates
