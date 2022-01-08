@@ -14,7 +14,7 @@ To add a **multiline** fragment:
 2. Insert the code fragment into the created file.
 3. Escape `<`, `>` characters and quotation marks with appropriate `HTML` entities.
 4. Surround the code with `<pre><code>...</code></pre>` tags.
-5. Show this file's contents in a target document using `iframe`.
+5. Show this file's contents in a target document using `<iframe>`.
 
 ## Creating a New `HTML` Document
 
