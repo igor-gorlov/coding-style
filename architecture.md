@@ -49,6 +49,7 @@
     -   Quotation Marks ~quotes
     -   Em Dashes, En Dashes, and Hyphens ~dashes
 -   Numerals ~nums
+-   Accessibility ~access
 
 ## C++ Coding Style Guide (cpp.html) ~cpp
 
