@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Igor Gorlov's Style Guide for HTML, CSS, and Markdown</title>
+		<link rel="stylesheet" href="common.css" />
+	</head>
+
+	<body>
+		<main>
+			<h1>Igor Gorlov's Style Guide for <code>HTML</code>, <code>CSS</code>, and <code>Markdown</code></h1>
+			<p>
+				Source code written in the languages listed within the title is controlled by
+				<a href="https://prettier.io" target="_blank"><code>Prettier</code></a
+				>. You only need to configure this tool according to the following table (a config file at the top level
+				of a worktree is recommended as the simplest and the most flexible solution). Please do
+				<strong>not</strong> adjust the formatting manually, even if an automatically processed document looks
+				somewhat abnormal &mdash; let <code>Prettier</code> take full responsibility for <code>HTML</code>,
+				<code>CSS</code>, and <code>Markdown</code> code.
+			</p>
+			<table>
+				<caption>
+					The Required Configuration for
+					<code>Prettier</code>
+				</caption>
+				<tr>
+					<th>Option</th>
+					<th>Value</th>
+				</tr>
+				<tr>
+					<td><code>bracketSameLine</code></td>
+					<td><code>true</code></td>
+				</tr>
+				<tr>
+					<td><code>bracketSpacing</code></td>
+					<td><code>false</code></td>
+				</tr>
+				<tr>
+					<td><code>htmlWhitespaceSensitivity</code></td>
+					<td><code>css</code></td>
+				</tr>
+				<tr>
+					<td><code>printWidth</code></td>
+					<td><code>120</code></td>
+				</tr>
+				<tr>
+					<td><code>proseWrap</code></td>
+					<td><code>always</code></td>
+				</tr>
+				<tr>
+					<td><code>tabWidth</code></td>
+					<td><code>4</code></td>
+				</tr>
+				<tr>
+					<td><code>trailingComma</code></td>
+					<td><code>none</code></td>
+				</tr>
+				<tr>
+					<td><code>useTabs</code></td>
+					<td><code>true</code></td>
+				</tr>
+			</table>
+		</main>
+	</body>
+</html>
