@@ -97,3 +97,7 @@
 ## Prettier Configuration File (.prettierrc) ~prettierrc
 
 ## Prettier Ignore File (.prettierignore) ~prettierignore
+
+## Third-Party Dependencies (third-party/) ~3rdparty
+
+### highlight.js (third-party/highlight.js) ~hljs
