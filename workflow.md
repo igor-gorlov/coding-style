@@ -7,6 +7,8 @@ To add a **single-line** fragment of raw program code into a document:
 1. Escape less-than characters (`<`), greater-than characters (`>`) and quotation marks (`"`) with appropriate `HTML`
    entities.
 2. Surround the code with `<code>...</code>` tags.
+3. Assign two classes to the `<code>` tag: `.snippet` and `.language-xxxx`, where `xxxx` is an identifier of the
+   programming language this snippet is written in.
 
 To add a **multiline** fragment:
 
