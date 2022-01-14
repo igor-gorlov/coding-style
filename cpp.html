@@ -26,8 +26,9 @@
 					<li>Use <code>C++20</code>.</li>
 					<li>Do <strong>not</strong> use global variables.</li>
 					<li>
-						Use <code class="non-breaking">#pragma once</code> in order to prevent multiple inclusions of
-						the same file; do <strong>not</strong> use conditional compilation for this purpose.
+						Use <code class="non-breaking snippet language-cpp">#pragma once</code> in order to prevent
+						multiple inclusions of the same file; do <strong>not</strong> use conditional compilation for
+						this purpose.
 					</li>
 					<li>Use <code>struct</code> keyword for plain old data types.</li>
 				</ul>
@@ -44,13 +45,13 @@
 							<tr>
 								<td>An important variable</td>
 								<td>
-									<code>uint64 lastModificationTimestamp;</code>
+									<code class="snippet language-cpp">uint64 lastModificationTimestamp;</code>
 								</td>
 							</tr>
 							<tr>
 								<td>A temporary variable used only as a loop counter</td>
 								<td>
-									<code>uint i = 0;</code>
+									<code class="snippet language-cpp">uint i = 0;</code>
 								</td>
 							</tr>
 						</table>
@@ -73,13 +74,13 @@
 							<tr>
 								<td>A user-declared type</td>
 								<td>
-									<code>class CustomType;</code>
+									<code class="snippet language-cpp">class CustomType;</code>
 								</td>
 							</tr>
 							<tr>
 								<td>An arithmetic type alias</td>
 								<td>
-									<code>typedef std::uint32_t uint32;</code>
+									<code class="snippet language-cpp">typedef std::uint32_t uint32;</code>
 								</td>
 							</tr>
 						</table>
@@ -93,13 +94,13 @@
 							<tr>
 								<td>A function call</td>
 								<td>
-									<code>saveCurrentFile();</code>
+									<code class="snippet language-cpp">saveCurrentFile();</code>
 								</td>
 							</tr>
 							<tr>
 								<td>A variable declaration</td>
 								<td>
-									<code>int playerPosition;</code>
+									<code class="snippet language-cpp">int playerPosition;</code>
 								</td>
 							</tr>
 						</table>
@@ -110,7 +111,7 @@
 							<tr>
 								<td>Example</td>
 								<td>
-									<code>#define NUMBER_OF_ITERATIONS</code>
+									<code class="snippet language-cpp">#define NUMBER_OF_ITERATIONS</code>
 								</td>
 							</tr>
 						</table>
@@ -147,25 +148,25 @@
 							<tr>
 								<td>A good function name</td>
 								<td>
-									<code>void deallocateMemory(void* memory);</code>
+									<code class="snippet language-cpp">void deallocateMemory(void* memory);</code>
 								</td>
 							</tr>
 							<tr>
 								<td>An undesirable function name</td>
 								<td>
-									<code>void memoryDeallocation(void* memory);</code>
+									<code class="snippet language-cpp">void memoryDeallocation(void* memory);</code>
 								</td>
 							</tr>
 							<tr>
 								<td>An appropriate variable name</td>
 								<td>
-									<code>enemy* target;</code>
+									<code class="snippet language-cpp">enemy* target;</code>
 								</td>
 							</tr>
 							<tr>
 								<td>An inconvenient variable name</td>
 								<td>
-									<code>enemy* destroy;</code>
+									<code class="snippet language-cpp">enemy* destroy;</code>
 								</td>
 							</tr>
 						</table>
@@ -180,7 +181,7 @@
 							<tr>
 								<td>A function</td>
 								<td>
-									<code>bool isRunning(ProcessHandler* process);</code>
+									<code class="snippet language-cpp">bool isRunning(ProcessHandler* process);</code>
 								</td>
 							</tr>
 							<tr>
@@ -215,7 +216,10 @@
 								An optional multiline comment briefly describing this file and its contents, then two
 								empty lines.
 							</li>
-							<li>An optional <code class="non-breaking">#pragma once</code>, then two empty lines.</li>
+							<li>
+								An optional <code class="non-breaking snippet language-cpp">#pragma once</code>, then
+								two empty lines.
+							</li>
 							<li>
 								An optional sequence of standard includes in alphabetical order, then one empty line.
 							</li>
