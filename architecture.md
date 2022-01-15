@@ -21,6 +21,7 @@
 
 ## Version Control Guide (vcs.html) ~vcs
 
+-   Terminology ~terms
 -   Archichanges ~archch
 -   Commit Messages ~messages
     -   Subject Line ~subject
@@ -30,7 +31,6 @@
     -   Body ~body
     -   Footer ~footer
 -   Branching ~branching
-    -   Terminology ~terms
     -   Overview ~overview
     -   Encapsulation Branches ~encaps
     -   Release Branches ~release

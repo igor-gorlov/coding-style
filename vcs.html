@@ -18,6 +18,9 @@
 			<nav>
 				<h2 id="contents">Contents</h2>
 				<ul>
+					<li id="contents-terminology">
+						<a href="#terminology">Terminology</a>
+					</li>
 					<li id="contents-archichanges"><a href="#archichanges">Archichanges</a></li>
 					<li id="contents-commit-messages">
 						<a href="#commit-messages">Commit Messages</a>
@@ -36,9 +39,6 @@
 					<li id="contents-branching">
 						<a href="#branching">Branching</a>
 						<ul>
-							<li id="contents-branching-terminology">
-								<a href="#branching-terminology">Terminology</a>
-							</li>
 							<li id="contents-branching-overview"><a href="#branching-overview">Overview</a></li>
 							<li id="contents-branching-encapsulation">
 								<a href="#branching-encapsulation">Encapsulation Branches</a>
@@ -51,6 +51,44 @@
 			</nav>
 		</header>
 		<main>
+			<section>
+				<h2 id="terminology"><a href="#contents-terminology">Terminology</a></h2>
+				<p>
+					Here are the basic definitions necessary to get started. Additional terms will be introduced later
+					during further explanation.
+				</p>
+				<dl>
+					<dt>Workable program</dt>
+					<dd>A program that compiles (if required), runs and passes all tests (if any).</dd>
+					<dt>Readable documentation</dt>
+					<dd>
+						Unambiguous and consistent documentation which has <strong>no</strong> internal contradictions
+						and/or incomplete sections, but (probably) still needs additions and/or improvements.
+					</dd>
+					<dt>Solid state</dt>
+					<dd>
+						A codebase is in a solid state when <strong>all</strong> of the following conditions are met:
+						<ul>
+							<li>Its program part (if present) is <strong>workable</strong>.</li>
+							<li>Its documentation part (if present) is <strong>readable</strong>.</li>
+							<li>It conforms to the coding style rules.</li>
+						</ul>
+					</dd>
+					<dt>Unstable state</dt>
+					<dd>
+						A codebase is in an unstable state when <strong>one or more</strong> of the solid state
+						conditions are <strong>false</strong>.
+					</dd>
+					<dt>Solid commit</dt>
+					<dd>A commit pointing to a codebase snapshot which is in a <strong>solid state</strong>.</dd>
+					<dt>Unstable commit</dt>
+					<dd>A commit pointing to a codebase snapshot which is in an <strong>unstable state</strong>.</dd>
+					<dt>Solid branch</dt>
+					<dd>A branch requiring every its commit to be <strong>solid</strong>.</dd>
+					<dt>Unstable branch</dt>
+					<dd>A branch on which unstable commits are <strong>permitted</strong>.</dd>
+				</dl>
+			</section>
 			<section>
 				<h2 id="archichanges"><a href="#contents-archichanges">Archichanges</a></h2>
 				<p>
@@ -244,48 +282,6 @@
 			</section>
 			<section>
 				<h2 id="branching"><a href="#contents-branching">Branching</a></h2>
-				<section>
-					<h3 id="branching-terminology"><a href="#contents-branching-terminology">Terminology</a></h3>
-					<p>
-						Here is the basic set of terms needed to get started with Igor Gorlov's branching model.
-						Additional terms will be introduced later during further explanation.
-					</p>
-					<dl>
-						<dt>Workable program</dt>
-						<dd>A program that compiles (if required), runs and passes all tests (if any).</dd>
-						<dt>Readable documentation</dt>
-						<dd>
-							Unambiguous and consistent documentation which has <strong>no</strong> internal
-							contradictions and/or incomplete sections, but (probably) still needs additions and/or
-							improvements.
-						</dd>
-						<dt>Solid state</dt>
-						<dd>
-							A codebase is in a solid state when <strong>all</strong> of the following conditions are
-							met:
-							<ul>
-								<li>Its program part (if present) is <strong>workable</strong>.</li>
-								<li>Its documentation part (if present) is <strong>readable</strong>.</li>
-								<li>It conforms to the coding style rules.</li>
-							</ul>
-						</dd>
-						<dt>Unstable state</dt>
-						<dd>
-							A codebase is in an unstable state when <strong>one or more</strong> of the solid state
-							conditions are <strong>false</strong>.
-						</dd>
-						<dt>Solid commit</dt>
-						<dd>A commit pointing to a codebase snapshot which is in a <strong>solid state</strong>.</dd>
-						<dt>Unstable commit</dt>
-						<dd>
-							A commit pointing to a codebase snapshot which is in an <strong>unstable state</strong>.
-						</dd>
-						<dt>Solid branch</dt>
-						<dd>A branch requiring every its commit to be <strong>solid</strong>.</dd>
-						<dt>Unstable branch</dt>
-						<dd>A branch on which unstable commits are <strong>permitted</strong>.</dd>
-					</dl>
-				</section>
 				<section>
 					<h3 id="branching-overview"><a href="#contents-branching-overview">Overview</a></h3>
 					<p>
