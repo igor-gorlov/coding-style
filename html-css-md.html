@@ -4,9 +4,11 @@
 		<meta charset="UTF-8" />
 		<title>Igor Gorlov's Style Guide for HTML, CSS, and Markdown</title>
 		<link rel="stylesheet" href="common.css" />
+		<link rel="stylesheet" href="third-party/highlight.js/default.min.css" />
+		<script src="third-party/highlight.js/highlight.min.js"></script>
 	</head>
 
-	<body>
+	<body onload="hljs.configure({cssSelector: 'code.snippet'});hljs.highlightAll()">
 		<main>
 			<h1>Igor Gorlov's Style Guide for <code>HTML</code>, <code>CSS</code>, and <code>Markdown</code></h1>
 			<p>
