@@ -98,6 +98,8 @@
 
 ## Prettier Ignore File (.prettierignore) ~prettierignore
 
+## Snippets' Preparation Script (prepare_snippets.js) ~snp-prep
+
 ## Third-Party Dependencies (third-party/) ~3rdparty
 
 ### highlight.js (third-party/highlight.js) ~hljs
