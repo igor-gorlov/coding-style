@@ -1,4 +1,2 @@
-<pre><code>
 if(condition)
 	thenExecuteSingleStatement();
-</code></pre>

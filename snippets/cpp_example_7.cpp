@@ -1,8 +1,6 @@
-<pre><code>
 class ObjectWithEmptyConstructor
 {
 public:
 	ObjectWithEmptyConstructor()
 	{}
 };
-</code></pre>

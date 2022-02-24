@@ -1,6 +1,4 @@
-<pre><code>
 namespace Prefix
 {
 	// Many declarations and definitions...
 } // namespace Prefix
-</code></pre>

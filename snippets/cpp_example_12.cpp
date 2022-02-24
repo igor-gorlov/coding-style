@@ -1,6 +1,4 @@
-<pre><code>
 class Fake
 {
 	// A huge amount of members...
 }; // class Fake
-</code></pre>
