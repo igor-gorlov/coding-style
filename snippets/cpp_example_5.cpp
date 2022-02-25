@@ -1,4 +1,4 @@
-std::vector&lt;std::string&gt; messages;
-messages.push_back(&quot;Alarm!&quot;);
-messages.push_back(&quot;Alarm canceled&quot;);
+std::vector<std::string> messages;
+messages.push_back("Alarm!");
+messages.push_back("Alarm canceled");
 uint64 numberOfMessages = messages.size();
