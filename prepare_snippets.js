@@ -14,8 +14,11 @@ for (let i of placeholders)
 					i.parentElement?.appendChild(wrapper);
 					wrapper.appendChild(i);
 				}
-				// Insert the content.
-				i.innerHTML = text;
+				// Escape and insert the code.
+				let escapedCode = text.replace(/\</g, "&lt;")
+					.replace(/\>/g, "&gt;")
+					.replace(/\"/g, "&quot;");
+				i.innerHTML = escapedCode;
 				// Highlight the snippet.
 				hljs.highlightElement(i);
 			}
