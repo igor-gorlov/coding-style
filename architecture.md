@@ -100,6 +100,6 @@
 
 ## Snippets' Preparation Script (prepare_snippets.js) ~snp-prep
 
-## Third-Party Dependencies (third-party/) ~3rdparty
+## Third-Party Dependencies (third_party/) ~3rdparty
 
-### highlight.js (third-party/highlight.js) ~hljs
+### highlight.js (highlight.js/) ~hljs
