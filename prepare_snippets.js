@@ -7,6 +7,13 @@ Assign .snippet and .language-xxxx classes to the <code> tag, otherwise there is
 The latter method uses an empty <code>...</code> pair with the same set of assigned classes as above; however, a
 data-src attribute is required to specify URL of the source file where the code fragment is stored. Don't worry about
 special characters - the script will escape them for you.
+
+The program implies that DOM of the target webpage is ready and highlight.js library (used to colorize code) is
+available in global namespace. The recommended installation method for snippet preparation script is to put the
+following into your <head> container:
+	<link rel="stylesheet" href="path/to/highlight.js/stylesheet.css" />
+	<script defer src="path/to/highlight.js/script.js"></script>
+	<script defer src="path/to/prepare_snippets.js"></script>
 */
 
 
