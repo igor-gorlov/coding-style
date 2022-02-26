@@ -1,6 +1,4 @@
-<pre><code>
 namespace LibraryPrefix
 {
 	// Declarations and definitions...
 }
-</code></pre>

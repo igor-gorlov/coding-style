@@ -1,7 +1,5 @@
-<pre><code>
 class Grandfather
 {
 protected:
 	std::string pFamilySkeleton;
 };
-</code></pre>

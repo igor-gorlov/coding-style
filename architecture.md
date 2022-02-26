@@ -70,30 +70,36 @@
 
 ### Architecture (architecture.html) ~arch
 
-### C++ Example 1 (cpp_example_1.html) ~cpp-ex1
+### C++ Example 1 (cpp_example_1.cpp) ~cpp-ex1
 
-### C++ Example 2 (cpp_example_2.html) ~cpp-ex2
+### C++ Example 2 (cpp_example_2.cpp) ~cpp-ex2
 
-### C++ Example 3 (cpp_example_3.html) ~cpp-ex3
+### C++ Example 3 (cpp_example_3.cpp) ~cpp-ex3
 
-### C++ Example 4 (cpp_example_4.html) ~cpp-ex4
+### C++ Example 4 (cpp_example_4.cpp) ~cpp-ex4
 
-### C++ Example 5 (cpp_example_5.html) ~cpp-ex5
+### C++ Example 5 (cpp_example_5.cpp) ~cpp-ex5
 
-### C++ Example 6 (cpp_example_6.html) ~cpp-ex6
+### C++ Example 6 (cpp_example_6.cpp) ~cpp-ex6
 
-### C++ Example 7 (cpp_example_7.html) ~cpp-ex7
+### C++ Example 7 (cpp_example_7.cpp) ~cpp-ex7
 
-### C++ Example 8 (cpp_example_8.html) ~cpp-ex8
+### C++ Example 8 (cpp_example_8.cpp) ~cpp-ex8
 
-### C++ Example 9 (cpp_example_9.html) ~cpp-ex9
+### C++ Example 9 (cpp_example_9.cpp) ~cpp-ex9
 
-### C++ Example 10 (cpp_example_10.html) ~cpp-ex10
+### C++ Example 10 (cpp_example_10.cpp) ~cpp-ex10
 
-### C++ Example 11 (cpp_example_11.html) ~cpp-ex11
+### C++ Example 11 (cpp_example_11.cpp) ~cpp-ex11
 
-### C++ Example 12 (cpp_example_12.html) ~cpp-ex12
+### C++ Example 12 (cpp_example_12.cpp) ~cpp-ex12
 
 ## Prettier Configuration File (.prettierrc) ~prettierrc
 
 ## Prettier Ignore File (.prettierignore) ~prettierignore
+
+## Snippets' Preparation Script (prepare_snippets.js) ~snp-prep
+
+## Third-Party Dependencies (third-party/) ~3rdparty
+
+### highlight.js (third-party/highlight.js) ~hljs

@@ -1,7 +1,5 @@
-<pre><code>
 class Allocator
 {
 private:
 	void* mAllocatedMemory;
 };
-</code></pre>

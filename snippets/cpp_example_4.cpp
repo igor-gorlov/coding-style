@@ -1,7 +1,5 @@
-<pre><code>
 class Player
 {
 public:
 	bool isAlive;
 };
-</code></pre>

@@ -1,4 +1,3 @@
-<pre><code>
 class Container
 {
 public:
@@ -6,4 +5,3 @@ public:
 private:
 	void* mInternalData;
 };
-</code></pre>

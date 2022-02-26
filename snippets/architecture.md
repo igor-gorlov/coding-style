@@ -1,4 +1,3 @@
-<pre><code>
 # Coding Style Guide by Igor Gorlov
 
 ## General Guidelines (general.html) ~general
@@ -63,5 +62,3 @@
 ### C++ Example 11 (cpp_example_11.html) ~cpp-example11
 
 ### C++ Example 12 (cpp_example_12.html) ~cpp-example12
-
-</code></pre>

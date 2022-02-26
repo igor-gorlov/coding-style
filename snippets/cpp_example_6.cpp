@@ -1,7 +1,5 @@
-<pre><code>
 if(condition)
 {
 	doSomething();
 	doSomethingElse();
 }
-</code></pre>
