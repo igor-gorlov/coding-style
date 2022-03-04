@@ -103,3 +103,7 @@
 ## Third-Party Dependencies (third_party/) ~3rdparty
 
 ### highlight.js (highlight.js/) ~hljs
+
+## Node Modules (node_modules/, package-lock.json, package.json) ~nodejs
+
+### Prettier ~prettier
