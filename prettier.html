@@ -4,6 +4,9 @@
 		<meta charset="UTF-8" />
 		<title>Igor Gorlov's Guide to Formatting with Prettier</title>
 		<link rel="stylesheet" href="common.css" />
+		<link rel="stylesheet" href="third_party/highlight.js/default.min.css" />
+		<script defer src="third_party/highlight.js/highlight.min.js"></script>
+		<script defer src="prepare_snippets.js"></script>
 	</head>
 
 	<body>
@@ -21,48 +24,8 @@
 				looks somewhat abnormal &mdash; let <code>Prettier</code> take full responsibility for code
 				representation.
 			</p>
-			<table>
-				<caption>
-					The Required Configuration for
-					<code>Prettier</code>
-				</caption>
-				<tr>
-					<th>Option</th>
-					<th>Value</th>
-				</tr>
-				<tr>
-					<td><code>bracketSameLine</code></td>
-					<td><code>true</code></td>
-				</tr>
-				<tr>
-					<td><code>bracketSpacing</code></td>
-					<td><code>false</code></td>
-				</tr>
-				<tr>
-					<td><code>htmlWhitespaceSensitivity</code></td>
-					<td><code>css</code></td>
-				</tr>
-				<tr>
-					<td><code>printWidth</code></td>
-					<td><code>120</code></td>
-				</tr>
-				<tr>
-					<td><code>proseWrap</code></td>
-					<td><code>always</code></td>
-				</tr>
-				<tr>
-					<td><code>tabWidth</code></td>
-					<td><code>4</code></td>
-				</tr>
-				<tr>
-					<td><code>trailingComma</code></td>
-					<td><code>none</code></td>
-				</tr>
-				<tr>
-					<td><code>useTabs</code></td>
-					<td><code>true</code></td>
-				</tr>
-			</table>
+			<p>The following is a complete and ready-to-use configuration for <code>Prettier</code>:</p>
+			<code class="snippet language-json" data-src=".prettierrc"></code>
 		</main>
 	</body>
 </html>
