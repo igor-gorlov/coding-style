@@ -2,21 +2,24 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<title>Igor Gorlov's Style Guide for HTML, CSS, and Markdown</title>
+		<title>Igor Gorlov's Guide to Formatting with Prettier</title>
 		<link rel="stylesheet" href="common.css" />
 	</head>
 
 	<body>
 		<main>
-			<h1>Igor Gorlov's Style Guide for <code>HTML</code>, <code>CSS</code>, and <code>Markdown</code></h1>
+			<h1>Igor Gorlov's Guide to Formatting with <code>Prettier</code></h1>
 			<p>
-				Source code written in the languages listed within the title is controlled by
-				<a href="https://prettier.io" target="_blank"><code>Prettier</code></a
-				>. You only need to configure this tool according to the following table (a config file at the top level
-				of a worktree is recommended as the simplest and the most flexible solution). Please do
-				<strong>not</strong> adjust the formatting manually, even if an automatically processed document looks
-				somewhat abnormal &mdash; let <code>Prettier</code> take full responsibility for <code>HTML</code>,
-				<code>CSS</code>, and <code>Markdown</code> code.
+				<a href="https://prettier.io" target="_blank"><code>Prettier</code></a> is a code formatter for
+				<code>HTML</code>, <code>CSS</code>, <code>Markdown</code>, <code>JavaScript</code>, and
+				<code>JSON</code>. It enforces its own coding style, which is not so perfect but consistent. All you
+				need is a <code>.prettierrc</code> file containing Configuration options. This file should be located at
+				the top level of your project and must be controlled by your VCS.
+			</p>
+			<p>
+				Please do <strong>not</strong> adjust the formatting manually, even if an automatically processed file
+				looks somewhat abnormal &mdash; let <code>Prettier</code> take full responsibility for how does the code
+				look.
 			</p>
 			<table>
 				<caption>

@@ -58,7 +58,7 @@
 -   Formatting ~format
 -   Commenting ~comments
 
-## Style Guide for HTML, CSS, and Markdown (html_css_md.html) ~html-css-md
+## Formatting with Prettier (prettier.html) ~prettier
 
 ## Common Stylesheet (common.css) ~common-css
 
