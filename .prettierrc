@@ -11,5 +11,13 @@
 	"singleQuote": false,
 	"quoteProps": "consistent",
 	"arrowParens": "avoid",
-	"embeddedLanguageFormatting": "off"
+	"embeddedLanguageFormatting": "off",
+	"overrides": [
+		{
+			"files": ".prettierrc",
+			"options": {
+				"parser": "json"
+			}
+		}
+	]
 }
