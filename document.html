@@ -17,13 +17,13 @@
 				overwhelming majority of technical documents. No specific markup languages are discussed here because
 				many of them have well-known generic subset of features (like multilevel headers and bulleted lists).
 				However, some of the rules below involve advanced styling provided by powerful solutions (for example,
-				<code class="non-breaking">HTML + CSS</code>) but not supported in lightweight systems (such as
-				<code>Markdown</code>). In the meantime, complex technologies could be a bad choice when you need to
-				quickly write a simple document for which the contents is much more important than its visual
-				representation. In the latter case, full-featured solutions usually produce a lot of boilerplate and
-				hence should be given up in favor of more primitive tools. It is absolutely fair: a developer have all
-				rights to select a method that works better on the current task. If your chosen technology doesn't
-				implement a particular feature, feel free to ignore all rules that require this feature.
+				<span class="non-breaking">HTML + CSS</span>) but not supported in lightweight systems (such as
+				Markdown). In the meantime, complex technologies could be a bad choice when you need to quickly write a
+				simple document for which the contents is much more important than its visual representation. In the
+				latter case, full-featured solutions usually produce a lot of boilerplate and hence should be given up
+				in favor of more primitive tools. It is absolutely fair: a developer have all rights to select a method
+				that works better on the current task. If your chosen technology doesn't implement a particular feature,
+				feel free to ignore all rules that require this feature.
 			</p>
 			<nav>
 				<h2 id="contents">Contents</h2>
@@ -103,9 +103,9 @@
 								<tr>
 									<th></th>
 									<th>Glyph</th>
-									<th>Hexadecimal <code>Unicode</code> number</th>
-									<th>Decimal <code>Unicode</code> number</th>
-									<th><code>HTML</code> entity</th>
+									<th>Hexadecimal Unicode number</th>
+									<th>Decimal Unicode number</th>
+									<th>HTML entity</th>
 								</tr>
 								<tr>
 									<td>Left (opening) double quote</td>
@@ -126,8 +126,8 @@
 						<dt>Neutral quotes</dt>
 						<dd>
 							The standard <strong>typewriter quotation marks</strong>. Both their opening and closing
-							variants have identical glyphs (&quot;), <code>Unicode</code> numbers (hexadecimal &mdash;
-							U+0022, decimal &mdash; 34), and <code>HTML</code> entities (<code>&amp;quot;</code>).
+							variants have identical glyphs (&quot;), Unicode numbers (hexadecimal &mdash; U+0022,
+							decimal &mdash; 34), and HTML entities (<code>&amp;quot;</code>).
 						</dd>
 					</dl>
 				</section>
@@ -321,8 +321,8 @@
 										<tr>
 											<td>Example</td>
 											<td>
-												According to Stroustrup, <code>C++</code> is &ldquo;the invisible
-												foundation of everything&rdquo;.
+												According to Stroustrup, C++ is &ldquo;the invisible foundation of
+												everything&rdquo;.
 											</td>
 										</tr>
 									</table>
@@ -378,16 +378,13 @@
 										<tr>
 											<td>Sentence two, a <strong>wrong</strong> way</td>
 											<td>
-												The new version of &ldquo;<code>iOS</code>&rdquo; has finally been
-												released to the public.
+												The new version of &ldquo;iOS&rdquo; has finally been released to the
+												public.
 											</td>
 										</tr>
 										<tr>
 											<td>Sentence two, the <strong>right</strong> way</td>
-											<td>
-												The new version of <code>iOS</code> has finally been released to the
-												public.
-											</td>
+											<td>The new version of iOS has finally been released to the public.</td>
 										</tr>
 									</table>
 								</li>
@@ -471,8 +468,8 @@
 								<tr>
 									<td>Example</td>
 									<td>
-										Among other characters, the <code>ASCII</code> table includes letters
-										(A&ndash;Z, a&ndash;z) and digits (0&ndash;9).
+										Among other characters, the ASCII table includes letters (A&ndash;Z, a&ndash;z)
+										and digits (0&ndash;9).
 									</td>
 								</tr>
 							</table>
@@ -483,8 +480,7 @@
 								<tr>
 									<td>Example</td>
 									<td>
-										<code>C++</code> preprocessor allows to create both variable-like and
-										function-like macros.
+										C++ preprocessor allows to create both variable-like and function-like macros.
 									</td>
 								</tr>
 							</table>
@@ -547,8 +543,7 @@
 				<ul>
 					<li>
 						<strong>Never</strong> simulate headers, lists, or any other semantic primitives using hacks and
-						workarounds (like <code>CSS</code> tricks in <code>HTML</code>) &mdash; use these primitives
-						<strong>directly</strong>.
+						workarounds (like CSS tricks in HTML) &mdash; use these primitives <strong>directly</strong>.
 					</li>
 					<li>
 						Provide <strong>any</strong> image with a descriptive text to make graphical content
