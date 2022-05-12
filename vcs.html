@@ -13,9 +13,8 @@
 		<header>
 			<h1>Version Control Guide by Igor Gorlov</h1>
 			<p>
-				In my work, I use <a href="https://git-scm.com"><code>Git</code></a> as the only version control system.
-				All my projects are <code>Git</code> repositories remotely hosted on
-				<a href="https://github.com"><code>GitHub</code></a> under
+				In my work, I use <a href="https://git-scm.com">Git</a> as the only version control system. All my
+				projects are Git repositories remotely hosted on <a href="https://github.com">GitHub</a> under
 				<a href="https://github.com/igor-gorlov">Igor Gorlov personal account</a>.
 			</p>
 			<nav>
@@ -116,13 +115,12 @@
 					<h3 id="commit-messages-subject"><a href="#contents-commit-messages-subject">Subject Line</a></h3>
 					<p>
 						A subject line is intended to express a <strong>brief summary</strong> of the commit, which may
-						be used by various developer tools and services, including (but not limiting to) the
-						<code>GitHub</code> web interface and <code>Git</code> itself. In many cases, the only thing
-						that is shown in a commit log being viewed by some third-party programmer will be your subject
-						line. Therefore, you have to make it concise and abstract, letting a reader to get the
-						high-level sense of the changes represented by this commit. Unless it is really necessary, do
-						<strong>not</strong> mention raw filenames in the subject line&nbsp;&mdash; use
-						<strong>archinames</strong> instead.
+						be used by various developer tools and services, including (but not limiting to) the GitHub web
+						interface and Git itself. In many cases, the only thing that is shown in a commit log being
+						viewed by some third-party programmer will be your subject line. Therefore, you have to make it
+						concise and abstract, letting a reader to get the high-level sense of the changes represented by
+						this commit. Unless it is really necessary, do <strong>not</strong> mention raw filenames in the
+						subject line&nbsp;&mdash; use <strong>archinames</strong> instead.
 					</p>
 					<p>Despite the hard length limit, a subject line has its own internal structure:</p>
 					<code> &lt;type&gt;[ &lt;scope&gt;][: &lt;description&gt;] </code>
@@ -149,17 +147,17 @@
 							</tr>
 							<tr>
 								<td><code>fix</code></td>
-								<td><code>Fix</code></td>
+								<td>Fix</td>
 								<td>Fixes a bug or addresses an issue</td>
 							</tr>
 							<tr>
 								<td><code>feat</code></td>
-								<td><code>Feature</code></td>
+								<td>Feature</td>
 								<td>Adds new functionality</td>
 							</tr>
 							<tr>
 								<td><code>mod</code></td>
-								<td><code>Modification</code></td>
+								<td>Modification</td>
 								<td>
 									Changes existing functionality in order to get a new behavior but
 									<strong>not</strong>
@@ -168,7 +166,7 @@
 							</tr>
 							<tr>
 								<td><code>opt</code></td>
-								<td><code>Optimization</code></td>
+								<td>Optimization</td>
 								<td>
 									Reduces the amount of resources needed for execution of the code, such as CPU time,
 									memory consumption, binary size etc.
@@ -176,12 +174,12 @@
 							</tr>
 							<tr>
 								<td><code>ref</code></td>
-								<td><code>Refactoring</code></td>
+								<td>Refactoring</td>
 								<td>Restructures the code for readability without any impact on its semantics</td>
 							</tr>
 							<tr>
 								<td><code>format</code></td>
-								<td><code>Format</code></td>
+								<td>Format</td>
 								<td>
 									Changes formatting of the code, but does <strong>not</strong> affect its meaning at
 									all
@@ -189,12 +187,12 @@
 							</tr>
 							<tr>
 								<td><code>clean</code></td>
-								<td><code>Clean</code></td>
+								<td>Clean</td>
 								<td>Removes unneeded code</td>
 							</tr>
 							<tr>
 								<td><code>upd</code></td>
-								<td><code>Update</code></td>
+								<td>Update</td>
 								<td>
 									Merges a parent branch into the current branch in order to propagate important
 									changes
@@ -287,10 +285,10 @@
 				<section>
 					<h3 id="commit-messages-footer"><a href="#contents-commit-messages-footer">Footer</a></h3>
 					<p>
-						A footer is used only for <code>Fix</code> commits to point to the problem being solved. Like a
-						subject line, a footer occupies strictly <strong>one</strong> row of seventy-two columns. It
-						consists of a <strong>hash sign (#)</strong> immediately followed by a number identifying the
-						addressed issue: <code>#123456</code>.
+						A footer is used only for Fix commits to point to the problem being solved. Like a subject line,
+						a footer occupies strictly <strong>one</strong> row of seventy-two columns. It consists of a
+						<strong>hash sign (#)</strong> immediately followed by a number identifying the addressed issue:
+						<code>#123456</code>.
 					</p>
 				</section>
 			</section>
@@ -299,10 +297,10 @@
 				<section>
 					<h3 id="branching-overview"><a href="#contents-branching-overview">Overview</a></h3>
 					<p>
-						Every repository is built around the default branch called <code>dev</code>. This is a
-						<strong>solid</strong> branch, it represents the main stream of development. Ideally, the whole
-						history of the project should be linearly stored on <code>dev</code> as a series of small and
-						distinct commits.
+						Every repository is built around the default branch called <strong><code>dev</code></strong
+						>. This is a <strong>solid</strong> branch, it represents the main stream of development.
+						Ideally, the whole history of the project should be linearly stored on <code>dev</code> as a
+						series of small and distinct commits.
 					</p>
 					<p>However, such scenario is often not viable in real world:</p>
 					<ul>
@@ -413,8 +411,8 @@
 						do all the preparatory work there. When the project is absolutely ready to be released, tag the
 						tip of the release branch, and you are done. However, if you maintain several generations of the
 						product in parallel (like Microsoft does with its
-						<code class="non-breaking">Windows 10</code> and
-						<code class="non-breaking">Windows 11</code> operating systems), it might be sine to develop
+						<span class="non-breaking">Windows 10</span> and
+						<span class="non-breaking">Windows 11</span> operating systems), it might be sine to develop
 						updates and fixes for each generation right on that generation's release branch (after the major
 						release tag). Anyway, a release branch persistently remains alive and
 						<strong>never</strong> gets deleted.

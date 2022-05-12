@@ -17,13 +17,13 @@
 				overwhelming majority of technical documents. No specific markup languages are discussed here because
 				many of them have well-known generic subset of features (like multilevel headers and bulleted lists).
 				However, some of the rules below involve advanced styling provided by powerful solutions (for example,
-				<code class="non-breaking">HTML + CSS</code>) but not supported in lightweight systems (such as
-				<code>Markdown</code>). In the meantime, complex technologies could be a bad choice when you need to
-				quickly write a simple document for which the contents is much more important than its visual
-				representation. In the latter case, full-featured solutions usually produce a lot of boilerplate and
-				hence should be given up in favor of more primitive tools. It is absolutely fair: a developer have all
-				rights to select a method that works better on the current task. If your chosen technology doesn't
-				implement a particular feature, feel free to ignore all rules that require this feature.
+				<span class="non-breaking">HTML + CSS</span>) but not supported in lightweight systems (such as
+				Markdown). In the meantime, complex technologies could be a bad choice when you need to quickly write a
+				simple document for which the contents is much more important than its visual representation. In the
+				latter case, full-featured solutions usually produce a lot of boilerplate and hence should be given up
+				in favor of more primitive tools. It is absolutely fair: a developer have all rights to select a method
+				that works better on the current task. If your chosen technology doesn't implement a particular feature,
+				feel free to ignore all rules that require this feature.
 			</p>
 			<nav>
 				<h2 id="contents">Contents</h2>
@@ -79,21 +79,11 @@
 							<ul>
 								<li>Written in one of programming languages or in pseudocode.</li>
 								<li>Output of a computer program.</li>
-								<li>Input made by a user of a computer.</li>
-								<li>
-									A name representing a hardware or a software component of a computing system, such
-									as CPU architecture, OS version, an installed application, and so on.
-								</li>
-								<li>
-									A compound word containing one or more parts which are fallen under one or more of
-									the previous clauses.
-									<table>
-										<tr>
-											<td>Example</td>
-											<td>A <code>Unix-compatible</code> operating system.</td>
-										</tr>
-									</table>
-								</li>
+								<li>Input (including key combinations) made by a user of a computer.</li>
+								<li>A name of a file or a directory.</li>
+								<li>An archiname.</li>
+								<li>A commit type identifier.</li>
+								<li>A VCS branch name.</li>
 							</ul>
 						</dd>
 						<dt>Internal text</dt>
@@ -113,9 +103,9 @@
 								<tr>
 									<th></th>
 									<th>Glyph</th>
-									<th>Hexadecimal <code>Unicode</code> number</th>
-									<th>Decimal <code>Unicode</code> number</th>
-									<th><code>HTML</code> entity</th>
+									<th>Hexadecimal Unicode number</th>
+									<th>Decimal Unicode number</th>
+									<th>HTML entity</th>
 								</tr>
 								<tr>
 									<td>Left (opening) double quote</td>
@@ -136,8 +126,8 @@
 						<dt>Neutral quotes</dt>
 						<dd>
 							The standard <strong>typewriter quotation marks</strong>. Both their opening and closing
-							variants have identical glyphs (&quot;), <code>Unicode</code> numbers (hexadecimal &mdash;
-							U+0022, decimal &mdash; 34), and <code>HTML</code> entities (<code>&amp;quot;</code>).
+							variants have identical glyphs (&quot;), Unicode numbers (hexadecimal &mdash; U+0022,
+							decimal &mdash; 34), and HTML entities (<code>&amp;quot;</code>).
 						</dd>
 					</dl>
 				</section>
@@ -216,14 +206,6 @@
 								</td>
 								<td><code>lib.h</code> Overview</td>
 							</tr>
-							<tr>
-								<td>Mentioning <code>Windows</code> OS in a header, a <strong>wrong</strong> way</td>
-								<td><code>windows</code> Environment Variables</td>
-							</tr>
-							<tr>
-								<td>Mentioning <code>Windows</code> OS in a header, the <strong>right</strong> way</td>
-								<td><code>Windows</code> Environment Variables</td>
-							</tr>
 						</table>
 					</li>
 					<li>
@@ -242,36 +224,21 @@
 				<section>
 					<h3 id="emphasis-terminology"><a href="#contents-emphasis-terminology">Terminology</a></h3>
 					<dl>
-						<dt>Exclusive emphasis technique (EET)</dt>
-						<dd>
-							A method of text highlighting that is <strong>never</strong> combined with other exclusive
-							emphasis techniques (including itself).
-						</dd>
 						<dt>Code emphasis</dt>
 						<dd>
-							An exclusive emphasis technique which uses a <strong>monospaced</strong> font and (if
-							possible) semantically marks the text being emphasized as <strong>program code</strong> (for
-							example, with <code class="snippet language-html">&lt;code&gt;</code> HTML tag).
+							An emphasis technique which uses a <strong>monospaced</strong> font and (if possible)
+							semantically marks the text being emphasized as <strong>program code</strong> (for example,
+							with <code class="snippet language-html">&lt;code&gt;</code> HTML tag).
 						</dd>
 						<dt>Term introduction emphasis (TIE)</dt>
 						<dd>
-							An exclusive emphasis technique that works on a <strong>short</strong> text fragment and
-							makes it <strong>non-breaking italic</strong>.
+							An emphasis technique that works on a <strong>short</strong> text fragment and makes it
+							<strong>non-breaking italic</strong>.
 						</dd>
 						<dt>Important fragment emphasis (IFE)</dt>
 						<dd>
-							An exclusive emphasis technique that works on a <strong>short</strong> text fragment and
-							makes it <strong>non-breaking bold</strong>.
-						</dd>
-						<dt>Emphasis conflict</dt>
-						<dd>
-							A situation when more than one exclusive emphasis technique should theoretically be applied
-							to the same word or phrase.
-						</dd>
-						<dt>Combinable emphasis technique (CET)</dt>
-						<dd>
-							A method of text highlighting permitted to be used in combination with any number of other
-							highlighting methods including itself.
+							An emphasis technique that works on a <strong>short</strong> text fragment and makes it
+							<strong>non-breaking bold</strong>.
 						</dd>
 					</dl>
 				</section>
@@ -322,27 +289,10 @@
 								</tr>
 							</table>
 						</li>
-						<li>
-							If an emphasis conflict takes place, the exclusive technique which is higher in the
-							following priority list is picked:
-							<ol>
-								<li>Code emphasis.</li>
-								<li>Term introduction emphasis.</li>
-								<li>Important fragment emphasis.</li>
-							</ol>
-						</li>
 						<li>Set <strong>blue</strong> color for links, do <strong>not</strong> underline them.</li>
 						<li>
 							Highlight headers of all levels with <strong>bold</strong>; the top-level header should be
 							<strong>underlined</strong>.
-						</li>
-						<li>
-							The highlighting methods for headers and links are considered
-							<strong>Combinable emphasis techniques</strong> with all the ensuing consequences.
-						</li>
-						<li>
-							Do <strong>not</strong> apply any exclusive emphasis technique to
-							<a href="general.html#metafiles-workflow"><code>workflow.md</code> metafile</a>.
 						</li>
 					</ul>
 				</section>
@@ -371,8 +321,8 @@
 										<tr>
 											<td>Example</td>
 											<td>
-												According to Stroustrup, <code>C++</code> is &ldquo;the invisible
-												foundation of everything&rdquo;.
+												According to Stroustrup, C++ is &ldquo;the invisible foundation of
+												everything&rdquo;.
 											</td>
 										</tr>
 									</table>
@@ -428,16 +378,13 @@
 										<tr>
 											<td>Sentence two, a <strong>wrong</strong> way</td>
 											<td>
-												The new version of &ldquo;<code>iOS</code>&rdquo; has finally been
-												released to the public.
+												The new version of &ldquo;iOS&rdquo; has finally been released to the
+												public.
 											</td>
 										</tr>
 										<tr>
 											<td>Sentence two, the <strong>right</strong> way</td>
-											<td>
-												The new version of <code>iOS</code> has finally been released to the
-												public.
-											</td>
+											<td>The new version of iOS has finally been released to the public.</td>
 										</tr>
 									</table>
 								</li>
@@ -521,8 +468,8 @@
 								<tr>
 									<td>Example</td>
 									<td>
-										Among other characters, the <code>ASCII</code> table includes letters
-										(A&ndash;Z, a&ndash;z) and digits (0&ndash;9).
+										Among other characters, the ASCII table includes letters (A&ndash;Z, a&ndash;z)
+										and digits (0&ndash;9).
 									</td>
 								</tr>
 							</table>
@@ -533,8 +480,7 @@
 								<tr>
 									<td>Example</td>
 									<td>
-										<code>C++</code> preprocessor allows to create both variable-like and
-										function-like macros.
+										C++ preprocessor allows to create both variable-like and function-like macros.
 									</td>
 								</tr>
 							</table>
@@ -597,8 +543,7 @@
 				<ul>
 					<li>
 						<strong>Never</strong> simulate headers, lists, or any other semantic primitives using hacks and
-						workarounds (like <code>CSS</code> tricks in <code>HTML</code>) &mdash; use these primitives
-						<strong>directly</strong>.
+						workarounds (like CSS tricks in HTML) &mdash; use these primitives <strong>directly</strong>.
 					</li>
 					<li>
 						Provide <strong>any</strong> image with a descriptive text to make graphical content
