@@ -94,6 +94,8 @@
 
 ### C++ Example 12 (cpp_example_12.cpp) ~cpp-ex12
 
+### Prettier Configuration Snippet ~prettierrc
+
 ## Prettier Configuration File (.prettierrc) ~prettierrc
 
 ## Prettier Ignore File (.prettierignore) ~prettierignore
