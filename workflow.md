@@ -2,8 +2,8 @@
 
 ## Code Snippets
 
-The prepare_snippets.js script is used to simplify insertion of raw program code listings into an `HTML` documents. You
-can find installation and usage instructions at the top of the JavaScript file itself.
+The prepare_snippets.js script is used to simplify insertion of raw program code listings into `HTML` documents. You can
+find installation and usage instructions at the top of the JavaScript file itself.
 
 ## Creating a New `HTML` Document
 
