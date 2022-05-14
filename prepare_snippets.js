@@ -20,7 +20,7 @@ following into your <head> container:
 let placeholders = document.querySelectorAll("code.snippet[data-src]");
 for (let i of placeholders) {
 	let sourceURL = i.getAttribute("data-src");
-	let result = fetch(sourceURL)
+	fetch(sourceURL)
 		.then(response => response.text())
 		.then(text => {
 			// If the placeholder is not a child of a <pre> element, create the latter and set it as a parent for the former.
