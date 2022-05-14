@@ -33,9 +33,6 @@
 					<li id="contents-metafiles">
 						<a href="#metafiles">Metafiles</a>
 						<ul>
-							<li id="contents-metafiles-architecture">
-								<a href="#metafiles-architecture"><code>architecture.md</code></a>
-							</li>
 							<li id="contents-metafiles-workflow">
 								<a href="#metafiles-workflow"><code>workflow.md</code></a>
 							</li>
@@ -266,48 +263,6 @@
 					has a fixed archiname, which is preserved for this particular metafile and cannot be assigned to any
 					custom archient. See the next subsections for details.
 				</p>
-				<section>
-					<h3 id="metafiles-architecture">
-						<a href="#contents-metafiles-architecture"><code>architecture.md</code></a>
-					</h3>
-					<p>
-						This <strong>mandatory</strong> metafile maps archititles to appropriate archinames and
-						therefore serves as a reminder for developers. Also, <code>architecture.md</code> has an
-						auxiliary function: it gives a quick high-level overview of the codebase and helps to understand
-						relations between all components. Use archiname <code>arch</code> to mention this document
-						within commit messages.
-					</p>
-					<p>The following is a set of rules <code>architecture.md</code> must comply with:</p>
-					<ul>
-						<li>
-							The document begins with a <strong>level one header</strong> exactly matching the name of
-							the project.
-						</li>
-						<li>
-							<strong>File</strong> archients of up to five next architectural layers are denoted by
-							headers of lower (second&ndash;sixth) level. These headers have the following syntax:
-							<pre><code class="non-breaking">
-								&lt;archititle&gt;[ (&lt;file-or-directory-names&gt;)] ~&lt;archiname&gt;
-							</code></pre>
-							<p>
-								As the syntax above states, the <code>(&lt;file-or-directory-names&gt;)</code> part is
-								optional&nbsp;&mdash; it may be skipped when internal file structure of the archient is
-								too complex.
-							</p>
-						</li>
-						<li>
-							Deeper layers are represented as elements of a multi-level bulleted list. The form of such
-							elements is:
-							<pre><code class="non-breaking">&lt;archititle&gt; ~&lt;archiname&gt;</code></pre>
-						</li>
-						<li>Do <strong>not</strong> mention metafiles in <code>architecture.md</code>.</li>
-					</ul>
-					<p>
-						The example below shows the contents of a real <code>architecture.md</code> file which had been
-						being using in this coding style documentation at one of its development stages.
-					</p>
-					<code class="snippet language-md" data-src="snippets/architecture.md"></code>
-				</section>
 				<section>
 					<h3 id="metafiles-workflow">
 						<a href="#contents-metafiles-workflow"><code>workflow.md</code></a>
