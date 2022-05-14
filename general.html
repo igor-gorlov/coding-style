@@ -197,23 +197,18 @@
 						Use <strong>lower snake case</strong> to name all files and directories which are (recursively)
 						located within the root directory of a project.
 					</li>
-					<li>Try to compose <strong>brief but understandable</strong> archinames.</li>
 					<li>Keep line length <strong>not</strong> higher than <strong>120</strong> columns.</li>
 					<li>
 						Do <strong>not</strong> write source files consisting of more than <strong>1000</strong> lines.
 					</li>
 					<li>
 						It is recommended to store all external dependencies of a project inside its own repository, in
-						<code>third_party</code> folder, with one subfolder per each dependency. The
-						<code>third_party</code> directory has a fixed archiname <strong><code>3rdparty</code></strong
-						>.
+						<code>third_party</code> folder, with one subfolder per each dependency.
 					</li>
 					<li>
 						To simplify creation of new files with initial content or insertion of frequently repeated code
 						fragments into existing files, you can make a <code>templates</code> catalog within the root
-						directory of your project and store samples there. This catalog must have a fixed archiname
-						<strong><code>templates</code></strong
-						>.
+						directory of your project and store samples there.
 					</li>
 				</ul>
 			</section>
@@ -226,9 +221,8 @@
 					tool-specific configs <strong>never</strong> fall into this category.
 				</p>
 				<p>
-					Some metafiles are <strong>mandatory</strong>, others are <strong>optional</strong>; each of them
-					has a fixed archiname, which is preserved for this particular metafile and cannot be assigned to any
-					custom archient. See the next subsections for details.
+					Some metafiles are <strong>mandatory</strong>, others are <strong>optional</strong>. See the next
+					subsections for details.
 				</p>
 				<section>
 					<h3 id="metafiles-workflow">
@@ -238,8 +232,7 @@
 						A project can define its own set of rules overriding both the general and the per-language
 						instructions. Such local rules are described by an <strong>optional</strong> metafile called
 						<dfn><code>workflow.md</code></dfn
-						>, which has an unspecified form. Its archiname is fixed to <strong><code>flow</code></strong
-						>.
+						>, which has an unspecified form.
 					</p>
 				</section>
 				<section>
@@ -257,7 +250,6 @@
 						<li>A link to the coding style guide revision used in the current repository is required.</li>
 						<li>A link to <code>workflow.md</code> is required if the latter exists.</li>
 					</ol>
-					<p>The fixed archiname assigned to <code>readme.md</code> is <code>readme</code>.</p>
 				</section>
 			</section>
 		</main>
