@@ -178,56 +178,7 @@
 					</p>
 					<p>Despite that this process is very intuitive, a set of mandatory rules exists:</p>
 					<ul>
-						<li>
-							The branch name must be written in <strong>Git case</strong>. If the name is hierarchical,
-							replace the separating slash (/) with a <strong>hyphen (-)</strong>.
-							<table>
-								<caption>
-									Examples
-								</caption>
-								<tr>
-									<th>Source hierarchical name</th>
-									<th>Resulting branch name</th>
-								</tr>
-								<tr>
-									<td><code>core/loader</code></td>
-									<td><code>core-loader</code></td>
-								</tr>
-								<tr>
-									<td><code>file-manager/search</code></td>
-									<td><code>file-manager-search</code></td>
-								</tr>
-								<tr>
-									<td><code>audio-formats/lossy/mp3</code></td>
-									<td><code>audio-formats-lossy-mp3</code></td>
-								</tr>
-							</table>
-						</li>
-						<li>
-							A prefix denoting the type of the merge commit being planned must precede the branch name;
-							the name and the prefix must be separated by <strong>slash (/)</strong>.
-							<table>
-								<caption>
-									Examples
-								</caption>
-								<tr>
-									<td>Develop a new big class named <code>TextParser</code></td>
-									<td><code>feat/text-parser</code></td>
-								</tr>
-								<tr>
-									<td>Refactor a <code>Network</code> module consisting of many classes</td>
-									<td><code>ref/network</code></td>
-								</tr>
-								<tr>
-									<td>
-										Rewrite a <code>Server</code> class which is a member of the
-										<code>Network</code>
-										module
-									</td>
-									<td><code>mod/network-server</code></td>
-								</tr>
-							</table>
-						</li>
+						<li>The branch name must be written in <strong>Git case</strong>.</li>
 						<li><strong>Always</strong> create a merge commit; avoid fast-forward merges.</li>
 						<li>
 							Provide the merge commit with an informative <a href="#commit-messages">message</a>; do
