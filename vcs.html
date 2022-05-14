@@ -23,7 +23,6 @@
 					<li id="contents-terminology">
 						<a href="#terminology">Terminology</a>
 					</li>
-					<li id="contents-archichanges"><a href="#archichanges">Archichanges</a></li>
 					<li id="contents-commit-messages">
 						<a href="#commit-messages">Commit Messages</a>
 						<ul>
@@ -32,9 +31,6 @@
 							</li>
 							<li id="contents-commit-messages-body">
 								<a href="#commit-messages-body">Body</a>
-							</li>
-							<li id="contents-commit-messages-footer">
-								<a href="#commit-messages-footer">Footer</a>
 							</li>
 						</ul>
 					</li>
@@ -46,7 +42,6 @@
 								<a href="#branching-encapsulation">Encapsulation Branches</a>
 							</li>
 							<li id="contents-branching-release"><a href="#branching-release">Release Branches</a></li>
-							<li id="contents-branching-initial"><a href="#branching-initial">The Initial Commit</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -94,21 +89,11 @@
 				</dl>
 			</section>
 			<section>
-				<h2 id="archichanges"><a href="#contents-archichanges">Archichanges</a></h2>
-				<p>
-					The <a href="general.html#metafiles-architecture"><code>architecture.md</code> metafile</a> must
-					remain actual at any time and thus is required to be updated on <strong>every archichange</strong>.
-					The update is performed by the <strong>same</strong> commit which applies the architectural change
-					itself.
-				</p>
-			</section>
-			<section>
 				<h2 id="commit-messages"><a href="#contents-commit-messages">Commit Messages</a></h2>
 				<p>
-					A well-formed commit message consists of a mandatory <dfn>subject line</dfn>, an optional
-					<dfn>body</dfn>, and an optional <dfn>footer</dfn>. All these three parts are separated from each
-					other by <strong>one empty line</strong>. The whole message must be wrapped to
-					<strong>seventy-two</strong> columns and must <strong>not</strong> refer to any other commits.
+					A well-formed commit message consists of a mandatory <dfn>subject line</dfn> and an optional
+					<dfn>body</dfn>. These two parts are separated from each other by <strong>one empty line</strong>.
+					The whole message must be wrapped to <strong>seventy-two</strong> columns.
 				</p>
 				<p>In the next subsections, we will consider each part of a commit message in detail.</p>
 				<section>
@@ -119,168 +104,32 @@
 						interface and Git itself. In many cases, the only thing that is shown in a commit log being
 						viewed by some third-party programmer will be your subject line. Therefore, you have to make it
 						concise and abstract, letting a reader to get the high-level sense of the changes represented by
-						this commit. Unless it is really necessary, do <strong>not</strong> mention raw filenames in the
-						subject line&nbsp;&mdash; use <strong>archinames</strong> instead.
+						this commit.
 					</p>
-					<p>Despite the hard length limit, a subject line has its own internal structure:</p>
-					<code> &lt;type&gt;[ &lt;scope&gt;][: &lt;description&gt;] </code>
 					<p>
-						Here, <code>&lt;type&gt;</code> is an identifier denoting the current commit type,
-						<code>&lt;scope&gt;</code> is an optional name of the architectural entity this commit is
-						related to, <code>&lt;description&gt;</code> is a very brief summary of the changes (also
-						optional).
+						The main goal of a subject line is to answer the question &ldquo;<strong>what?</strong>&rdquo;
+						instead of &ldquo;<strong>why?</strong>&rdquo;. Write in a few words what exactly was done and
+						leave the reasons (if any) for the message body.
 					</p>
-					<section>
-						<h4>Commit Type</h4>
-						<p>
-							All possible commit types are listed in the table below. Please note that in subject lines
-							you have to use commit type <strong>identifiers</strong>, not their names.
-						</p>
-						<table>
-							<caption>
-								Commit Types
-							</caption>
-							<tr>
-								<th>Identifier</th>
-								<th>Name</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td><code>fix</code></td>
-								<td>Fix</td>
-								<td>Fixes a bug or addresses an issue</td>
-							</tr>
-							<tr>
-								<td><code>feat</code></td>
-								<td>Feature</td>
-								<td>Adds new functionality</td>
-							</tr>
-							<tr>
-								<td><code>mod</code></td>
-								<td>Modification</td>
-								<td>
-									Changes existing functionality in order to get a new behavior but
-									<strong>not</strong>
-									to fix a bug
-								</td>
-							</tr>
-							<tr>
-								<td><code>opt</code></td>
-								<td>Optimization</td>
-								<td>
-									Reduces the amount of resources needed for execution of the code, such as CPU time,
-									memory consumption, binary size etc.
-								</td>
-							</tr>
-							<tr>
-								<td><code>ref</code></td>
-								<td>Refactoring</td>
-								<td>Restructures the code for readability without any impact on its semantics</td>
-							</tr>
-							<tr>
-								<td><code>format</code></td>
-								<td>Format</td>
-								<td>
-									Changes formatting of the code, but does <strong>not</strong> affect its meaning at
-									all
-								</td>
-							</tr>
-							<tr>
-								<td><code>clean</code></td>
-								<td>Clean</td>
-								<td>Removes unneeded code</td>
-							</tr>
-						</table>
-					</section>
-					<section>
-						<h4>Commit Scope</h4>
-						<p>
-							A scope is denoted by an appropriate archiname. If the pointed-to architectural entity is
-							nested (is a part of a larger archient), you can create a hierarchical identifier using
-							<strong>forward slash (/)</strong> as a separator; such scope name will look like a
-							filepath, although it hardly ever has something to do with real file system. If the chosen
-							architectural entity is the archiroot, omit a scope name.
-						</p>
-					</section>
-					<section>
-						<h4>Commit Description</h4>
-						<p>
-							A description is here to answer the question &ldquo;<strong>what?</strong>&rdquo; instead of
-							&ldquo;<strong>why?</strong>&rdquo;. Write in a few words what exactly was done and leave
-							the reasons (if any) for the message body. Apart from the above, the following rules are
-							applied:
-						</p>
-						<ul>
-							<li>
-								Use an <strong>imperative mood</strong> within a description (write it in the
-								<strong>present tense</strong>).
-							</li>
-							<li>The use of articles (a/an, the) is <strong>not</strong> recommended.</li>
-							<li>Do <strong>not</strong> start a description with a capital letter.</li>
-							<li>Do <strong>not</strong> finish a description with a period (.).</li>
-							<li>Within a description, write all numbers <strong>digitally</strong>.</li>
-						</ul>
-						<p>
-							It is possible to refer to another scope by its name right from a description. This trick is
-							very helpful in circumstances when you are exceeding the length limit and need to save your
-							characters, but the archititle being mentioned is too cumbersome. For example, you have a
-							section with archititle &ldquo;Frequently Asked Questions&rdquo; and archiname
-							<code>faq</code> in your application's user manual. When mentioning this section in a commit
-							description, simply type the scope name with a <strong>tilde (~)</strong> at the beginning:
-							<code>~faq</code>. That's it, you just have saved <strong>twenty-two</strong> characters!
-						</p>
-					</section>
-					<section>
-						<h4>Subject Line Examples</h4>
-						<ul class="no-markers">
-							<li>
-								<code class="non-breaking">fix ui/input/keyboard: correct handling of arrow keys</code>
-							</li>
-							<li>
-								<code class="non-breaking">feat core/parser: add Unicode support</code>
-							</li>
-							<li>
-								<code class="non-breaking">mod ui/settings/timeout: replace list with text field</code>
-							</li>
-							<li>
-								<code class="non-breaking">
-									opt lib/containers/concurrent-map: switch to lock-free algorithm
-								</code>
-							</li>
-							<li>
-								<code class="non-breaking">ref server: split up queryDatabase() method</code>
-							</li>
-							<li>
-								<code class="non-breaking">format: change indentation method from spaces to tabs</code>
-							</li>
-							<li>
-								<code class="non-breaking">clean: drop Windows 7 support</code>
-							</li>
-						</ul>
-					</section>
+					<p>Apart from the above, the following rules are applied:</p>
+					<ul>
+						<li>
+							Use an <strong>imperative mood</strong> within a subject line (write it in the
+							<strong>present tense</strong>).
+						</li>
+						<li>The use of articles (a/an, the) is <strong>not</strong> recommended.</li>
+						<li>Start a subject line with a capital letter.</li>
+						<li>Do <strong>not</strong> finish a subject line with a period (.).</li>
+						<li>Within a subject line, write all numbers <strong>digitally</strong>.</li>
+					</ul>
 				</section>
 				<section>
 					<h3 id="commit-messages-body"><a href="#contents-commit-messages-body">Body</a></h3>
 					<p>
-						A subject line is typically followed by a body, which tells more about the commit in a
-						relatively free form. This part of a commit message consists of an arbitrary number of
-						paragraphs separated by an <strong>empty line</strong>. Here you can explain the
-						<strong>reasons</strong> the commit had been prompted by, add
+						A subject line is typically followed by a body, which tells more about the commit. This message
+						part consists of an arbitrary number of paragraphs separated by an <strong>empty line</strong>.
+						Here you can explain the <strong>reasons</strong> the commit had been prompted by, add
 						<strong>technical details</strong>, and (probably) place additional information.
-					</p>
-					<p>
-						A body is <strong>less</strong> abstract than a subject line, so you are allowed to use raw
-						filenames, not only scope references. However, avoid abusing this low level style&nbsp;&mdash;
-						do <strong>not</strong> turn your commit message into pseudocode.
-					</p>
-				</section>
-				<section>
-					<h3 id="commit-messages-footer"><a href="#contents-commit-messages-footer">Footer</a></h3>
-					<p>
-						A footer is used only for Fix commits to point to the problem being solved. Like a subject line,
-						a footer occupies strictly <strong>one</strong> row of seventy-two columns. It consists of a
-						<strong>hash sign (#)</strong> immediately followed by a number identifying the addressed issue:
-						<code>#123456</code>.
 					</p>
 				</section>
 			</section>
@@ -328,56 +177,7 @@
 					</p>
 					<p>Despite that this process is very intuitive, a set of mandatory rules exists:</p>
 					<ul>
-						<li>
-							The branch name must be written in <strong>Git case</strong>. If the name is hierarchical,
-							replace the separating slash (/) with a <strong>hyphen (-)</strong>.
-							<table>
-								<caption>
-									Examples
-								</caption>
-								<tr>
-									<th>Source hierarchical name</th>
-									<th>Resulting branch name</th>
-								</tr>
-								<tr>
-									<td><code>core/loader</code></td>
-									<td><code>core-loader</code></td>
-								</tr>
-								<tr>
-									<td><code>file-manager/search</code></td>
-									<td><code>file-manager-search</code></td>
-								</tr>
-								<tr>
-									<td><code>audio-formats/lossy/mp3</code></td>
-									<td><code>audio-formats-lossy-mp3</code></td>
-								</tr>
-							</table>
-						</li>
-						<li>
-							A prefix denoting the type of the merge commit being planned must precede the branch name;
-							the name and the prefix must be separated by <strong>slash (/)</strong>.
-							<table>
-								<caption>
-									Examples
-								</caption>
-								<tr>
-									<td>Develop a new big class named <code>TextParser</code></td>
-									<td><code>feat/text-parser</code></td>
-								</tr>
-								<tr>
-									<td>Refactor a <code>Network</code> module consisting of many classes</td>
-									<td><code>ref/network</code></td>
-								</tr>
-								<tr>
-									<td>
-										Rewrite a <code>Server</code> class which is a member of the
-										<code>Network</code>
-										module
-									</td>
-									<td><code>mod/network-server</code></td>
-								</tr>
-							</table>
-						</li>
+						<li>The branch name must be written in <strong>Git case</strong>.</li>
 						<li><strong>Always</strong> create a merge commit; avoid fast-forward merges.</li>
 						<li>
 							Provide the merge commit with an informative <a href="#commit-messages">message</a>; do
@@ -416,40 +216,6 @@
 					<p>
 						A special <code>rel</code> prefix is used to clearly indicate a release branch; the prefix and
 						the branch name are separated by a <strong>slash (/)</strong>: <code>rel/v1</code>.
-					</p>
-				</section>
-				<section>
-					<h3 id="branching-initial"><a href="#contents-branching-initial">The Initial Commit</a></h3>
-					<p>
-						A new repository may begin its life either from scratch (when there are no files yet) or by
-						importing an existing codebase. Regardless of the origin of the contents being added, the
-						history of the project has to start from some <dfn>initial commit</dfn>, which is the root of
-						<code>dev</code> branch and thus must be <strong>solid</strong>. An initial commit is special in
-						the sense that its message requirements have nothing to do with the regular
-						<a href="#commit-messages"><span class="non-breaking">commit message rules</span></a> (see next
-						paragraphs for details). Also, by definition, it is impossible for a repository to have more
-						than 1 initial commit as well as not to have it at all; therefore, the initial commit is always
-						unique within particular history.
-					</p>
-					<p>
-						In case of existing code, <strong>all</strong> imported data must be included in
-						<strong>one</strong> monolithic initial commit. This is an exception to the
-						<a href="#branching-encapsulation-splitting-rule">rule which requires commits to be small</a>.
-						Such initial commit is equipped with a message <strong>exactly</strong> matching the text below:
-					</p>
-					<p>
-						<code class="non-breaking">Import project</code>
-					</p>
-					<p>
-						When creating a project from scratch, the initial commit must consist of
-						<a href="general.html#metafiles-readme"><code>readme.md</code></a> and
-						<a href="general.html#metafiles-architecture"><code>architecture.md</code></a> documents. The
-						former metafile follows the regular conventions established for <code>readme.md</code>; the
-						latter must only have the <strong>top-level header</strong> inside it. The commit message will
-						look <strong>exactly</strong> as follows:
-					</p>
-					<p>
-						<code class="non-breaking">Initialize project</code>
 					</p>
 				</section>
 			</section>
