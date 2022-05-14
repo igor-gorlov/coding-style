@@ -21,9 +21,6 @@
 							<li id="contents-terminology-cases">
 								<a href="#terminology-cases">Phrase Writing Methods</a>
 							</li>
-							<li id="contents-terminology-architecture">
-								<a href="#terminology-architecture">Project Architecture</a>
-							</li>
 							<li id="contents-terminology-misc">
 								<a href="#terminology-misc">Miscellaneous</a>
 							</li>
@@ -141,36 +138,6 @@
 									</td>
 								</tr>
 							</table>
-						</dd>
-					</dl>
-				</section>
-				<section>
-					<h3 id="terminology-architecture">
-						<a href="#contents-terminology-architecture">Project Architecture</a>
-					</h3>
-					<dl>
-						<dt>Archient (architectural entity)</dt>
-						<dd>
-							A relatively independent part of a codebase (for example, a class or a module) which can
-							(but is not required to) include other archients. Very small code fragments, such as
-							getter/setter methods in C++, are <strong>never</strong> considered archients.
-						</dd>
-						<dt>Archichange (architectural change)</dt>
-						<dd>An act of creating, deleting, renaming, replacing or relocating archients.</dd>
-						<dt>Archiname (architectural name)</dt>
-						<dd>A short <strong>Git-cased</strong> identifier of an archient.</dd>
-						<dt>Archititle (architectural title)</dt>
-						<dd>
-							A real name of an archient by which this archient is known across the codebase (for example,
-							an exact name of a class).
-						</dd>
-						<dt>File archient</dt>
-						<dd>An archient matching one or more filesystem objects (files or directories).</dd>
-						<dt>Archiroot (architectural root)</dt>
-						<dd>
-							The topmost archient which includes all other archients the project comprizes of. An
-							archiroot has
-							<strong>no</strong> archiname, and its archititle is identical to the project name.
 						</dd>
 					</dl>
 				</section>
