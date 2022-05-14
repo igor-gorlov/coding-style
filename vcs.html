@@ -33,9 +33,6 @@
 							<li id="contents-commit-messages-body">
 								<a href="#commit-messages-body">Body</a>
 							</li>
-							<li id="contents-commit-messages-footer">
-								<a href="#commit-messages-footer">Footer</a>
-							</li>
 						</ul>
 					</li>
 					<li id="contents-branching">
@@ -105,10 +102,10 @@
 			<section>
 				<h2 id="commit-messages"><a href="#contents-commit-messages">Commit Messages</a></h2>
 				<p>
-					A well-formed commit message consists of a mandatory <dfn>subject line</dfn>, an optional
-					<dfn>body</dfn>, and an optional <dfn>footer</dfn>. All these three parts are separated from each
-					other by <strong>one empty line</strong>. The whole message must be wrapped to
-					<strong>seventy-two</strong> columns and must <strong>not</strong> refer to any other commits.
+					A well-formed commit message consists of a mandatory <dfn>subject line</dfn> and an optional
+					<dfn>body</dfn>. These two parts are separated from each other by <strong>one empty line</strong>.
+					The whole message must be wrapped to <strong>seventy-two</strong> columns and must
+					<strong>not</strong> refer to any other commits.
 				</p>
 				<p>In the next subsections, we will consider each part of a commit message in detail.</p>
 				<section>
@@ -272,15 +269,6 @@
 						A body is <strong>less</strong> abstract than a subject line, so you are allowed to use raw
 						filenames, not only scope references. However, avoid abusing this low level style&nbsp;&mdash;
 						do <strong>not</strong> turn your commit message into pseudocode.
-					</p>
-				</section>
-				<section>
-					<h3 id="commit-messages-footer"><a href="#contents-commit-messages-footer">Footer</a></h3>
-					<p>
-						A footer is used only for Fix commits to point to the problem being solved. Like a subject line,
-						a footer occupies strictly <strong>one</strong> row of seventy-two columns. It consists of a
-						<strong>hash sign (#)</strong> immediately followed by a number identifying the addressed issue:
-						<code>#123456</code>.
 					</p>
 				</section>
 			</section>
