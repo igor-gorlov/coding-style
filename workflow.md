@@ -11,6 +11,8 @@
 
 ## Preparing a New Release
 
+Perform the following actions in a **single monolithic commit**:
+
 1. Copy all files from `draft` to `rev<number>`, where `<number>` points to the revision being released.
 2. Change the top-level header in `rev<number>/index.html` to "Revision <number> of Igor Gorlov's Coding Style
    Documentation".
