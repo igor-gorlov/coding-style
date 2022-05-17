@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Document Requirements&nbsp;&mdash; Revision 1 of Igor Gorlov's Coding Style Documentation</title>
+		<link rel="stylesheet" href="../common.css" />
+		<link rel="stylesheet" href="../third_party/highlight.js/default.min.css" />
+		<script defer src="../third_party/highlight.js/highlight.min.js"></script>
+		<script defer src="../prepare_snippets.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<h1>Document Requirements by Igor Gorlov</h1>
+			<p>
+				This guide aims to define both visual and semantic structure which, in my opinion, is optimal for the
+				overwhelming majority of technical documents. No specific markup languages are discussed here because
+				many of them have well-known generic subset of features (like multilevel headers and bulleted lists).
+				However, some of the rules below involve advanced styling provided by powerful solutions (for example,
+				<span class="non-breaking">HTML + CSS</span>) but not supported in lightweight systems (such as
+				Markdown). In the meantime, complex technologies could be a bad choice when you need to quickly write a
+				simple document for which the contents is much more important than its visual representation. In the
+				latter case, full-featured solutions usually produce a lot of boilerplate and hence should be given up
+				in favor of more primitive tools. It is absolutely fair: a developer have all rights to select a method
+				that works better on the current task. If your chosen technology doesn't implement a particular feature,
+				feel free to ignore all rules that require this feature.
+			</p>
+			<nav>
+				<h2 id="contents">Contents</h2>
+				<ul>
+					<li id="contents-terminology">
+						<a href="#terminology">Terminology</a>
+						<ul>
+							<li id="contents-terminology-general"><a href="#terminology-general">General</a></li>
+							<li id="contents-terminology-partitioning">
+								<a href="#terminology-partitioning">Partitioning</a>
+							</li>
+						</ul>
+					</li>
+					<li id="contents-basics"><a href="#basics">Basics</a></li>
+					<li id="contents-emphasis">
+						<a href="#emphasis">Emphasis</a>
+						<ul>
+							<li id="contents-emphasis-terminology"><a href="#emphasis-terminology">Terminology</a></li>
+							<li id="contents-emphasis-rules"><a href="#emphasis-rules">The Rules of Emphasis</a></li>
+						</ul>
+					</li>
+					<li id="contents-punctuation">
+						<a href="#punctuation">Punctuation</a>
+						<ul>
+							<li id="contents-punctuation-quotes"><a href="#punctuation-quotes">Quotation Marks</a></li>
+							<li id="contents-punctuation-dashes">
+								<a href="#punctuation-dashes">Em Dashes, En Dashes, and Hyphens</a>
+							</li>
+						</ul>
+					</li>
+					<li id="contents-num"><a href="#num">Numerals</a></li>
+					<li id="contents-accessibility"><a href="#accessibility">Accessibility</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section>
+				<h2 id="terminology"><a href="#contents-terminology">Terminology</a></h2>
+				<p>
+					Some terms present here may redefine (or ambiguously intersect with) existing well-known concepts.
+					If you are in doubt, use interpretations suggested in <strong>this section</strong>.
+				</p>
+				<section>
+					<h3 id="terminology-general"><a href="#contents-terminology-general">General</a></h3>
+					<dl>
+						<dt>Computer</dt>
+						<dd>Any electronic computing device.</dd>
+						<dt>Natural text</dt>
+						<dd>Text written in a <strong>natural</strong> language and bearing the main semantic load.</dd>
+						<dt>Computer text</dt>
+						<dd>
+							Text that is one or more of the following:
+							<ul>
+								<li>Written in one of programming languages or in pseudocode.</li>
+								<li>Output of a computer program.</li>
+								<li>Input (including key combinations) made by a user of a computer.</li>
+								<li>A name of a file or a directory.</li>
+								<li>A URL address.</li>
+								<li>A VCS branch name.</li>
+							</ul>
+						</dd>
+						<dt>Internal text</dt>
+						<dd>
+							Text that is located <strong>neither</strong> within a header <strong>nor</strong> within a
+							table of contents.
+						</dd>
+						<dt>Internal link</dt>
+						<dd>
+							A hyperlink referring to an element of the <strong>same</strong> document it is located in.
+						</dd>
+						<dt>Typographic quotes</dt>
+						<dd>
+							Double quotation marks which most important properties are described in the following table:
+							<table>
+								<tr>
+									<th></th>
+									<th>Glyph</th>
+									<th>Hexadecimal Unicode number</th>
+									<th>Decimal Unicode number</th>
+									<th>HTML entity</th>
+								</tr>
+								<tr>
+									<td>Left (opening) double quote</td>
+									<td>&ldquo;</td>
+									<td>U+201C</td>
+									<td>8220</td>
+									<td><code>&amp;ldquo;</code></td>
+								</tr>
+								<tr>
+									<td>Right (closing) double quote</td>
+									<td>&rdquo;</td>
+									<td>U+201D</td>
+									<td>8221</td>
+									<td><code>&amp;rdquo;</code></td>
+								</tr>
+							</table>
+						</dd>
+						<dt>Neutral quotes</dt>
+						<dd>
+							The standard typewriter quotation marks. Both their opening and closing variants have
+							identical glyphs (&quot;), Unicode numbers (hexadecimal&nbsp;&mdash; U+0022,
+							decimal&nbsp;&mdash; 34), and HTML entities (<code>&amp;quot;</code>).
+						</dd>
+					</dl>
+				</section>
+				<section>
+					<h3 id="terminology-partitioning"><a href="#contents-terminology-partitioning">Partitioning</a></h3>
+					<dl>
+						<dt>Partition</dt>
+						<dd>
+							A logically complete text fragment which starts with a <strong>header</strong> and
+							(potentially) can be nested into another partition.
+						</dd>
+						<dt>Statement</dt>
+						<dd>
+							A relatively small text fragment that covers an independent topic, has
+							<strong>no</strong> header, and can <strong>not</strong> contain partitions.
+						</dd>
+						<dt>Section</dt>
+						<dd>
+							A top-level partition (that is, a partition that is unable to be nested). A section starts
+							with a header of <strong>second</strong> level.
+						</dd>
+						<dt>Subsection</dt>
+						<dd>
+							A partition that is directly nested into a section and starts with a header of
+							<strong>third</strong> level.
+						</dd>
+						<dt>Microsection</dt>
+						<dd>
+							A partition that is directly nested into a subsection and starts with a header of
+							<strong>fourth</strong> level.
+						</dd>
+						<dt>Nanosection</dt>
+						<dd>
+							A partition that is directly nested into a Microsection and starts with a header of
+							<strong>fifth</strong> level.
+						</dd>
+						<dt>Picosection</dt>
+						<dd>
+							A partition that is directly nested into a nanosection and starts with a header of
+							<strong>sixth</strong> level.
+						</dd>
+						<dt>Clause</dt>
+						<dd>A statement that is an item of a list.</dd>
+						<dt>Paragraph</dt>
+						<dd>A statement that is <strong>out</strong> of any list.</dd>
+					</dl>
+				</section>
+			</section>
+			<section>
+				<h2 id="basics"><a href="#contents-basics">Basics</a></h2>
+				<ul>
+					<li>
+						Begin a document with a title in the form of a <dfn>top-level header</dfn> (that is, a
+						<strong>header of level one</strong>). There must be <strong>exactly one</strong> top-level
+						header in each individual document.
+					</li>
+					<li>All headers, titles, and table captions are written in <strong>header case</strong>.</li>
+					<li>
+						If a header, a title or a table caption contains computer text, this computer text retains its
+						native capitalization without any changes.
+						<table>
+							<caption>
+								Examples
+							</caption>
+							<tr>
+								<td>
+									Mentioning a file called <code>lib.h</code> in a header, a
+									<strong>wrong</strong> way
+								</td>
+								<td><code>Lib.h</code> Overview</td>
+							</tr>
+							<tr>
+								<td>
+									Mentioning a file called <code>lib.h</code> in a header, the
+									<strong>right</strong> way
+								</td>
+								<td><code>lib.h</code> Overview</td>
+							</tr>
+						</table>
+					</li>
+					<li>
+						A large document should have a <dfn>table of contents</dfn> at the beginning; this is a
+						<strong>2-level list</strong> of internal links to sections and subsections, it has
+						<strong>no</strong> markers preceding the elements.
+					</li>
+					<li>
+						If a table of contents is present, the document is also required to have
+						<strong><code class="non-breaking">Back to the table of contents</code></strong> link at the
+						bottom.
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h2 id="emphasis"><a href="#contents-emphasis">Emphasis</a></h2>
+				<section>
+					<h3 id="emphasis-terminology"><a href="#contents-emphasis-terminology">Terminology</a></h3>
+					<dl>
+						<dt>Code emphasis</dt>
+						<dd>
+							An emphasis technique which uses a <strong>monospaced</strong> font and (if possible)
+							semantically marks the text being emphasized as <strong>program code</strong> (for example,
+							with <code>&lt;code&gt;</code> HTML tag).
+						</dd>
+						<dt>Term introduction emphasis (TIE)</dt>
+						<dd>
+							An emphasis technique that works on a short text fragment and makes it
+							<strong>non-breaking italic</strong>.
+						</dd>
+						<dt>Important fragment emphasis (IFE)</dt>
+						<dd>
+							An emphasis technique that works on a short text fragment and makes it
+							<strong>non-breaking bold</strong>.
+						</dd>
+					</dl>
+				</section>
+				<section>
+					<h3 id="emphasis-rules"><a href="#contents-emphasis-rules">The Rules of Emphasis</a></h3>
+					<ul>
+						<li>Always use a <strong>proportional</strong> font for natural text.</li>
+						<li>Use <strong>code emphasis</strong> for all computer text.</li>
+						<li>
+							Use <strong>term introduction emphasis</strong> for the first occurrence of every new term
+							within the internal text.
+						</li>
+						<li>
+							Use <strong>important fragment emphasis</strong> for the most valuable words and phrases.
+						</li>
+						<li>
+							TIE and IFE highlightings should <strong>not</strong> span long pieces of text (only
+							critical fragments are to be emphasized) and should <strong>not</strong> appear too
+							frequently.
+							<table>
+								<caption>
+									Examples
+								</caption>
+								<tr>
+									<td>An unacceptably long emphasis</td>
+									<td>
+										In our community, it is
+										<strong
+											>not allowed to insult other people or to impersonate the
+											administrator</strong
+										>.
+									</td>
+								</tr>
+								<tr>
+									<td>Too many relatively short highlightings</td>
+									<td>
+										In our community, it is <strong>not allowed</strong> to
+										<strong>insult other people</strong> or to
+										<strong>impersonate the administrator</strong>.
+									</td>
+								</tr>
+								<tr>
+									<td>The recommended level of emphasis</td>
+									<td>
+										In our community, it is <strong>not</strong> allowed to insult other people or
+										to impersonate the administrator.
+									</td>
+								</tr>
+							</table>
+						</li>
+						<li>
+							Do <strong>not</strong> combine TIE and IFE highlightings together; prefer
+							<strong>TIE</strong> if a conflict takes place.
+							<table>
+								<caption>
+									Examples
+								</caption>
+								<tr>
+									<td>An illustration of the conflict</td>
+									<td>
+										The result of the subtraction is called the
+										<dfn><strong>difference</strong></dfn
+										>.
+									</td>
+								</tr>
+								<tr>
+									<td>The resolution</td>
+									<td>The result of the subtraction is called the <dfn>difference</dfn>.</td>
+								</tr>
+							</table>
+						</li>
+						<li>Set <strong>blue</strong> color for links, do <strong>not</strong> underline them.</li>
+						<li>
+							Highlight headers of all levels with <strong>bold</strong>; the top-level header should be
+							<strong>underlined</strong>.
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<h2 id="punctuation"><a href="#contents-punctuation">Punctuation</a></h2>
+				<section>
+					<h3 id="punctuation-quotes"><a href="#contents-punctuation-quotes">Quotation Marks</a></h3>
+					<ul>
+						<li>Use typographic quotes if they are supported; consider neutral ones a fallback.</li>
+						<li>
+							Quotation marks are placed around:
+							<ul>
+								<li>
+									Direct speech.
+									<table>
+										<tr>
+											<td>Example</td>
+											<td>The speaker said, &ldquo;Well, now look at the next slide&rdquo;.</td>
+										</tr>
+									</table>
+								</li>
+								<li>
+									Inline quotes.
+									<table>
+										<tr>
+											<td>Example</td>
+											<td>
+												According to Stroustrup, C++ is &ldquo;the invisible foundation of
+												everything&rdquo;.
+											</td>
+										</tr>
+									</table>
+								</li>
+								<li>
+									Titles of books, films, paintings or other artworks.
+									<table>
+										<tr>
+											<td>Example</td>
+											<td>
+												Have you ever read a free book &ldquo;Game Programming Patterns&rdquo;
+												by Robert Nystrom?
+											</td>
+										</tr>
+									</table>
+								</li>
+								<li>
+									Words or phrases which are used in a figurative, non-standard way.
+									<table>
+										<tr>
+											<td>Example</td>
+											<td>
+												The interpreter &ldquo;knows&rdquo; about all variables along with their
+												types.
+											</td>
+										</tr>
+									</table>
+								</li>
+							</ul>
+						</li>
+						<li>
+							Quotation marks are forbidden around:
+							<ul>
+								<li>
+									Computer text.
+									<table>
+										<caption>
+											Examples
+										</caption>
+										<tr>
+											<td>Wrong</td>
+											<td>
+												Press &ldquo;<code class="non-breaking">Alt + F4</code>&rdquo; to close
+												the window.
+											</td>
+										</tr>
+										<tr>
+											<td>Right</td>
+											<td>
+												Press <code class="non-breaking">Alt + F4</code> to close the window.
+											</td>
+										</tr>
+									</table>
+								</li>
+								<li>
+									Organization titles.
+									<table>
+										<caption>
+											Examples
+										</caption>
+										<tr>
+											<td>Wrong</td>
+											<td>&ldquo;Apple&rdquo; built their own closed ecosystem of products.</td>
+										</tr>
+										<tr>
+											<td>Right</td>
+											<td>Apple built their own closed ecosystem of products.</td>
+										</tr>
+									</table>
+								</li>
+							</ul>
+						</li>
+						<li>
+							In special cases not described above, the decision about when to use quotation marks is left
+							out for the developer.
+						</li>
+						<li>
+							If a sentence ends with both a closing quotation mark and a dot (.), the dot is placed
+							<strong>after</strong> the closing quotation mark.
+							<table>
+								<caption>
+									Examples
+								</caption>
+								<tr>
+									<td>Wrong</td>
+									<td>I thought, &ldquo;We will hardly ever meet in real.&rdquo;</td>
+								</tr>
+								<tr>
+									<td>Right</td>
+									<td>I thought, &ldquo;We will hardly ever meet in real&rdquo;.</td>
+								</tr>
+							</table>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h3 id="punctuation-dashes">
+						<a href="#contents-punctuation-dashes">Em Dashes, En Dashes, and Hyphens</a>
+					</h3>
+					<ul>
+						<li>
+							<strong>Em</strong> dashes are used between parts of sentence (most often in place of commas
+							or colons).
+							<table>
+								<caption>
+									Examples
+								</caption>
+								<tr>
+									<td>The subordinate clause expresses the reason of the main clause</td>
+									<td>
+										After exceeding a certain amount of threads, parallel architecture becomes a
+										pessimization&nbsp;&mdash; the more workers act simultaneously, the more time
+										the scheduler consumes.
+									</td>
+								</tr>
+								<tr>
+									<td>The clause delimited by em dashes is an optional addition for the sentence</td>
+									<td>
+										The art of programming&nbsp;&mdash; from my point of view&nbsp;&mdash; lies in
+										the skill of working with abstractions.
+									</td>
+								</tr>
+							</table>
+						</li>
+						<li>
+							An <strong>em</strong> dash is separated from adjacent text with a <strong>space</strong>;
+							the space to the left of the dash must be <strong>non-breaking</strong>.
+						</li>
+						<li>
+							An <strong>en</strong> dash is used as a delimiter within ranges.
+							<table>
+								<tr>
+									<td>Example</td>
+									<td>
+										Among other characters, the ASCII table includes letters (A&ndash;Z, a&ndash;z)
+										and digits (0&ndash;9).
+									</td>
+								</tr>
+							</table>
+						</li>
+						<li>
+							The purpose of hyphens (-) is to divide parts of compound words.
+							<table>
+								<tr>
+									<td>Example</td>
+									<td>
+										C++ preprocessor allows to create both variable-like and function-like macros.
+									</td>
+								</tr>
+							</table>
+						</li>
+						<li>
+							There must be <strong>no</strong> whitespaces directly adjacent to
+							<strong>en</strong> dashes or hyphens.
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<h2 id="num"><a href="#contents-num">Numerals</a></h2>
+				<p>A number is represented <strong>digitally</strong> if one or more of the following is true:</p>
+				<ul>
+					<li>It is less than <strong>zero</strong> or greater than <strong>ninety-nine</strong>.</li>
+					<li>It is a part of a date or a formula.</li>
+					<li>
+						It is either a marker in a list or a number of a section or another number used for partitioning
+						document.
+					</li>
+					<li>It expresses a technical characteristic or a result of measurement.</li>
+				</ul>
+				If none of the above conditions are met, the number must be represented
+				<strong>in full</strong>.
+				<table>
+					<caption>
+						Examples
+					</caption>
+					<tr>
+						<td>We bought twenty-five hard drives, 1 terabyte each.</td>
+					</tr>
+					<tr>
+						<td>4 + 8 = 12</td>
+					</tr>
+				</table>
+				<p>
+					An ordinal numeral referring to a number represented digitally must have a special
+					<dfn>ordinal suffix</dfn>, which is the final two letters of the full representation of the number.
+				</p>
+				<table>
+					<caption>
+						Examples
+					</caption>
+					<tr>
+						<td>The full representation is &ldquo;Two hundred and fifty-fir<u>st</u>&rdquo;</td>
+						<td>There is a typo on 251st page.</td>
+					</tr>
+					<tr>
+						<td>The full representation is &ldquo;one hundred and eighteen<u>th</u>&rdquo;</td>
+						<td>
+							Oganesson&nbsp;&mdash; the 118th element of the periodic system&nbsp;&mdash; was named after
+							its discoverer, Russian physicist Yuri Oganessian.
+						</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2 id="accessibility"><a href="#contents-accessibility">Accessibility</a></h2>
+				<ul>
+					<li>
+						<strong>Never</strong> simulate headers, lists, or any other semantic primitives using hacks and
+						workarounds (like CSS tricks in HTML)&nbsp;&mdash; use these primitives
+						<strong>directly</strong>.
+					</li>
+					<li>
+						Provide <strong>any</strong> image with a descriptive text to make graphical content
+						understandable for screen reader users.
+					</li>
+				</ul>
+			</section>
+		</main>
+		<a href="#contents">Back to the table of contents</a>
+	</body>
+</html>

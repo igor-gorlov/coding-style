@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>C++ Coding Style Guide&nbsp;&mdash; Revision 1 of Igor Gorlov's Coding Style Documentation</title>
+		<link rel="stylesheet" href="../common.css" />
+		<link rel="stylesheet" href="../third_party/highlight.js/default.min.css" />
+		<script defer src="../third_party/highlight.js/highlight.min.js"></script>
+		<script defer src="../prepare_snippets.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<h1>C++ Coding Style Guide by Igor Gorlov</h1>
+			<nav>
+				<h2 id="contents">Contents</h2>
+				<ul>
+					<li id="contents-general"><a href="#general">General</a></li>
+					<li id="contents-naming"><a href="#naming">Naming</a></li>
+					<li id="contents-formatting"><a href="#formatting">Formatting</a></li>
+					<li id="contents-commenting"><a href="#commenting">Commenting</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section>
+				<h2 id="general"><a href="#contents-general">General</a></h2>
+				<ul>
+					<li>Use <strong>C++20</strong>.</li>
+					<li>Do <strong>not</strong> use global variables.</li>
+					<li>
+						Use <code class="non-breaking">#pragma once</code> in order to prevent multiple inclusions of
+						the same file; do <strong>not</strong> use conditional compilation for this purpose.
+					</li>
+					<li>
+						Use <strong><code>struct</code></strong> keyword for plain old data types.
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h2 id="naming"><a href="#contents-naming">Naming</a></h2>
+				<ul>
+					<li>
+						Use <strong>informative</strong> names for all entities except of temporary variables.
+						<table>
+							<caption>
+								Examples
+							</caption>
+							<tr>
+								<td>An important variable</td>
+								<td>
+									<code class="snippet language-cpp">uint64 lastModificationTimestamp;</code>
+								</td>
+							</tr>
+							<tr>
+								<td>A temporary variable used only as a loop counter</td>
+								<td>
+									<code class="snippet language-cpp">uint i = 0;</code>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li>
+						Give include files <strong><code>.h</code></strong> extension.
+					</li>
+					<li>
+						Give <strong><code>.cpp</code></strong> extension to files that will be compiled directly to
+						binaries.
+					</li>
+					<li>
+						Use <strong>upper camel case</strong> for namespace and type names (except of aliases for
+						arithmetic types, which must be written in <strong>lower camel case</strong>).
+						<table>
+							<caption>
+								Examples
+							</caption>
+							<tr>
+								<td>A user-defined namespace</td>
+								<td>
+									<code class="snippet language-cpp" data-src="../snippets/cpp_example_1.cpp"></code>
+								</td>
+							</tr>
+							<tr>
+								<td>A user-declared type</td>
+								<td>
+									<code class="snippet language-cpp">class CustomType;</code>
+								</td>
+							</tr>
+							<tr>
+								<td>An arithmetic type alias</td>
+								<td>
+									<code class="snippet language-cpp">typedef std::uint32_t uint32;</code>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li>
+						Use <strong>lower camel case</strong> to name functions and variables.
+						<table>
+							<caption>
+								Examples
+							</caption>
+							<tr>
+								<td>A function call</td>
+								<td>
+									<code class="snippet language-cpp">saveCurrentFile();</code>
+								</td>
+							</tr>
+							<tr>
+								<td>A variable declaration</td>
+								<td>
+									<code class="snippet language-cpp">int playerPosition;</code>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li>
+						Use <strong>upper snake case</strong> for preprocessor identifiers.
+						<table>
+							<tr>
+								<td>Example</td>
+								<td>
+									<code class="snippet language-cpp">#define NUMBER_OF_ITERATIONS</code>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li>
+						Add <strong><code>m</code></strong> prefix to names of private class members.
+						<table>
+							<tr>
+								<td>Example</td>
+								<td>
+									<code class="snippet language-cpp" data-src="../snippets/cpp_example_2.cpp"></code>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li>
+						Add <strong><code>p</code></strong> prefix to names of protected class members.
+						<table>
+							<tr>
+								<td>Example</td>
+								<td>
+									<code class="snippet language-cpp" data-src="../snippets/cpp_example_3.cpp"></code>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li>
+						Prefer <strong>verbs</strong> for function names; and <strong>nouns</strong> for type, namespace
+						and variable names.
+						<table>
+							<caption>
+								Examples
+							</caption>
+							<tr>
+								<td>A good function name</td>
+								<td>
+									<code class="snippet language-cpp">void deallocateMemory(void* memory);</code>
+								</td>
+							</tr>
+							<tr>
+								<td>An undesirable function name</td>
+								<td>
+									<code class="snippet language-cpp">void memoryDeallocation(void* memory);</code>
+								</td>
+							</tr>
+							<tr>
+								<td>An appropriate variable name</td>
+								<td>
+									<code class="snippet language-cpp">enemy* target;</code>
+								</td>
+							</tr>
+							<tr>
+								<td>An inconvenient variable name</td>
+								<td>
+									<code class="snippet language-cpp">enemy* destroy;</code>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li>
+						Bool variables as well as functions returning bool have names in the form of
+						<strong>yes-no question</strong>.
+						<table>
+							<caption>
+								Examples
+							</caption>
+							<tr>
+								<td>A function</td>
+								<td>
+									<code class="snippet language-cpp">bool isRunning(ProcessHandler* process);</code>
+								</td>
+							</tr>
+							<tr>
+								<td>A data member of a class</td>
+								<td>
+									<code class="snippet language-cpp" data-src="../snippets/cpp_example_4.cpp"></code>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li>
+						If a variable stores amount of some items, give it a name with
+						<strong><code>numberOf</code></strong> prefix; but if such a variable contains an actual list of
+						items, use <strong>simple plural</strong>.
+						<table>
+							<tr>
+								<td>Example</td>
+								<td>
+									<code class="snippet language-cpp" data-src="../snippets/cpp_example_5.cpp"></code>
+								</td>
+							</tr>
+						</table>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h2 id="formatting"><a href="#contents-formatting">Formatting</a></h2>
+				<ul>
+					<li>
+						Organize each source file according to the following template:
+						<ol>
+							<li>
+								An optional multiline comment briefly describing this file and its contents, then two
+								empty lines.
+							</li>
+							<li>An optional <code class="non-breaking">#pragma once</code>, then two empty lines.</li>
+							<li>
+								An optional sequence of standard includes in alphabetical order, then one empty line.
+							</li>
+							<li>An optional sequence of system includes in alphabetical order, then one empty line.</li>
+							<li>
+								An optional sequence of third-party includes in alphabetical order, then one empty line.
+							</li>
+							<li>
+								An optional sequence of includes from current project in alphabetical order, then one
+								empty line.
+							</li>
+							<li>
+								A sequence of declarations and definitions optionally divided into paragraphs by one or
+								two empty lines.
+							</li>
+						</ol>
+					</li>
+					<li>
+						Place each curly brace which encloses a scope on a separate line.
+						<table>
+							<tr>
+								<td>Example</td>
+								<td>
+									<code class="snippet language-cpp" data-src="../snippets/cpp_example_6.cpp"></code>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li>
+						If a pair of curly braces is empty, place both these braces on one separate line without any
+						whitespaces between them.
+						<table>
+							<tr>
+								<td>Example</td>
+								<td>
+									<code class="snippet language-cpp" data-src="../snippets/cpp_example_7.cpp"></code>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li>
+						<strong>Always</strong> use curly braces to enclose code blocks, even when the language rules
+						permit not to use them in this particular situation.
+						<table>
+							<caption>
+								Examples
+							</caption>
+							<tr>
+								<td>A dirty trick allowed by C++</td>
+								<td>
+									<code class="snippet language-cpp" data-src="../snippets/cpp_example_8.cpp"></code>
+								</td>
+							</tr>
+							<tr>
+								<td>The more reliable way</td>
+								<td>
+									<code class="snippet language-cpp" data-src="../snippets/cpp_example_9.cpp"></code>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li>For indentation use <strong>tabs (one per level)</strong>, not spaces.</li>
+					<li>
+						Do <strong>not</strong> indent access specifiers.
+						<table>
+							<tr>
+								<td>Example</td>
+								<td>
+									<code class="snippet language-cpp" data-src="../snippets/cpp_example_10.cpp"></code>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li>Indent comments in the <strong>exactly same</strong> manner as code.</li>
+				</ul>
+			</section>
+			<section>
+				<h2 id="commenting"><a href="#contents-commenting">Commenting</a></h2>
+				<ul>
+					<li>
+						When finishing a class or namespace body which occupies a lot of vertical space, put a
+						single-line comment right after the closing curly brace (right after semicolon in case of
+						class). The mentioned comment must be equivalent to the header of this class or namespace.
+						<table>
+							<caption>
+								Examples
+							</caption>
+							<tr>
+								<td>A namespace</td>
+								<td>
+									<code class="snippet language-cpp" data-src="../snippets/cpp_example_11.cpp"></code>
+								</td>
+							</tr>
+							<tr>
+								<td>A class</td>
+								<td>
+									<code class="snippet language-cpp" data-src="../snippets/cpp_example_12.cpp"></code>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li>
+						If a single-line comment (//...) does not fit on one line, use a multiline variant (/*...*/)
+						instead.
+					</li>
+					<li>Try to comment on any code that is <strong>not</strong> self-documented.</li>
+					<li>Finish any comment with a period (.).</li>
+				</ul>
+			</section>
+		</main>
+		<a href="#contents">Back to the table of contents</a>
+	</body>
+</html>

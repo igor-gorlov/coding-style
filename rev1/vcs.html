@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Version Control Guide&nbsp;&mdash; Revision 1 of Igor Gorlov's Coding Style Documentation</title>
+		<link rel="stylesheet" href="../common.css" />
+		<link rel="stylesheet" href="../third_party/highlight.js/default.min.css" />
+		<script defer src="../third_party/highlight.js/highlight.min.js"></script>
+		<script defer src="../prepare_snippets.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<h1>Version Control Guide by Igor Gorlov</h1>
+			<p>
+				In my work, I use <a href="https://git-scm.com">Git</a> as the only version control system. All my
+				projects are Git repositories remotely hosted on <a href="https://github.com">GitHub</a> under
+				<a href="https://github.com/igor-gorlov">Igor Gorlov personal account</a>.
+			</p>
+			<nav>
+				<h2 id="contents">Contents</h2>
+				<ul>
+					<li id="contents-terminology">
+						<a href="#terminology">Terminology</a>
+					</li>
+					<li id="contents-commit-messages">
+						<a href="#commit-messages">Commit Messages</a>
+						<ul>
+							<li id="contents-commit-messages-subject">
+								<a href="#commit-messages-subject">Subject Line</a>
+							</li>
+							<li id="contents-commit-messages-body">
+								<a href="#commit-messages-body">Body</a>
+							</li>
+						</ul>
+					</li>
+					<li id="contents-branching">
+						<a href="#branching">Branching</a>
+						<ul>
+							<li id="contents-branching-overview"><a href="#branching-overview">Overview</a></li>
+							<li id="contents-branching-encapsulation">
+								<a href="#branching-encapsulation">Encapsulation Branches</a>
+							</li>
+							<li id="contents-branching-release"><a href="#branching-release">Release Branches</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section>
+				<h2 id="terminology"><a href="#contents-terminology">Terminology</a></h2>
+				<p>
+					Here are the basic definitions necessary to get started. Additional terms will be introduced later
+					during further explanation.
+				</p>
+				<dl>
+					<dt>Workable program</dt>
+					<dd>A program that compiles (if required), runs and passes all tests (if any).</dd>
+					<dt>Readable documentation</dt>
+					<dd>
+						Unambiguous and consistent documentation which has <strong>no</strong> internal contradictions
+						and/or incomplete sections, but (probably) still needs additions and/or improvements.
+					</dd>
+					<dt>Solid state</dt>
+					<dd>
+						A codebase is in a solid state when <strong>all</strong> of the following conditions are met:
+						<ul>
+							<li>Its program part (if present) is <strong>workable</strong>.</li>
+							<li>Its documentation part (if present) is <strong>readable</strong>.</li>
+							<li>It conforms to the coding style rules.</li>
+						</ul>
+					</dd>
+					<dt>Unstable state</dt>
+					<dd>
+						A codebase is in an unstable state when <strong>one or more</strong> of the solid state
+						conditions are <strong>false</strong>.
+					</dd>
+					<dt>Solid commit</dt>
+					<dd>A commit pointing to a codebase snapshot which is in a <strong>solid state</strong>.</dd>
+					<dt>Unstable commit</dt>
+					<dd>A commit pointing to a codebase snapshot which is in an <strong>unstable state</strong>.</dd>
+					<dt>Solid branch</dt>
+					<dd>A branch requiring every its commit to be <strong>solid</strong>.</dd>
+					<dt>Unstable branch</dt>
+					<dd>A branch on which unstable commits are <strong>permitted</strong>.</dd>
+					<dt>Parent branch (base branch, base)</dt>
+					<dd>The branch from which the current branch had initially been started.</dd>
+				</dl>
+			</section>
+			<section>
+				<h2 id="commit-messages"><a href="#contents-commit-messages">Commit Messages</a></h2>
+				<p>
+					A well-formed commit message consists of a mandatory <dfn>subject line</dfn> and an optional
+					<dfn>body</dfn>. These two parts are separated from each other by <strong>one empty line</strong>.
+					The whole message must be wrapped to <strong>seventy-two</strong> columns.
+				</p>
+				<p>In the next subsections, we will consider each part of a commit message in detail.</p>
+				<section>
+					<h3 id="commit-messages-subject"><a href="#contents-commit-messages-subject">Subject Line</a></h3>
+					<p>
+						A subject line is intended to express a <strong>brief summary</strong> of the commit, which may
+						be used by various developer tools and services, including (but not limiting to) the GitHub web
+						interface and Git itself. In many cases, the only thing that is shown in a commit log being
+						viewed by some third-party programmer will be your subject line. Therefore, you have to make it
+						concise and abstract, letting a reader to get the high-level sense of the changes represented by
+						this commit.
+					</p>
+					<p>
+						The main goal of a subject line is to answer the question &ldquo;<strong>what?</strong>&rdquo;
+						instead of &ldquo;<strong>why?</strong>&rdquo;. Write in a few words what exactly was done and
+						leave the reasons (if any) for the message body.
+					</p>
+					<p>Apart from the above, the following rules are applied:</p>
+					<ul>
+						<li>
+							Use an <strong>imperative mood</strong> within a subject line (write it in the
+							<strong>present tense</strong>).
+						</li>
+						<li>The use of articles (a/an, the) is <strong>not</strong> recommended.</li>
+						<li>Start a subject line with a capital letter.</li>
+						<li>Do <strong>not</strong> finish a subject line with a period (.).</li>
+						<li>Within a subject line, write all numbers <strong>digitally</strong>.</li>
+					</ul>
+				</section>
+				<section>
+					<h3 id="commit-messages-body"><a href="#contents-commit-messages-body">Body</a></h3>
+					<p>
+						A subject line is typically followed by a body, which tells more about the commit. This message
+						part consists of an arbitrary number of paragraphs separated by an <strong>empty line</strong>.
+						Here you can explain the <strong>reasons</strong> the commit had been prompted by, add
+						<strong>technical details</strong>, and (probably) place additional information.
+					</p>
+				</section>
+			</section>
+			<section>
+				<h2 id="branching"><a href="#contents-branching">Branching</a></h2>
+				<section>
+					<h3 id="branching-overview"><a href="#contents-branching-overview">Overview</a></h3>
+					<p>
+						Every repository is built around the default branch called <dfn><code>dev</code></dfn
+						>. This is a <strong>solid</strong> branch, it represents the main stream of development.
+						Ideally, the whole history of the project should be linearly stored on <code>dev</code> as a
+						series of small and distinct commits.
+					</p>
+					<p>However, such scenario is often not viable in real world:</p>
+					<ul>
+						<li id="branching-overview-issue1">
+							The first obstacle comes from inherent complexity of any software which is larger than a
+							code example from a beginners' manual. The more abstraction layers your project consists of,
+							the harder it becomes both to retain a solid state and to keep commits compact
+							simultaneously.
+						</li>
+						<li id="branching-overview-issue2">
+							Another problem appears when the upcoming release is getting close. You have to perform
+							several final touches before announcing a new version, but suddenly understand that those
+							touches are really not needed on <code>dev</code>&nbsp;&mdash; they will hamper the future
+							work. For example, there is absolutely no necessity to improve quality of visual design if
+							you are planning to completely revisit the GUI right after the upcoming release.
+						</li>
+					</ul>
+					<p>
+						The branching strategy covered in the remaining subsections proposes several workarounds for the
+						issues listed above.
+					</p>
+				</section>
+				<section>
+					<h3 id="branching-encapsulation">
+						<a href="#contents-branching-encapsulation">Encapsulation Branches</a>
+					</h3>
+					<p>
+						To resolve the <a href="#branching-overview-issue1">first issue</a>, we add some kind of
+						complexity management using temporary unstable branches (hereinafter&nbsp;&mdash;
+						<dfn>encapsulation branches</dfn>). When a complex task rises, create a new branch, do all
+						unstable work on it, then merge back into <code>dev</code>, and finally delete the encapsulation
+						branch.
+					</p>
+					<p>Despite that this process is very intuitive, a set of mandatory rules exists:</p>
+					<ul>
+						<li>The branch name must be written in <strong>Git case</strong>.</li>
+						<li><strong>Always</strong> create a merge commit; avoid fast-forward merges.</li>
+						<li>
+							Provide the merge commit with an informative <a href="#commit-messages">message</a>; do
+							<strong>not</strong> leave the default one.
+						</li>
+						<li>
+							The abuse of encapsulation branches can lead to an overcomplicated repository structure; so
+							avoid creating them recursively in order to keep any encapsulation branch
+							<strong>linear</strong>.
+						</li>
+						<li id="branching-encapsulation-splitting-rule">
+							Keep all commits <strong>small and logically separated</strong>; if you have a complex task,
+							break it down into simpler ones.
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h3 id="branching-release"><a href="#contents-branching-release">Release Branches</a></h3>
+					<p>
+						This addresses the <a href="#branching-overview-issue2">second issue</a>. If the new version of
+						your product needs additional pre-release tuning which has nothing to do with the subsequent
+						(starting after this new version) development, create a dedicated <dfn>release branch</dfn> and
+						do all the preparatory work there. When the project is absolutely ready to be released, tag the
+						tip of the release branch, and you are done. However, if you maintain several generations of the
+						product in parallel (like Microsoft does with its
+						<span class="non-breaking">Windows 10</span> and
+						<span class="non-breaking">Windows 11</span> operating systems), it might be sine to develop
+						updates and fixes for each generation right on that generation's release branch (after the major
+						release tag). Anyway, a release branch persistently remains alive and
+						<strong>never</strong> gets deleted.
+					</p>
+					<p>
+						Release branches are <strong>solid</strong>. Similarly to <code>dev</code>, any of them can be
+						(but not always is) a base for its own encapsulation branches.
+					</p>
+					<p>
+						A special <dfn><code>rel</code></dfn> prefix is used to clearly indicate a release branch; the
+						prefix and the branch name are separated by a slash (/): <code>rel/v1</code>.
+					</p>
+				</section>
+			</section>
+		</main>
+		<a href="#contents">Back to the table of contents</a>
+	</body>
+</html>

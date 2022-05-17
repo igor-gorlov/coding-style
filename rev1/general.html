@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>
+			General Coding Style Guidelines&nbsp;&mdash; Revision 1 of Igor Gorlov's Coding Style Documentation
+		</title>
+		<link rel="stylesheet" href="../common.css" />
+		<link rel="stylesheet" href="../third_party/highlight.js/default.min.css" />
+		<script defer src="../third_party/highlight.js/highlight.min.js"></script>
+		<script defer src="../prepare_snippets.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<h1>General Coding Style Guidelines by Igor Gorlov</h1>
+			<nav>
+				<h2 id="contents">Contents</h2>
+				<ul>
+					<li id="contents-terminology">
+						<a href="#terminology">Terminology</a>
+						<ul>
+							<li id="contents-terminology-cases">
+								<a href="#terminology-cases">Phrase Writing Methods</a>
+							</li>
+							<li id="contents-terminology-misc">
+								<a href="#terminology-misc">Miscellaneous</a>
+							</li>
+						</ul>
+					</li>
+					<li id="contents-project"><a href="#project">Project Basics</a></li>
+					<li id="contents-metafiles">
+						<a href="#metafiles">Metafiles</a>
+						<ul>
+							<li id="contents-metafiles-workflow">
+								<a href="#metafiles-workflow"><code>workflow.md</code></a>
+							</li>
+							<li id="contents-metafiles-readme">
+								<a href="#metafiles-readme"><code>readme.md</code></a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section>
+				<h2 id="terminology"><a href="#contents-terminology">Terminology</a></h2>
+				<p>The following are some common terms used throughout the whole coding style documentation.</p>
+				<section>
+					<h3 id="terminology-cases">
+						<a href="#contents-terminology-cases">Phrase Writing Methods</a>
+					</h3>
+					<dl>
+						<dt>Spaceless case</dt>
+						<dd>
+							A collective name for several styles of phrase writing in which whitespaces are
+							<strong>not</strong>
+							used.
+						</dd>
+						<dt>Spaceful case</dt>
+						<dd>
+							A collective name for several styles of phrase writing where spaces are used as word
+							delimiters.
+						</dd>
+						<dt>Header case</dt>
+						<dd>
+							A <strong>spaceful</strong> case which capitalizes all <strong>notional</strong> parts of
+							speech within the phrase being written, while the first word is unconditionally capitalized.
+							<table>
+								<tr>
+									<td>Example</td>
+									<td>An Occurrence at Owl Creek Bridge</td>
+								</tr>
+							</table>
+						</dd>
+						<dt>Upper camel case</dt>
+						<dd>
+							A <strong>spaceless</strong> case where each word of the phrase being written begins with a
+							capital letter.
+							<table>
+								<tr>
+									<td>Example</td>
+									<td>
+										<code>SpacesAreNotAllowedHere</code>
+									</td>
+								</tr>
+							</table>
+						</dd>
+						<dt>Lower camel case</dt>
+						<dd>
+							A <strong>spaceless</strong> case where each word of the phrase being written except of the
+							first one begins with a capital letter.
+							<table>
+								<tr>
+									<td>Example</td>
+									<td>
+										<code>spacesAreNotAllowedHere</code>
+									</td>
+								</tr>
+							</table>
+						</dd>
+						<dt>Upper snake case</dt>
+						<dd>
+							A <strong>spaceless</strong> case using an underscore character (_) as a word separator and
+							requiring <strong>all</strong> letters to be capital.
+							<table>
+								<tr>
+									<td>Example</td>
+									<td>
+										<code>SPACES_ARE_NOT_ALLOWED_HERE</code>
+									</td>
+								</tr>
+							</table>
+						</dd>
+						<dt>Lower snake case</dt>
+						<dd>
+							A <strong>spaceless</strong> case using an underscore character (_) as a word separator and
+							totally prohibiting capital letters.
+							<table>
+								<tr>
+									<td>Example</td>
+									<td>
+										<code>spaces_are_not_allowed_here</code>
+									</td>
+								</tr>
+							</table>
+						</dd>
+						<dt>Git case</dt>
+						<dd>
+							A <strong>spaceless</strong> case using hyphen character (-) as a word separator and totally
+							prohibiting capital letters.
+							<table>
+								<tr>
+									<td>Example</td>
+									<td>
+										<code>spaces-are-not-allowed-here</code>
+									</td>
+								</tr>
+							</table>
+						</dd>
+					</dl>
+				</section>
+				<section>
+					<h3 id="terminology-misc">
+						<a href="#contents-terminology-misc">Miscellaneous</a>
+					</h3>
+					<dl>
+						<dt>Line terminator</dt>
+						<dd>
+							A character intended to finish a line of text, also widely known as end-of-line, newline or
+							linebreak (for example, CRLF on Windows or LF on Unix-compatible systems).
+						</dd>
+						<dt>Compound word</dt>
+						<dd>A word consisting of two or more hyphen-separated parts.</dd>
+						<dt>To represent (a number) digitally</dt>
+						<dd>
+							To write a number using <strong>digits</strong>.
+							<table>
+								<caption>
+									Examples
+								</caption>
+								<tr>
+									<td>Arabic decimal</td>
+									<td>126</td>
+								</tr>
+								<tr>
+									<td>Hexadecimal</td>
+									<td>0x7e</td>
+								</tr>
+								<tr>
+									<td>Roman</td>
+									<td>CXXVII</td>
+								</tr>
+							</table>
+						</dd>
+						<dt>To represent (a number) in full</dt>
+						<dd>
+							To write a number using <strong>words</strong>.
+							<table>
+								<tr>
+									<td>Example</td>
+									<td>One hundred and twenty-six</td>
+								</tr>
+							</table>
+						</dd>
+					</dl>
+				</section>
+			</section>
+			<section>
+				<h2 id="project"><a href="#contents-project">Project Basics</a></h2>
+				<ul>
+					<li>Encode all files within a repository in UTF-8.</li>
+					<li>Finish any file with a <strong>line terminator</strong>.</li>
+					<li>Name the root directory of a project in <strong>Git case</strong>.</li>
+					<li>
+						Use <strong>lower snake case</strong> to name all files and directories which are (recursively)
+						located within the root directory of a project.
+					</li>
+					<li>Keep line length <strong>not</strong> higher than <strong>120</strong> columns.</li>
+					<li>
+						Do <strong>not</strong> write source files consisting of more than <strong>1000</strong> lines.
+					</li>
+					<li>
+						It is recommended to store all external dependencies of a project inside its own repository, in
+						<code>third_party</code> folder, with one subfolder per each dependency.
+					</li>
+					<li>
+						To simplify creation of new files with initial content or insertion of frequently repeated code
+						fragments into existing files, you can make a <code>templates</code> catalog within the root
+						directory of your project and store samples there.
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h2 id="metafiles"><a href="#contents-metafiles">Metafiles</a></h2>
+				<p>
+					<dfn>Metafiles</dfn> are special helper documents written in <strong>Markdown</strong> and placed at
+					the top level of each project. In fact, they are more of a annotation of the codebase rather than
+					its part. Only documents covered in the current section are considered metafiles; various
+					tool-specific configs <strong>never</strong> fall into this category.
+				</p>
+				<section>
+					<h3 id="metafiles-workflow">
+						<a href="#contents-metafiles-workflow"><code>workflow.md</code></a>
+					</h3>
+					<p>
+						A project can define its own set of rules overriding both the general and the per-language
+						instructions. Such local rules are described by an <strong>optional</strong> metafile called
+						<dfn><code>workflow.md</code></dfn
+						>, which has an unspecified form.
+					</p>
+				</section>
+				<section>
+					<h3 id="metafiles-readme">
+						<a href="#contents-metafiles-readme"><code>readme.md</code></a>
+					</h3>
+					<p>
+						Every project must have a <dfn><code>readme.md</code></dfn> file within its root directory. This
+						document describes the project, defines its goals and ideology, gives some basic instructions on
+						building and/or using the product. However, <code>readme.md</code> is <strong>not</strong> a
+						replacement for regular documentation; it only declares the essentials.
+					</p>
+					<p>The form of <code>readme.md</code> is free except of the following:</p>
+					<ol>
+						<li>A link to the coding style guide revision used in the current repository is required.</li>
+						<li>A link to <code>workflow.md</code> is required if the latter exists.</li>
+					</ol>
+				</section>
+			</section>
+		</main>
+		<a href="#contents">Back to the table of contents</a>
+	</body>
+</html>
